@@ -5,7 +5,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        ADD ROUTING HERE
+        <Switch>
+        </Switch>
       </div>
     )
   }
