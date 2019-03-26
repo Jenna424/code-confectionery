@@ -17,6 +17,26 @@ module Api
         end
       end
 
+      def show
+        render json: @cake, status: 200
+      end
+
+      def update
+        if @cake.update(cake_params)
+          render json: @cake, status: 200
+        else
+          render json: { errors: @cake.errors.full_messages }, status: 400
+        end
+      end
+
+      def destroy
+        if @cake.destroy
+          render json: { message: "Your cake was successfully deleted!" }, status: 200
+        else
+          render json: { errors: "Unable to delete the cake" }, status: 400
+        end
+      end
+
       private
 
         def set_cake
