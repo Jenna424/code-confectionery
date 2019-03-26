@@ -7,6 +7,16 @@ module Api
         render json: Cake.all
       end
 
+      def create
+        cake = Cake.new(cake_params)
+        if cake.save
+          render json: cake, status: 201 # indicates successful resource creation
+        else
+          render json: { errors: cake.errors.full_messages }, status: :unprocessable_entity # status: 422
+          # render json: { status: 500, error: 'Your cake was not saved successfully' }
+        end
+      end
+
       private
 
         def set_cake
