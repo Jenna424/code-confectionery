@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_26_150400) do
+ActiveRecord::Schema.define(version: 2019_03_26_151045) do
 
   create_table "cakes", force: :cascade do |t|
     t.string "structure", default: "layered"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_150400) do
     t.boolean "ordered", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "flavor_combination"
   end
 
 end
