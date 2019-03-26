@@ -9,7 +9,7 @@ module Api
 
       private
 
-        def garden_params
+        def cake_params
           params.require(:cake).permit(
             :structure,
             :occasion,
