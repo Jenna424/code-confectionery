@@ -9,6 +9,10 @@ module Api
 
       private
 
+        def set_cake
+          @cake = Cake.find_by(id: params[:id])
+        end
+
         def cake_params
           params.require(:cake).permit(
             :structure,
