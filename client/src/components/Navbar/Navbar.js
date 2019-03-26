@@ -6,9 +6,9 @@ const Navbar = () => (
     <div className="item" style={{color: 'violet', backgroundColor: 'lightyellow'}}>
       <i className="birthday cake icon"></i>
     </div>
-    <a className="item"><NavLink exact to="/" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Cake Constructor</NavLink></a>
-    <a className="item"><NavLink to="/cakes" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Cakes Gallery</NavLink></a>
-    <a className="item"><NavLink to="/ingredients/new" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Add Ingredient</NavLink></a>
+    <NavLink to="/cakes" className="item" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Cakes Gallery</NavLink>
+    <NavLink exact to="/" className="item" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Cake Constructor</NavLink>
+    <NavLink to="/ingredients/new" className="item" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Add Ingredient</NavLink>
   </div>
 )
 
