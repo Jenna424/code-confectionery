@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_26_151250) do
+ActiveRecord::Schema.define(version: 2019_03_26_151437) do
+
+  create_table "cake_ingredients", force: :cascade do |t|
+    t.integer "cake_id"
+    t.integer "ingredient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cakes", force: :cascade do |t|
     t.string "structure", default: "layered"
