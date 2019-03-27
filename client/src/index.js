@@ -7,6 +7,20 @@ import thunk from 'redux-thunk';
 
 import App from './App';
 
+import cakeConstructor from './reducers/cakeConstructor';
+import ordersPlaced from './reducers/ordersPlaced';
+
+const rootReducer = combineReducers({
+  cakeConstructor,
+  ordersPlaced
+});
+
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddlware(thunk)
+);
+
 ReactDOM.render(
   <Provider store={store}>
     <Router>
