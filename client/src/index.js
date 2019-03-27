@@ -7,13 +7,11 @@ import thunk from 'redux-thunk';
 
 import App from './App';
 
-const wrappedApp = (
-  <Router>
-    <App />
-  </Router>
-);
-
 ReactDOM.render(
-  wrappedApp,
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider,
   document.getElementById('root')
 );
