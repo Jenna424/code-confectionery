@@ -1,11 +1,11 @@
 import * as types from './actionTypes';
 
-export const addLayer = ingredient => ({
+export const addLayer = flavor => ({
   type: types.ADD_LAYER,
-  ingredient
+  flavor
 })
 
-export const removeLayer = ingredient => ({
+export const removeLayer = flavor => ({
   type: types.REMOVE_LAYER,
-  ingredient
+  flavor
 })
