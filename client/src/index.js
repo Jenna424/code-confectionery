@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
 const store = createStore(
   rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddlware(thunk)
+  applyMiddleware(thunk)
 );
 
 ReactDOM.render(
@@ -26,6 +26,6 @@ ReactDOM.render(
     <Router>
       <App />
     </Router>
-  </Provider,
+  </Provider>,
   document.getElementById('root')
 );
