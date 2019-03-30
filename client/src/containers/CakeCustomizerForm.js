@@ -3,6 +3,19 @@ import React, { Component } from 'react';
 class CakeCustomizerForm extends Component {
   state = {
   	pastryPreferences: {
+      customerName: {
+        stringTag: 'input',
+        tagContents: {
+          type: 'text',
+          placeholder: 'Enter your name here...'
+        },
+        value: '',
+        validationCriteria: {
+          cannotBeBlank: true
+        },
+        isValid: false,
+        interactedWith: false
+      },
       occasion: {
         stringTag: 'select',
         tagContents: {
