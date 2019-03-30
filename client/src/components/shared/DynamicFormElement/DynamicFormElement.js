@@ -19,7 +19,7 @@ const DynamicFormElement = ({ stringTag, tagContents, value, mustValidate, formI
   	  htmlTag = <textarea value={value} onChange={handleOnChange} />;
   	  break;
   	default:
-  	  htmlTag = <input value={value }onChange={handleOnChange} />;
+  	  htmlTag = <input value={value} onChange={handleOnChange} />;
   }
 
   return (
