@@ -26,6 +26,10 @@ class CakeCustomizerForm extends Component {
           validationCriteria: {},
           isValid: true
         }
+      },
+      diameter: {
+        stringTag: 'input',
+        
       }
   	}
   }
