@@ -29,7 +29,12 @@ class CakeCustomizerForm extends Component {
       },
       diameter: {
         stringTag: 'input',
-        
+        tagContents: {
+          type: 'number'
+          min: 4,
+          max: 14
+        }
+
       }
   	}
   }
