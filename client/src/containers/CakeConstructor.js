@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class CakeConstructor extends Component {
   render() {
@@ -10,4 +11,4 @@ class CakeConstructor extends Component {
   }
 }
 
-export default CakeConstructor;
+export default connect(mapStateToProps, mapDispatchToProps)(CakeConstructor);
