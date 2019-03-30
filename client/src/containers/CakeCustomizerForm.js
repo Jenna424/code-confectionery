@@ -61,7 +61,6 @@ class CakeCustomizerForm extends Component {
           optionsArray: [
             {value: 'rainbow sprinkles', label: 'Rainbow Sprinkles'},
             {value: 'chocolate sprinkles', label: 'Chocolate Sprinkles'},
-            {value: 'edible confetti', label: 'Edible Confetti'},
             {value: 'sea salt', label: 'Sea Salt'},
             {value: 'powdered sugar', label: 'Powdered Sugar'},
             {value: 'gummy bears', label: 'Gummy Bears'},
@@ -72,6 +71,26 @@ class CakeCustomizerForm extends Component {
             {value: 'chocolate syrup', label: 'Chocolate Syrup'},
             {value: 'whipped cream', label: 'Whipped Cream Dollop'},
             {value: 'fresh fruit', label: 'Fresh Fruit'}
+            {value: 'none', label: 'None'}
+          ],
+          value: null,
+          validationCriteria: {
+            cannotBeBlank: true
+          },
+          isValid: false,
+          interactedWith: false
+        }
+      },
+      toppers: {
+        stringTag: 'select',
+        tagContents: {
+          optionsArray: [
+            {value: 'birthday candles', label: 'Birthday Candles'},
+            {value: 'wedding figurines', label: 'Bride and Groom Figurines'},
+            {value: 'sparklers', label: 'Sparklers'},
+            {value: 'monogrammed metal topper', label: 'Monogrammed Metal Topper'},
+            {value: 'text topper', label: 'Text Topper'},
+            {value: 'none', label: 'None'}
           ],
           value: null,
           validationCriteria: {
