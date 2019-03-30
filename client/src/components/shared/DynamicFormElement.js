@@ -5,13 +5,18 @@ const DynamicFormElement = props => {
 
   switch (props.stringHtmlTag) {
   	case 'select':
-  	  htmlTag = <select>
+  	  htmlTag = (
+  	    <select>
+  	      <option>Option A</option>
+  	      <option>Option B</option>
+  	    </select>
+  	  );
   	  break;
   	case 'textarea':
-  	  htmlTag = <textarea />
+  	  htmlTag = <textarea />;
   	  break;
   	default:
-  	  htmlTag = <input />
+  	  htmlTag = <input />;
   }
 
   return (
