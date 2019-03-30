@@ -25,6 +25,15 @@ export default (state = initialState, action) => {
   	  	},
   	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastryPart]
   	  }
+  	case types.UNSTACK_LAYER:
+  	  return {
+  	  	...state,
+  	  	layers: {
+  	  	  ...state.layers,
+  	  	  [action.layer.flavor]: state.layers[action.layer.flavor] - 1
+  	  	},
+  	  	cakeCost: state.cakeCost - CAKE_COMPONENT_COSTS[action.layer.pastryPart]
+  	  }
   }
 }
 
