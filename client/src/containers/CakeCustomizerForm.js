@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class CakeCustomizerForm extends Component {
   state = {
   	pastryPreferences: {
-  	
+      occasion: {
+        stringTag: 'select',
+      }
   	}
   }
   render() {
