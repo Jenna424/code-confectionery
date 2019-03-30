@@ -22,9 +22,11 @@ class CakeCustomizerForm extends Component {
             {value: 'just because', label: 'Just Because...'}
             {value: 'other', label: 'Other'}
           ],
-          value: 'just because',
-          validationCriteria: {},
-          isValid: true,
+          value: null,
+          validationCriteria: {
+            cannotBeBlank: true
+          },
+          isValid: false,
           interactedWith: false
         }
       },
@@ -53,7 +55,32 @@ class CakeCustomizerForm extends Component {
         isValid: true, // a number will always be selected due to the default number
         interactedWith: false
       },
-
+      garnish: {
+        stringTag: 'select',
+        tagContents: {
+          optionsArray: [
+            {value: 'rainbow sprinkles', label: 'Rainbow Sprinkles'},
+            {value: 'chocolate sprinkles', label: 'Chocolate Sprinkles'},
+            {value: 'edible confetti', label: 'Edible Confetti'},
+            {value: 'sea salt', label: 'Sea Salt'},
+            {value: 'powdered sugar', label: 'Powdered Sugar'},
+            {value: 'gummy bears', label: 'Gummy Bears'},
+            {value: 'cookie crumbs', label: 'Cookie Crumbs'
+            {value: 'chopped nuts', label: 'Chopped Nuts'},
+            {value: 'edible rose', label: 'Edible Rose'},
+            {value: 'buttercream swirls', label: 'Buttercream Swirls'},
+            {value: 'chocolate syrup', label: 'Chocolate Syrup'},
+            {value: 'whipped cream', label: 'Whipped Cream Dollop'},
+            {value: 'fresh fruit', label: 'Fresh Fruit'}
+          ],
+          value: null,
+          validationCriteria: {
+            cannotBeBlank: true
+          },
+          isValid: false,
+          interactedWith: false
+        }
+      }
   	}
   }
   render() {
