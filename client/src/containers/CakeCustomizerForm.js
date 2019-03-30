@@ -135,6 +135,8 @@ class CakeCustomizerForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault(); // prevent the default form submit action
+    const cakeCustomizations = {};
+
   }
 
   render() {
