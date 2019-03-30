@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { meetsValidationCriteria } from '../utils/logic.js';
 import DynamicFormElement from '../components/shared/DynamicFormElement/DynamicFormElement';
 
