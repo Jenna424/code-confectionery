@@ -3,9 +3,7 @@ import styles from './DynamicFormElement.module.css';
 
 const DynamicFormElement = props => {
   const tagClassesArray = [styles.genericTag];
-
-
-
+  
   let htmlTag = null;
 
   switch (props.stringTag) {
