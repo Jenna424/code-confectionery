@@ -23,6 +23,8 @@ class CakeCustomizerForm extends Component {
             {value: 'other', label: 'Other'}
           ],
           value: 'just because',
+          validationCriteria: {},
+          
         }
       }
   	}
