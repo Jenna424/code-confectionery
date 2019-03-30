@@ -24,7 +24,8 @@ class CakeCustomizerForm extends Component {
           ],
           value: 'just because',
           validationCriteria: {},
-          isValid: true
+          isValid: true,
+          interactedWith: false
         }
       },
       diameter: {
@@ -38,7 +39,8 @@ class CakeCustomizerForm extends Component {
         validationCriteria: {
           isNumber: true
         }
-        isValid: true // a number will always be selected due to the default number
+        isValid: true, // a number will always be selected due to the default number
+        interactedWith: false
       }
   	}
   }
