@@ -65,7 +65,7 @@ class CakeCustomizerForm extends Component {
             {value: 'sea salt', label: 'Sea Salt'},
             {value: 'powdered sugar', label: 'Powdered Sugar'},
             {value: 'gummy bears', label: 'Gummy Bears'},
-            {value: 'cookie crumbs', label: 'Cookie Crumbs'
+            {value: 'cookie crumbs', label: 'Cookie Crumbs'},
             {value: 'chopped nuts', label: 'Chopped Nuts'},
             {value: 'edible rose', label: 'Edible Rose'},
             {value: 'buttercream swirls', label: 'Buttercream Swirls'},
