@@ -61,9 +61,7 @@ class CakeCustomizerForm extends Component {
           max: 14
         },
         value: 4, // default value is minimum diameter (4 inches)
-        validationCriteria: {
-          isNumber: true
-        }
+        validationCriteria: {},
         isValid: true, // a number will always be selected due to the default number
         interactedWith: false
       },
