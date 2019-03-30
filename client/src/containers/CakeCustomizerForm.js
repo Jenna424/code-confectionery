@@ -135,7 +135,22 @@ class CakeCustomizerForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault(); // prevent the default form submit action
+
+    const { pastryParticulars } = this.state;
+    const { layers, cakeCost, onPastryPurchase } = this.props;
     const cakeCustomizations = {};
+
+    for (let fieldProperty in pastryParticulars) {
+      cakeCustomizations[fieldProperty] = pastryParticulars[fieldProperty].value;
+    }
+
+    const orderObject = {
+      cakeCustomizations,
+      layers
+      cakeCost
+    }
+
+    onPastryPurchase(orderObject)
   }
 
   render() {
