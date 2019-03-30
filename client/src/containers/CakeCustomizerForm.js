@@ -4,6 +4,7 @@ import DynamicFormElement from '../components/shared/DynamicFormElement/DynamicF
 
 class CakeCustomizerForm extends Component {
   state = {
+    wholeFormIsValid: false,
   	pastryParticulars: {
       customerName: {
         stringTag: 'input',
@@ -166,6 +167,19 @@ class CakeCustomizerForm extends Component {
       <div>
         <p><em>Fill out the following pastry particulars to customize your cake:</em></p>
         <form onSubmit={this.handleOnSubmit}>
+          {cakeCustomizerConfiguration.map(fieldObject =>
+            <DynamicFormElement
+              key={fieldObject.fieldProperty}
+              stringTag={fieldObject.setup.stringTag}
+              tagContents={fieldObject.setup.tagContents}
+              value={fieldObject.setup.value}
+              isInvalid={!fieldObject.setup.isValid}
+              mustValidate={fieldObject.setup.validationCriteria}
+              interactedWith={fieldObject.setup.interactedWith}
+              handleOnChange={event => this.handleOnChange(event, fieldObject.fieldProperty)}
+            />
+          )}
+          <input type="submit" disabled={!this.state.wholeFormIsValid}>Purchase Pastry</input>
         </form>
       </div>
     )
