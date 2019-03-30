@@ -6,7 +6,7 @@ const DynamicFormElement = ({ stringTag, tagContents, value, mustValidate, formI
 
   let htmlTag = null;
 
-  switch (props.stringTag) {
+  switch (stringTag) {
   	case 'select':
   	  htmlTag = (
   	    <select>
