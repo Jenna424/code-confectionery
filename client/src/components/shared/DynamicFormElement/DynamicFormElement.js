@@ -3,6 +3,10 @@ import styles from './DynamicFormElement.module.css';
 
 const DynamicFormElement = ({ stringTag, tagContents, labelText, value, mustValidate, formIsInvalid, handleOnChange, interactedWith }) => {
   const tagClassesArray = [styles.genericTag];
+  
+  if (interactedWith && mustValidate && formIsInvalid) {
+    tagClassesArray.push(styles.validationError)
+  }
 
   let htmlTag = null;
 
