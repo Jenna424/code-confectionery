@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { meetsValidationCriteria } from '../utils/logic.js';
 
 class CakeCustomizerForm extends Component {
   state = {
