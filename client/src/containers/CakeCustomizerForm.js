@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { meetsValidationCriteria } from '../utils/logic.js';
-import DynamicFormElement from '../components/shared/DynamicFormElement';
+import DynamicFormElement from '../components/shared/DynamicFormElement/DynamicFormElement';
 
 class CakeCustomizerForm extends Component {
   state = {
