@@ -4,9 +4,11 @@ import styles from './DynamicFormElement.module.css';
 const DynamicFormElement = props => {
   const tagClassesArray = [styles.genericTag];
 
+
+
   let htmlTag = null;
 
-  switch (props.stringHtmlTag) {
+  switch (props.stringTag) {
   	case 'select':
   	  htmlTag = (
   	    <select>
