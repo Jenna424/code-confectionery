@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './DynamicFormElement.module.css';
 
 const DynamicFormElement = props => {
   let htmlTag = null;
@@ -20,7 +21,7 @@ const DynamicFormElement = props => {
   }
 
   return (
-    <div>
+    <div className={styles.inputWrapper}>
       <label>The actual label for the form element goes here.</label>
       {htmlTag}
     </div>
