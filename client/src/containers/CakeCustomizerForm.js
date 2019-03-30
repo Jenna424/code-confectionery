@@ -3,7 +3,7 @@ import { meetsValidationCriteria } from '../utils/logic.js';
 
 class CakeCustomizerForm extends Component {
   state = {
-  	pastryPreferences: {
+  	pastryParticulars: {
       customerName: {
         stringTag: 'input',
         tagContents: {
@@ -112,6 +112,27 @@ class CakeCustomizerForm extends Component {
       }
   	}
   }
+
+  handleOnChange = (event, pastryParticularsProperty) => {
+    let wholeFormIsValid = true;
+
+    const pastryParticularsCopy = {...this.state.pastryParticulars};
+    const propertyObjectCopy = {...pastryParticularsCopy[pastryParticularsProperty]};
+    propertyObjectCopy.value = event.target.value;
+    propertyObjectCopy.isValid = meetsValidationCriteria(propertyObjectCopy.value, propertyObjectCopy.validationCriteria);
+    propertyObjectCopy.interactedWith = true;
+    pastryParticularsCopy[pastryParticularsProperty] = propertyObjectCopy;
+
+    for (let pastryParticularsProperty in pastryParticularsCopy) {
+      wholeFormIsValid = pastryParticularsCopy[pastryParticularsProperty].isValid && wholeFormIsValid;
+    }
+
+    this.setState({
+      pastryParticulars: pastryParticularsCopy,
+      wholeFormIsValid
+    })
+  }
+
   render() {
     return (
       <div>
