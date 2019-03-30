@@ -134,9 +134,17 @@ class CakeCustomizerForm extends Component {
   }
 
   render() {
+    const cakeCustomizerConfiguration = []; // stores an array of JS objects. Each object in this array has a key of the property name that the form input is needed for (e.g. occasion vs. diameter), and its corresponding value is the input presentation
+    for (let property in this.state.pastryParticulars) {
+      cakeCustomizerConfiguration.push({
+        property,
+        propertyPresentation: this.state.pastryParticulars[property]
+      })
+    }
     return (
       <div>
         <form>
+          <p>Customize your cake by filling out the following pastry purchase particulars:</p>
         </form>
       </div>
     )
