@@ -14,6 +14,20 @@ const CAKE_COMPONENT_COSTS = {
   topper: 1.5
 }
 
+export default (state = initialState, action) => {
+  switch (action.type) {
+  	case types.STACK_LAYER:
+  	  return {
+  	  	...state,
+  	  	layers: {
+  	  	  ...state.layers,
+  	  	  [action.layer.flavor]: state.layers[action.layer.flavor] + 1
+  	  	},
+  	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastryPart]
+  	  }
+  }
+}
+
 // layers is an object representing all of the layers in the layer cake
 // each key in the layers object is a string flavor,
 // and its corresponding value is the number of layers in the cake with that particular flavor
