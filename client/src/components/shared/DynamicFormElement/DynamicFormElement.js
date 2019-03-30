@@ -13,7 +13,15 @@ const DynamicFormElement = ({ stringTag, tagContents, labelText, value, mustVali
   switch (stringTag) {
   	case 'select':
   	  htmlTag = (
-  	    <select className={tagClassesArray.join(' ')} {...tagContents} value={value} onChange={handleOnChange}>
+  	    <select 
+          className={tagClassesArray.join(' ')} 
+          {...tagContents.optionsArray.map(optionObject =>
+            <option key={optionObject.value} value={optionObject.value}>
+              {optionObject.label}
+            </option>
+          ))}
+          value={value} 
+          onChange={handleOnChange}>
   	    </select>
   	  );
   	  break;
