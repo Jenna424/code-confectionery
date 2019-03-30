@@ -1,3 +1,3 @@
-export const ADD_LAYER = 'ADD_LAYER';
-export const REMOVE_LAYER = 'REMOVE_LAYER';
+export const STACK_LAYER = 'STACK_LAYER';
+export const UNSTACK_LAYER = 'UNSTACK_LAYER';
 export const LOAD_LAYERS_SUCCESS = 'LOAD_LAYERS_SUCCESS';
