@@ -21,7 +21,8 @@ class CakeCustomizerForm extends Component {
             {value: 'retirement', label: 'Retirement'},
             {value: 'just because', label: 'Just Because...'}
             {value: 'other', label: 'Other'}
-          ]
+          ],
+          value: 'just because',
         }
       }
   	}
