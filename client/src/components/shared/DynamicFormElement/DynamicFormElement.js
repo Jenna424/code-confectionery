@@ -24,7 +24,7 @@ const DynamicFormElement = ({ stringTag, tagContents, labelText, value, mustVali
 
   return (
     <div className={styles.inputWrapper}>
-      <label className={styles.label}>The actual label for the form element goes here.</label>
+      <label className={styles.label}>{labelText}</label>
       {htmlTag}
     </div>
   )
