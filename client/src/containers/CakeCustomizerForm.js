@@ -25,7 +25,6 @@ class CakeCustomizerForm extends Component {
           value: 'just because',
           validationCriteria: {},
           isValid: true
-          
         }
       }
   	}
