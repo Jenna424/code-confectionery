@@ -28,6 +28,17 @@ class CakeCustomizerForm extends Component {
           interactedWith: false
         }
       },
+      message: {
+        stringTag: 'input',
+        tagContents: {
+          type: 'text',
+          placeholder: 'Enter a custom message to display on your cake...'
+        },
+        value: '',
+        validationCriteria: {},
+        isValid: true,
+        interactedWith: false
+      },
       diameter: {
         stringTag: 'input',
         tagContents: {
@@ -41,7 +52,8 @@ class CakeCustomizerForm extends Component {
         }
         isValid: true, // a number will always be selected due to the default number
         interactedWith: false
-      }
+      },
+
   	}
   }
   render() {
