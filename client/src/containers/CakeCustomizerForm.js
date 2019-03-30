@@ -187,5 +187,5 @@ class CakeCustomizerForm extends Component {
   }
 }
 
-export default CakeCustomizerForm;
+export default connect(mapStateToProps, mapDispatchToProps)(CakeCustomizerForm);
 
