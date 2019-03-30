@@ -133,6 +133,10 @@ class CakeCustomizerForm extends Component {
     })
   }
 
+  handleOnSubmit = event => {
+    event.preventDefault(); // prevent the default form submit action
+  }
+
   render() {
     const cakeCustomizerConfiguration = []; // stores an array of JS objects. Each object in this array has a key of the property name that the form input is needed for (e.g. occasion vs. diameter), and its corresponding value is the input presentation
     for (let property in this.state.pastryParticulars) {
@@ -144,7 +148,7 @@ class CakeCustomizerForm extends Component {
     return (
       <div>
         <p><em>Customize your cake by filling out the following pastry purchase particulars:</em></p>
-        <form>
+        <form onSubmit={this.handleOnSubmit}>
         </form>
       </div>
     )
