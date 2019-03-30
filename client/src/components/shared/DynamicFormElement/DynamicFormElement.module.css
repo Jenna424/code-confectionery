@@ -15,6 +15,11 @@
   padding: 5px 15px;
 }
 
+.genericTag:focus {
+  background-color: lightyellow;
+  outline: none;
+}
+
 .validationError {
   color: #721c24;
   background-color: #f8d7da;
