@@ -152,6 +152,4 @@ class CakeCustomizerForm extends Component {
 }
 
 export default CakeCustomizerForm;
-stringTag, tagContents, labelText, value, mustValidate, formIsInvalid, handleOnChange, interactedWith
-
 
