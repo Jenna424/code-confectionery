@@ -22,7 +22,7 @@ const DynamicFormElement = props => {
 
   return (
     <div className={styles.inputWrapper}>
-      <label>The actual label for the form element goes here.</label>
+      <label className={styles.label}>The actual label for the form element goes here.</label>
       {htmlTag}
     </div>
   )
