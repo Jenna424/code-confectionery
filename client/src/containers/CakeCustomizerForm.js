@@ -143,8 +143,8 @@ class CakeCustomizerForm extends Component {
     }
     return (
       <div>
+        <p><em>Customize your cake by filling out the following pastry purchase particulars:</em></p>
         <form>
-          <p>Customize your cake by filling out the following pastry purchase particulars:</p>
         </form>
       </div>
     )
