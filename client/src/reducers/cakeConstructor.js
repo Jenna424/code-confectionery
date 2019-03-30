@@ -17,11 +17,11 @@ const CAKE_COMPONENT_COSTS = {
 export default (state = initialState, action) => {
   switch (action.type) {
   	case types.STACK_LAYER:
-  	  return {
-  	  	...state,
-  	  	layers: {
-  	  	  ...state.layers,
-  	  	  [action.layer.flavor]: state.layers[action.layer.flavor] + 1
+  	  return { // return new, updated state object
+  	  	...state, // copy over all key/value pairs from the old, previous, existing state object, but remember: this does NOT create a deep clone (it does NOT go into objects and create new nested objects)
+  	  	layers: { // set layers to a new JS object to maintain immutability
+  	  	  ...state.layers, // distribute all key/value pairs in from the old layers object into the new one
+  	  	  [action.layer.flavor]: state.layers[action.layer.flavor] + 1 // using bracket syntax, dynamically override the key/value pair for a given layer object, which we'll get as a payload from our dispatched action object
   	  	},
   	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastryPart]
   	  }
