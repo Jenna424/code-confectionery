@@ -138,7 +138,7 @@ class CakeCustomizerForm extends Component {
     for (let property in this.state.pastryParticulars) {
       cakeCustomizerConfiguration.push({
         property,
-        propertyPresentation: this.state.pastryParticulars[property]
+        inputPresentation: this.state.pastryParticulars[property]
       })
     }
     return (
