@@ -136,15 +136,14 @@ class CakeCustomizerForm extends Component {
   handleOnSubmit = event => {
     event.preventDefault(); // prevent the default form submit action
     const cakeCustomizations = {};
-
   }
 
   render() {
-    const cakeCustomizerConfiguration = []; // stores an array of JS objects. Each object in this array has a key of the property name that the form input is needed for (e.g. occasion vs. diameter), and its corresponding value is the input presentation
-    for (let property in this.state.pastryParticulars) {
+    const cakeCustomizerConfiguration = [];
+    for (let fieldProperty in this.state.pastryParticulars) {
       cakeCustomizerConfiguration.push({
-        property,
-        inputPresentation: this.state.pastryParticulars[property]
+        fieldProperty,
+        setup: this.state.pastryParticulars[fieldProperty]
       })
     }
     return (
