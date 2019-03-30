@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './DynamicFormElement.module.css';
 
-const DynamicFormElement = props => {
+const DynamicFormElement = ({ stringTag, tagContents, value, mustValidate, formIsInvalid, handleOnChange, interactedWith }) => {
   const tagClassesArray = [styles.genericTag];
-  
+
   let htmlTag = null;
 
   switch (props.stringTag) {
