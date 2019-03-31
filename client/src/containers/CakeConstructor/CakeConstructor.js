@@ -11,10 +11,10 @@ class CakeConstructor extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <p style={{marginTop: '10px'}}>CakeConstructor container class component will present a graphical representation of the cake that the user is currently customizing!</p>
         {this.props.error ? <p className={styles.error}>Unable to load flavor combinations for custom cake creation</p> : <p>No error</p>}
-      </div>
+      </Fragment>
     )
   }
 }
