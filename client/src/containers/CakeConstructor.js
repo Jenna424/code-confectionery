@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as types from '../actions/actionTypes';
+//import * as types from '../actions/actionTypes';
+import { stackLayer, unstackLayer } from '../actions/cakeConstructor';
 
 class CakeConstructor extends Component {
   render() {
@@ -16,6 +17,11 @@ const mapStateToProps = state => ({
   layers: state.layers
 })
 
+const mapDispatchToProps = dispatch => ({
+  onStackLayer: layer => dispatch(stackLayer(layer)),
+  onUnstackLayer: layer => dispatch(unstackLayer(layer))
+})
+
 export default connect(mapStateToProps, mapDispatchToProps)(CakeConstructor);
 
 {/* 
@@ -25,7 +31,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(CakeConstructor);
 
 // mapDispatchToProps stores an arrow function that accepts the dispatch function as an argument
 // It implicitly returns a JS object with props function mappings.
-// The keys in the returned object are the names of action-dispatching arrow function objects
-// and whose corresponding values are the callback functions that, when triggered, will invoke dispatch function
-// with an action object returning by invoking the action creator function
+// That is, the keys in the returned object are the names of action-dispatching arrow functions
+// whose corresponding values are the callback functions that, when triggered, 
+// will invoke the dispatch function with the action object returned by invoking the action creator function
 */}
