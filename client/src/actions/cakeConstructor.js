@@ -16,6 +16,10 @@ export const setLayersSuccess = layers => ({
   type: types.SET_LAYERS_SUCCESS,
   layers
 })
+
+export const fetchLayersFailure = () => ({
+  type: types.FETCH_LAYERS_FAILURE
+})
 // loadLayers is an asynchronous action creator function, made possible by redux-thunk
 export const loadLayers = () => {
   let requestObject = {
