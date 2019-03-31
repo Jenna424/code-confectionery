@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_181732) do
+ActiveRecord::Schema.define(version: 2019_03_31_003511) do
 
   create_table "cake_layers", force: :cascade do |t|
     t.integer "cake_id"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_03_27_181732) do
   create_table "cakes", force: :cascade do |t|
     t.string "structure", default: "layered"
     t.string "occasion"
-    t.integer "width"
+    t.integer "diameter"
     t.float "price"
     t.string "img_url"
     t.boolean "ordered", default: false
