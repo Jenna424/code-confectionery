@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadLayers, stackLayer, unstackLayer } from '../actions/cakeConstructor';
+import styles from './CakeConstructor.module.css';
 
 class CakeConstructor extends Component {
 
