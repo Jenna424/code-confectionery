@@ -19,7 +19,7 @@ class CakeConstructor extends Component {
           <LayerLevers
             onStackLayer={this.props.onStackLayer}
             onUnstackLayer={this.props.onUnstackLayer}
-            disabled={disableData}
+            disableData={disableData}
           />
         }
       </Fragment>
