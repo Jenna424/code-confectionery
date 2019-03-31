@@ -17,7 +17,6 @@ class CakeConstructor extends Component {
         <p style={{marginTop: '10px'}}>Create a Custom Cake</p>
         {this.props.error ? <p className={styles.error}>Unable to load flavor combinations for custom cake creation</p> : null}
         if (batterLayers.length && fillingLayers.length) {
-          <div>Render component that renders graphical representation of current cake being created here.</div>
           <LayerLevers
             batterLayers={batterLayers}
             fillingLayers={fillingLayers}
