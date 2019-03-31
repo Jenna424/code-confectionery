@@ -22,13 +22,8 @@ export const fetchLayersFailure = () => ({
 })
 // loadLayers is an asynchronous action creator function, made possible by redux-thunk
 export const loadLayers = () => {
-  let requestObject = {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' },
-    credentials: 'include'
-  }
   return dispatch => {
-    return fetch(`${BASE_URL}/layers`, requestObject) // make async call to fetch layers from my Rails API backend server
+    return fetch(`${BASE_URL}/layers`) // make async call to fetch layers from my Rails API backend server
       .then(response => response.json()) // handle promises. Once promises are resolved, after the async code is done and I've gotten a successful JSON response back from my server, which contains the array of layer objects,
       .then(layers => dispatch(setLayersSuccess(layers))) // dispatch the action object that is returned by calling synchronous action creator function setLayersSuccess with this array of layer objects as its argument.
       .catch(error => dispatch(fetchLayersFailure())) // However, if my request to fetch layers from my Rails server failed, I want to adjust my error key = true in Redux store state. To this end, I dispatch the action object that is returned by calling synchronous action creator function fetchLayersFailure()
