@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-//import * as types from '../actions/actionTypes';
 import { stackLayer, unstackLayer } from '../actions/cakeConstructor';
 
 class CakeConstructor extends Component {
