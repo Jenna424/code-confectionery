@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { stackLayer, unstackLayer } from '../actions/cakeConstructor';
+import { loadLayers, stackLayer, unstackLayer } from '../actions/cakeConstructor';
 
 class CakeConstructor extends Component {
   render() {
@@ -19,7 +19,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onStackLayer: layer => dispatch(stackLayer(layer)),
-  onUnstackLayer: layer => dispatch(unstackLayer(layer))
+  onUnstackLayer: layer => dispatch(unstackLayer(layer)),
+  onLoadLayers: () => dispatch(loadLayers())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CakeConstructor);
