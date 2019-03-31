@@ -1,4 +1,6 @@
 import * as types from './actionTypes';
+const BASE_URL = process.env.REACT_APP_API_URL;
+
 // synchronous action creators:
 export const stackLayer = layer => ({
   type: types.STACK_LAYER,
