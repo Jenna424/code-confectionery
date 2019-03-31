@@ -12,6 +12,7 @@ class CakeConstructor extends Component {
     return (
       <div>
         <p style={{marginTop: '10px'}}>CakeConstructor container class component will present a graphical representation of the cake that the user is currently customizing!</p>
+        {this.props.error ? <p style={{textAlign: 'center', padding: '2px 4px', color: '#c7254e', backgroundColor: '#f9f2f4', borderRadius: '4px'}}>Unable to load flavor combinations for custom cake creation</p> : <p>No error</p>}
       </div>
     )
   }
