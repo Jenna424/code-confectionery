@@ -40,6 +40,11 @@ export default (state = initialState, action) => {
         layers: action.layers, // loadLayersSuccess action creator function returned an action object w/ layers key pointing to layers payload (an array of layer objects that I got back in JSON response from server)
         error: false // set error to false to clear it in case we previously had an error that was since resolved
       };
+    case types.LOAD_LAYERS_FAILURE:
+      return {
+        ...state,
+        error: true
+      };
   }
 }
 
