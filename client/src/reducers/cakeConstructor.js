@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
   	  	  [action.layer.flavor]: state.layers[action.layer.flavor] + 1 // using bracket syntax, dynamically override the key/value pair for a given layer object, which we'll get as a payload from our dispatched action object
   	  	},
   	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastryPart]
-  	  }
+  	  };
   	case types.UNSTACK_LAYER:
   	  return {
   	  	...state,
@@ -33,7 +33,7 @@ export default (state = initialState, action) => {
   	  	  [action.layer.flavor]: state.layers[action.layer.flavor] - 1
   	  	},
   	  	cakeCost: state.cakeCost - CAKE_COMPONENT_COSTS[action.layer.pastryPart]
-  	  }
+  	  };
     case types.LOAD_LAYERS_SUCCESS: // this is executed whenever I successfully fetch layers from my Rails server
       return { // return a new, updated state object
         ...state, // copy over all key/value pairs from old, previous, existing state object
