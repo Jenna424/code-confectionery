@@ -17,6 +17,7 @@ class CakeConstructor extends Component {
         if (this.props.layers) {
           <div>The graphical representation of the current cake being created goes here.</div>
           <LayerLevers
+            layers={this.props.layers}
             onStackLayer={this.props.onStackLayer}
             onUnstackLayer={this.props.onUnstackLayer}
             currentCakeCost={this.props.currentCakeCost}
