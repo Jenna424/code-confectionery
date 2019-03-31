@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { loadLayers, stackLayer, unstackLayer } from '../actions/cakeConstructor';
 
 class CakeConstructor extends Component {
-  
+
   componentDidMount() {
     this.props.onLoadLayers(); // executing action-dispatching arrow function (received from mapDispatchToProps) which, in turn, calls dispatch() to call function returned by loadLayers asynchronous action creator function, to hopefully successfully fetch layers from Rails API
   }
@@ -11,7 +11,7 @@ class CakeConstructor extends Component {
   render() {
     return (
       <div>
-        CakeConstructor container class component will present a graphical representation of the cake that the user is currently customizing!
+        <p style={{marginTop: '10px'}}>CakeConstructor container class component will present a graphical representation of the cake that the user is currently customizing!</p>
       </div>
     )
   }
