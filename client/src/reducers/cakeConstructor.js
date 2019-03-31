@@ -34,6 +34,12 @@ export default (state = initialState, action) => {
   	  	},
   	  	cakeCost: state.cakeCost - CAKE_COMPONENT_COSTS[action.layer.pastryPart]
   	  }
+    case types.LOAD_LAYERS_SUCCESS: // this is executed whenever I successfully fetch layers from my Rails server
+      return { // return a new, updated state object
+        ...state, // copy over all key/value pairs from old, previous, existing state object
+        layers: action.layers, // loadLayersSuccess action creator function returned an action object w/ layers key pointing to layers payload (an array of layer objects that I got back in JSON response from server)
+        error: false // set error to false to clear it in case we previously had an error that was since resolved
+      };
   }
 }
 
