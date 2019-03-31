@@ -21,6 +21,7 @@ class CakeConstructor extends Component {
 
 const mapStateToProps = state => ({
   layers: state.layers,
+  cakeLayout: state.cakeLayout,
   error: state.error
 })
 
