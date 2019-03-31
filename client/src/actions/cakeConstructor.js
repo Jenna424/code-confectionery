@@ -9,6 +9,11 @@ export const unstackLayer = layer => ({
   type: types.UNSTACK_LAYER,
   layer
 })
+
+export const setLayers = layers => ({
+  type: types.SET_LAYERS,
+  layers
+})
 // loadLayersSuccess is an asynchronous action creator function, made possible by redux-thunk
 export const loadLayersSuccess = () => {
   return dispatch => {
@@ -31,9 +36,15 @@ export const loadLayersSuccess = () => {
 
 // loadLayersSuccess asynchronous action creator function will be invoked to initialize, 
 // or load, the layers that I can use in the CakeConstructor container class component.
-// loadLayersSuccess asynchronous action creator function returns a function that receives the dispatch function as its argument.
+// loadLayersSuccess asynchronous action creator function returns a function 
+// that receives the dispatch function as its argument.
 // Inside the body of the returned function, I execute asynchronous code to fetch layers from my Rails API backend server.
-// Once that async code is done and I've received a JSON response from my server
-// that contains the array of layer objects,
-// dispatch function is called inside the body of the returned function
-// to dispatch the action object which is returned by invoking my synchronous action creator function, setLayers
+// Once that async code is done and I've received a JSON response from my server,
+// which contains the array of layer objects,
+// the dispatch function is called inside the body of the returned function
+// to dispatch the action object which was returned by invoking my synchronous action creator function, setLayers.
+// setLayers synchronous action creator function accepts the array of layer objects 
+// (that I got back in the JSON response from my Rails server) as an argument.
+// setLayers action creator function implicitly returns an action object
+// that has a type key set = to 'SET_LAYERS' and a layers key set = to the layers payload, i.e.,
+// the array of layer objects.
