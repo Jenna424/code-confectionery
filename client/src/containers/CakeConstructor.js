@@ -13,7 +13,8 @@ class CakeConstructor extends Component {
 }
 
 const mapStateToProps = state => ({
-  layers: state.layers
+  layers: state.layers,
+  error: state.error
 })
 
 const mapDispatchToProps = dispatch => ({
