@@ -10,14 +10,17 @@ class CakeConstructor extends Component {
   }
 
   render() {
+    const batterLayers = this.props.layers.filter(layerObject => layerObject.pastry_part === 'batter');
+    const fillingLayers = this.props.layers.filter(layerObject => layerObject.pastry_part === 'filling');
     return (
       <Fragment>
-        <p style={{marginTop: '10px'}}>CakeConstructor container class component will present a graphical representation of the cake that the user is currently customizing!</p>
+        <p style={{marginTop: '10px'}}>Create a Custom Cake</p>
         {this.props.error ? <p className={styles.error}>Unable to load flavor combinations for custom cake creation</p> : null}
-        if (this.props.layers) {
-          <div>The graphical representation of the current cake being created goes here.</div>
+        if (batterLayers.length && fillingLayers.length) {
+          <div>Render component that renders graphical representation of current cake being created here.</div>
           <LayerLevers
-            layers={this.props.layers}
+            batterLayers={batterLayers}
+            fillingLayers={fillingLayers}
             onStackLayer={this.props.onStackLayer}
             onUnstackLayer={this.props.onUnstackLayer}
             currentCakeCost={this.props.currentCakeCost}
