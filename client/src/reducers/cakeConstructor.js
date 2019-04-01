@@ -3,6 +3,7 @@ import * as types from '../actions/actionTypes';
 const initialState = {
   layers: [], // initially set = to an empty array, layers will ultimately store an array of layer objects fetched asynchronously from my Rails API backend
   cakeLayout: {}, // initially set = to an empty object, cakeLayout will ultimately store an object that represents the architecture of the cake currently being constructed. Each key in this object will be a string flavor, and its corresponding value will be the number of layers in the cake with that particular flavor
+  lastLayerLevered: null,
   cakeCost: 0, // the cake board is free
   error: false
 }
