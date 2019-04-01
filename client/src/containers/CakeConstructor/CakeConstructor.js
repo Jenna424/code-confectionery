@@ -34,6 +34,7 @@ class CakeConstructor extends Component {
 const mapStateToProps = state => ({
   layers: state.layers,
   cakeLayout: state.cakeLayout,
+  lastLayerLevered: state.lastLayerLevered,
   currentCakeCost: state.cakeCost,
   error: state.error
 })
