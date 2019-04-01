@@ -20,6 +20,7 @@ class CakeConstructor extends Component {
           <LayerLevers
             batterLayers={batterLayers}
             fillingLayers={fillingLayers}
+            lastLayerLevered={this.props.lastLayerLevered}
             onStackLayer={this.props.onStackLayer}
             onUnstackLayer={this.props.onUnstackLayer}
             currentCakeCost={this.props.currentCakeCost}
