@@ -25,7 +25,7 @@ export default (state = initialState, action) => {
   	  	  ...state.cakeLayout, // using spread operator, I distribute all key/value pairs from the old cakeLayout object into the new one
   	  	  [action.layer.flavor]: state.cakeLayout[action.layer.flavor] + 1 // using bracket syntax, I dynamically override a given key/value pair in the cakeLayout object. I got a layer object as a payload from my dispatched action object.
   	  	},
-  	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastryPart]
+  	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastry_part]
   	  };
   	case types.UNSTACK_LAYER:
   	  return {
@@ -34,7 +34,7 @@ export default (state = initialState, action) => {
   	  	  ...state.cakeLayout,
   	  	  [action.layer.flavor]: state.cakeLayout[action.layer.flavor] - 1
   	  	},
-  	  	cakeCost: state.cakeCost - CAKE_COMPONENT_COSTS[action.layer.pastryPart]
+  	  	cakeCost: state.cakeCost - CAKE_COMPONENT_COSTS[action.layer.pastry_part]
   	  };
     case types.SET_LAYERS_SUCCESS: // this is executed whenever I successfully fetch layers from my Rails server
       return { // return a new, updated state object
