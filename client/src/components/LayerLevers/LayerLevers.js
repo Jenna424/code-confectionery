@@ -1,9 +1,18 @@
 import React from 'react';
 
-const LayerLevers = ({ batterLayers, fillingLayers, lastLayerLevered, onStackLayer, onUnstackLayer, dataToDisable }) => (
-  const
+const LayerLevers = ({ batterLayers, fillingLayers, lastLayerLevered, onStackLayer, onUnstackLayer }) => (
   <div>
-    <p>I will render buttons to add and remove layers from the cake here.</p>
+    <p>Available Cake Batter Flavors</p>
+    {batterLayers.map(layerObject =>
+      <LayerLever
+        key={layerObject.id}
+        leverLabel={layerObject.flavor}
+        onStackLayer={() => onStackLayer(layerObject)}
+        onUnstackLayer={() => onUnstackLayer(layerObject)}
+        disabled={lastLayerLevered === layerObject.pastry_part}
+      />
+    )}
+    
   </div>
 )
 
