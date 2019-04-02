@@ -12,8 +12,8 @@ class CakeConstructor extends Component {
 
   render() {
     const { layers, cakeLayout, stackLayer, unstackLayer, lastLayerLevered, cakeCost, error } = this.props;
-    const batterLayers = this.props.layers.filter(layerObject => layerObject.pastry_part === 'batter');
-    const fillingLayers = this.props.layers.filter(layerObject => layerObject.pastry_part === 'filling');
+    const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
+    const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
 
     return (
       <Fragment>
