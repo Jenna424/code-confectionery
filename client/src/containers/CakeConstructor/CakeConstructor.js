@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { onLoadLayers, onStackLayer, onUnstackLayer } from '../../actions/cakeConstructor';
+import { loadLayers, stackLayer, unstackLayer } from '../../actions/cakeConstructor';
 import styles from './CakeConstructor.module.css';
 import LayerLevers from '../../components/LayerLevers/LayerLevers';
 
