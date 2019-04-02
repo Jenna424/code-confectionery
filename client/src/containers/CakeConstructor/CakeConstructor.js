@@ -11,7 +11,7 @@ class CakeConstructor extends Component {
   }
 
   render() {
-    const { layers, cakeLayout, stackLayer, unstackLayer, lastLayerLevered, cakeCost, error } = this.props;
+    const { layers, cakeLayout, stackLayer, unstackLayer, lastLayerLevered, peakPastryPart, cakeCost, error } = this.props;
     const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
     const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
 
@@ -24,6 +24,7 @@ class CakeConstructor extends Component {
             batterLayers={batterLayers}
             fillingLayers={fillingLayers}
             lastLayerLevered={lastLayerLevered}
+            peakPastryPart={peakPastryPart}
             stackLayer={stackLayer}
             unstackLayer={unstackLayer}
             cakeLayout={cakeLayout}
@@ -39,6 +40,7 @@ const mapStateToProps = state => ({
   layers: state.layers,
   cakeLayout: state.cakeLayout,
   lastLayerLevered: state.lastLayerLevered,
+  peakPastryPart: state.peakPastryPart,
   cakeCost: state.cakeCost,
   error: state.error
 })
