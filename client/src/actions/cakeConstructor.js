@@ -21,7 +21,7 @@ export const fetchLayersFailure = () => ({
   type: types.FETCH_LAYERS_FAILURE
 })
 // loadLayers is an asynchronous action creator function, made possible by redux-thunk
-export const loadLayers = () => {
+export const onLoadLayers = () => {
   return dispatch => {
     return fetch(`${BASE_URL}/layers`) // make async call to fetch layers from my Rails API backend server
       .then(response => response.json()) // handle promises. Once promises are resolved, after the async code is done and I've gotten a successful JSON response back from my server, which contains the array of layer objects,
