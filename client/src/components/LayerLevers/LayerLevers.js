@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LayerLevers = ({ batterLayers, fillingLayers, lastLayerLevered, onStackLayer, onUnstackLayer }) => (
+const LayerLevers = ({ batterLayers, fillingLayers, lastLayerLevered, onStackLayer, onUnstackLayer, cakeLayout }) => (
   <div>
     <p>Available Cake Batter Flavors</p>
     {batterLayers.map(layerObject =>
@@ -9,7 +9,7 @@ const LayerLevers = ({ batterLayers, fillingLayers, lastLayerLevered, onStackLay
         leverLabel={layerObject.flavor}
         onStackLayer={() => onStackLayer(layerObject)}
         onUnstackLayer={() => onUnstackLayer(layerObject)}
-        disabled={lastLayerLevered === layerObject.pastry_part}
+        disabled={lastLayerLevered === layerObject.pastry_part || cakeLayout[layerObject.flavor] === 0}
       />
     )}
     
