@@ -7,7 +7,23 @@
 .cakeBoard { /* div.cakeBoard is the thin round silver base on which the cake sits */
   width: 95%;
   height: 1.5%;
-  background: linear-gradient(#D3D3D3, #C0C0C0);
-  border-radius: 15px;
-  margin: 2% auto;
+  background: linear-gradient(#D3D3D3, #C0C0C0); /* Transitioning between shades of gray. Not having a monotone color gives it a 3-dimensional look */
+  border-radius: 15px; /* rounded corners */
+  margin: auto; /* centers it */
+}
+
+.batter {
+  width: 90%;
+  height: 10%;
+  margin: auto; /* centers it */
+  border-radius: 20px; /* rounded corners */
+  background-color: #f3e5ab;
+}
+
+.redVelvet {
+  background-color: #800B15;
+}
+
+.carrot {
+  background-color: #BF6F31;
 }
