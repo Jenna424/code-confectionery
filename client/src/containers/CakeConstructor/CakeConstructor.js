@@ -39,7 +39,7 @@ const mapStateToProps = state => ({
   layers: state.layers,
   cakeLayout: state.cakeLayout,
   lastLayerLevered: state.lastLayerLevered,
-  currentCakeCost: state.cakeCost,
+  cakeCost: state.cakeCost,
   error: state.error
 })
 
