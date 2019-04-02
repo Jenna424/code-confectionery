@@ -19,3 +19,17 @@ const bakeBatterLayer = batterFlavor => {
     <div data-flavor={batterFlavor} className={cakeBatterClasses.join(' ')}></div>
   )
 }
+
+const Cake = () => {
+  return (
+    <div className={styles.cakeContainer}>
+      {bakeBatterLayer('red velvet')}
+      {bakeBatterLayer('mint')}
+      {bakeBatterLayer('keylime pie')}
+      {bakeBatterLayer('carrot')}
+      <div className={styles.cakeBoard}></div>
+    </div>
+  )
+}
+
+export default Cake;
