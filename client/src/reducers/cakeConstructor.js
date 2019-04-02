@@ -39,9 +39,14 @@ export default (state = initialState, action) => {
         lastLayerLevered: action.layer.pastry_part === 'batter' ? 'filling' : 'batter'
   	  };
     case types.SET_LAYERS_SUCCESS: // this is executed whenever I successfully fetch layers from my Rails server
+      const updatedCakeLayout = {};
+      action.layers.forEach(layerObject => updatedCakeLayout[layerObject.flavor] = 0)
       return { // return a new, updated state object
         ...state, // copy over all key/value pairs from old, previous, existing state object
         layers: action.layers, // setLayersSuccess action creator function returned an action object w/ layers key pointing to layers payload (an array of layer objects that I got back in JSON response from server)
+        cakeLayout: {
+          ...updatedCakeLayout // copy over all key/value pairs from updatedCakeLayout object (in which each key is a string flavor pointing to the value of 0)
+        },
         error: false // set error to false to clear it in case I previously got an error that has since been resolved
       };
     case types.FETCH_LAYERS_FAILURE:
