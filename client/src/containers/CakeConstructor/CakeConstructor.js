@@ -27,7 +27,7 @@ class CakeConstructor extends Component {
             stackLayer={stackLayer}
             unstackLayer={unstackLayer}
             cakeLayout={cakeLayout}
-            //currentCakeCost={this.props.currentCakeCost}
+            cakeCost={cakeCost}
           />
         }
       </Fragment>
