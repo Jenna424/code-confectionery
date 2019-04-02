@@ -27,3 +27,15 @@
 .carrot {
   background-color: #BF6F31;
 }
+
+.mysteryFlavor {
+  border: 1px solid #f0de95;
+}
+
+.mysteryFlavor::after {
+  content: attr(data-flavor);
+  text-align: center;
+  padding: 10px;
+  display: block;
+  line-height: initial;
+}
