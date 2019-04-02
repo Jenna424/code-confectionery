@@ -32,7 +32,7 @@
   border: 1px solid #f0de95;
 }
 
-.mysteryFlavor::after {
+.mysteryFlavor:after {
   content: attr(data-flavor);
   text-align: center;
   padding: 10px;
