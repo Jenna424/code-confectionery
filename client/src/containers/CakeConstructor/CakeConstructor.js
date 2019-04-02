@@ -1,18 +1,19 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { loadLayers, stackLayer, unstackLayer } from '../../actions/cakeConstructor';
+import { onLoadLayers, onStackLayer, onUnstackLayer } from '../../actions/cakeConstructor';
 import styles from './CakeConstructor.module.css';
 import LayerLevers from '../../components/LayerLevers/LayerLevers';
 
 class CakeConstructor extends Component {
 
   componentDidMount() {
-    this.props.onLoadLayers(); // executing action-dispatching arrow function (received from mapDispatchToProps) which, in turn, calls dispatch() to call function returned by loadLayers asynchronous action creator function, to hopefully successfully fetch layers from Rails API
+    this.props.loadLayers(); // executing action-dispatching arrow function (received from mapDispatchToProps) which, in turn, calls dispatch() to call function returned by loadLayers asynchronous action creator function, to hopefully successfully fetch layers from Rails API
   }
 
   render() {
     const batterLayers = this.props.layers.filter(layerObject => layerObject.pastry_part === 'batter');
     const fillingLayers = this.props.layers.filter(layerObject => layerObject.pastry_part === 'filling');
+
     return (
       <Fragment>
         <p style={{marginTop: '10px'}}>Create a Custom Cake</p>
@@ -22,10 +23,10 @@ class CakeConstructor extends Component {
             batterLayers={batterLayers}
             fillingLayers={fillingLayers}
             lastLayerLevered={this.props.lastLayerLevered}
-            onStackLayer={this.props.onStackLayer}
-            onUnstackLayer={this.props.onUnstackLayer}
+            stackLayer={this.props.stackLayer}
+            unstackLayer={this.props.unstackLayer}
             cakeLayout={this.props.cakeLayout}
-            currentCakeCost={this.props.currentCakeCost}
+            //currentCakeCost={this.props.currentCakeCost}
           />
         }
       </Fragment>
@@ -42,9 +43,9 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  onStackLayer: layer => dispatch(stackLayer(layer)),
-  onUnstackLayer: layer => dispatch(unstackLayer(layer)),
-  onLoadLayers: () => dispatch(loadLayers())
+  stackLayer: layer => dispatch(stackLayer(layer)),
+  unstackLayer: layer => dispatch(unstackLayer(layer)),
+  loadLayers: () => dispatch(loadLayers())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CakeConstructor);
