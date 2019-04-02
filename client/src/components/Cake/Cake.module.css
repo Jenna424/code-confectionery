@@ -1,0 +1,5 @@
+.cake-box { /* div.cake-box wraps the entire cake */
+  width: 500px;
+  margin: auto; /* centers the div.cake-box */
+  height: 450px;
+}
