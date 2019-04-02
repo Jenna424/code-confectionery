@@ -9,7 +9,7 @@ const LayerLevers = ({ batterLayers, fillingLayers, lastLayerLevered, stackLayer
       <LayerLever
         key={layerObject.id}
         layer={layerObject}
-        leverLabel={layerObject.flavor}
+        flavorLabel={layerObject.flavor}
         stackLayer={stackLayer}
         ustackLayer={unstackLayer}
         disabled={lastLayerLevered === layerObject.pastry_part}
@@ -22,7 +22,7 @@ const LayerLevers = ({ batterLayers, fillingLayers, lastLayerLevered, stackLayer
       <LayerLever
         key={layerObject.id}
         layer={layerObject}
-        leverLabel={layerObject.flavor}
+        flavorLabel={layerObject.flavor}
         stackLayer={stackLayer}
         unstackLayer={unstackLayer}
         disabled={lastLayerLevered === layerObject.pastry_part || cakeLayout[layerObject.flavor] === 0}
