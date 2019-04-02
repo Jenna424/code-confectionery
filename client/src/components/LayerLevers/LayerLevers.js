@@ -1,4 +1,5 @@
 import React from 'react';
+import LayerLever from '../LayerLever/LayerLever';
 
 const LayerLevers = ({ batterLayers, fillingLayers, lastLayerLevered, onStackLayer, onUnstackLayer, cakeLayout }) => (
   <div>
