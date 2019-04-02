@@ -17,13 +17,14 @@ class CakeConstructor extends Component {
       <Fragment>
         <p style={{marginTop: '10px'}}>Create a Custom Cake</p>
         {this.props.error ? <p className={styles.error}>Unable to load flavor combinations for custom cake creation</p> : null}
-        if (batterLayers.length && fillingLayers.length) {
+        {(batterLayers.length > 0 && fillingLayers.length > 0) &&
           <LayerLevers
             batterLayers={batterLayers}
             fillingLayers={fillingLayers}
             lastLayerLevered={this.props.lastLayerLevered}
             onStackLayer={this.props.onStackLayer}
             onUnstackLayer={this.props.onUnstackLayer}
+            cakeLayout={this.props.cakeLayout}
             currentCakeCost={this.props.currentCakeCost}
           />
         }
