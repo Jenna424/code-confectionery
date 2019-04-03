@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { loadLayers, stackLayer, unstackLayer } from '../../actions/cakeConstructor';
 import styles from './CakeConstructor.module.css';
+import Cake from '../../components/Cake/Cake';
 import LayerLevers from '../../components/LayerLevers/LayerLevers';
 
 class CakeConstructor extends Component {
@@ -11,7 +12,7 @@ class CakeConstructor extends Component {
   }
 
   render() {
-    const { layers, cakeLayout, stackLayer, unstackLayer, lastLayerLevered, peakPastryPart, cakeCost, error } = this.props;
+    const { layers, cakeLayout, stackLayer, unstackLayer, cakeCost, error } = this.props; // I removed lastLayerLevered, peakPastryPart
     const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
     const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
 
@@ -19,12 +20,13 @@ class CakeConstructor extends Component {
       <Fragment>
         <p style={{marginTop: '10px'}}>Create a Custom Cake</p>
         {this.props.error ? <p className={styles.error}>Unable to load flavor combinations for custom cake creation</p> : null}
+        <Cake />
         {(batterLayers.length > 0 && fillingLayers.length > 0) &&
           <LayerLevers
             batterLayers={batterLayers}
             fillingLayers={fillingLayers}
-            lastLayerLevered={lastLayerLevered}
-            peakPastryPart={peakPastryPart}
+            //lastLayerLevered={lastLayerLevered}
+            //peakPastryPart={peakPastryPart}
             stackLayer={stackLayer}
             unstackLayer={unstackLayer}
             cakeLayout={cakeLayout}
@@ -39,8 +41,6 @@ class CakeConstructor extends Component {
 const mapStateToProps = state => ({
   layers: state.layers,
   cakeLayout: state.cakeLayout,
-  lastLayerLevered: state.lastLayerLevered,
-  peakPastryPart: state.peakPastryPart,
   cakeCost: state.cakeCost,
   error: state.error
 })
@@ -54,6 +54,10 @@ const mapDispatchToProps = dispatch => ({
 export default connect(mapStateToProps, mapDispatchToProps)(CakeConstructor);
 
 {/* 
+// From mapStateToProps, I just removed:
+// lastLayerLevered: state.lastLayerLevered,
+// peakPastryPart: state.peakPastryPart
+
 // mapStateToProps stores an arrow function that accepts the entire Redux store state object as an argument.
 // It implicitly returns a JS object with the portion of the Redux store state that we want to update.
 // and this is used to determine what, if anything, should be re-rendered depending on if anything has changed
