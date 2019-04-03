@@ -11,6 +11,24 @@ class CakeConstructor extends Component {
     this.props.loadLayers(); // executing action-dispatching arrow function (received from mapDispatchToProps) which, in turn, calls dispatch() to call function returned by loadLayers asynchronous action creator function, to hopefully successfully fetch layers from Rails API
   }
 
+  producePastryPartLevers = pastryPartLayers => {
+    const { cakeLayout, stackLayer, unstackLayer } = this.props;
+    const lastLayerLevered = cakeLayout[cakeLayout.length - 1];
+    return (
+      pastryPartLayers.map(layerObject =>
+        <LayerLevers
+          key={layerObject.id}
+          label={layerObject.flavor}
+          stackLayer={() => stackLayer(layerObject)}
+          unstackLayer={() => unstackLayer(layerObject)}
+          disableStack={cakeLayout.length > 0 && layerObject.pastry_part === lastLayerLevered.pastry_part}
+          disableUnstack={!(cakeLayout.length && cakeLayout.includes(layerObject) && layerObject.id === lastLayerLevered.id)}
+        />
+      )
+    )
+  }
+}
+
 const mapStateToProps = state => ({
   layers: state.layers,
   cakeLayout: state.cakeLayout,
