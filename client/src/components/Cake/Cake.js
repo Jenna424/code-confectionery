@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Cake.module.css';
 
 const Cake = ({ cakeLayout }) => {
-  const cakeLayers = cakeLayout.map(cakeObject => 
+  let cakeLayers = cakeLayout.map(cakeObject => 
     <CakeLayer flavor={cakeObject.flavor} />
   )
 
