@@ -5,3 +5,17 @@
   background-color: #f9f2f4;
   border-radius: '4px';
 }
+
+.leversContainer {
+  margin: auto;
+  width: 500px;
+  height: 450px;
+}
+
+.pastryPartLevers {
+  float: left;
+  text-align: center;
+  width: 250px;
+  height: 225px;
+  overflow: scroll;
+}
