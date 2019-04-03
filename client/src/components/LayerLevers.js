@@ -6,6 +6,9 @@ const LayerLevers = ({ stackLayer, unstackLayer, disableStack, disableUnstack, l
       <button onClick={stackLayer} className="tiny ui compact button" disabled={disableStack}>+</button>
       <div className="or"></div>
       <button onClick={unstackLayer} className="tiny ui compact pink button" disabled={disableUnstack}>-</button>
+      <br />
+      {label}
+      <br />
     </div>
   </Fragment>
 )
