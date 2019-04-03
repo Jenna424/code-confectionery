@@ -12,7 +12,7 @@ class CakeConstructor extends Component {
   }
 
   render() {
-    const { layers, cakeLayout, stackLayer, unstackLayer, cakeCost, error } = this.props; // I removed lastLayerLevered, peakPastryPart
+    const { layers, cakeLayout, stackLayer, unstackLayer, cakeCost, error } = this.props;
     const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
     const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
 
@@ -25,8 +25,6 @@ class CakeConstructor extends Component {
           <LayerLevers
             batterLayers={batterLayers}
             fillingLayers={fillingLayers}
-            //lastLayerLevered={lastLayerLevered}
-            //peakPastryPart={peakPastryPart}
             stackLayer={stackLayer}
             unstackLayer={unstackLayer}
             cakeLayout={cakeLayout}
@@ -53,11 +51,7 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(CakeConstructor);
 
-{/* 
-// From mapStateToProps, I just removed:
-// lastLayerLevered: state.lastLayerLevered,
-// peakPastryPart: state.peakPastryPart
-
+{/*
 // mapStateToProps stores an arrow function that accepts the entire Redux store state object as an argument.
 // It implicitly returns a JS object with the portion of the Redux store state that we want to update.
 // and this is used to determine what, if anything, should be re-rendered depending on if anything has changed
