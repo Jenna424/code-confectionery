@@ -11,50 +11,6 @@ class CakeConstructor extends Component {
     this.props.loadLayers(); // executing action-dispatching arrow function (received from mapDispatchToProps) which, in turn, calls dispatch() to call function returned by loadLayers asynchronous action creator function, to hopefully successfully fetch layers from Rails API
   }
 
-  producePastryPartLevers = pastryPartLayers => {
-    const { layers, cakeLayout, stackLayer, unstackLayer, cakeCost, error } = this.props;
-    const lastLayerLevered = cakeLayout[cakeLayout.length - 1]; // the last layer object in the array (or undefined if the array is empty)
-    return (
-      pastryPartLayers.map(layerObject =>
-        <LayerLevers
-          key={layerObject.id}
-          label={layerObject.flavor}
-          stackLayer={() => stackLayer(layerObject)}
-          unstackLayer={() => unstackLayer(layerObject)}
-          disableStack={cakeLayout.length > 0 && layerObject.pastry_part === lastLayerLevered.pastry_part}
-          disableUnstack={!(cakeLayout.length && cakeLayout.includes(layerObject) && layerObject.id === lastLayerLevered.id)}
-        />
-      )
-    )
-  }
-
-  render() {
-    const { layers, cakeLayout, stackLayer, unstackLayer, cakeCost, error } = this.props;
-    const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
-    const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
-    return (
-      <div className={styles.leverContainer}>
-        <p style={{marginTop: '10px'}}>Create a Custom Cake</p>
-        {this.props.error ? <p className={styles.error}>Unable to load flavor combinations for custom cake creation</p> : null}
-        <Cake />
-        <p></p>
-        {(batterLayers.length > 0 && fillingLayers.length > 0) && 
-          <Fragment>
-          <div className={styles.levers}>
-            <p>Batter Flavors</p>
-            {this.producePastryPartLevers(batterLayers)}
-          </div>
-          <div className={styles.levers}>
-            <p>Filling Flavors</p>
-            {this.producePastryPartLevers(fillingLayers)}
-          </div>
-          </Fragment>
-        }
-      </div>
-    )
-  }
-}
-
 const mapStateToProps = state => ({
   layers: state.layers,
   cakeLayout: state.cakeLayout,
