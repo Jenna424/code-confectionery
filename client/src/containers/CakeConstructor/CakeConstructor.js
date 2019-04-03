@@ -38,16 +38,16 @@ class CakeConstructor extends Component {
         {error ? <p className={styles.error}>Unable to load flavor combinations for your custom cake creation</p> : null}
         <Cake />
         {(batterLayers.length > 0 && fillingLayers.length > 0) && 
-          <Fragment>
-            <div>
+          <div className={styles.leversContainer}>
+            <div className={styles.pastryPartLevers}>
               <p>Batter Flavors</p>
               {this.producePastryPartLevers(batterLayers)}
             </div>
-            <div>
+            <div className={styles.pastryPartLevers}>
               <p>Filling Flavors</p>
               {this.producePastryPartLevers(fillingLayers)}
             </div>
-          </Fragment>
+          </div>
         }
       </div>
     )
