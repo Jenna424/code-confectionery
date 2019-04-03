@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Cake.module.css';
 
 const Cake = ({ cakeLayout }) => {
   const cakeLayers = cakeLayout.map(cakeObject => 
