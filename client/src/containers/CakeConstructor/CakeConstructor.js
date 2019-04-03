@@ -29,7 +29,7 @@ class CakeConstructor extends Component {
   }
 
   render() {
-    const { layers, cakeCost, error } = this.props;
+    const { layers, cakeLayout, cakeCost, error } = this.props;
     const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
     const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
     return (
