@@ -7,7 +7,7 @@ const Cake = ({ cakeLayout }) => {
   )
 
   return (
-    <div>
+    <div className={styles.cakeContainer}>
       <p>Graphical representation of the layer cake currently being created goes here</p>
     </div>
   )
