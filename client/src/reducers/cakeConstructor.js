@@ -2,10 +2,8 @@ import * as types from '../actions/actionTypes';
 
 const initialState = {
   layers: [], // initially set = to an empty array, layers will ultimately store an array of layer objects fetched asynchronously from my Rails API backend
-  cakeLayout: {}, // initially set = to an empty object, cakeLayout will ultimately store an object that represents the architecture of the cake currently being constructed. Each key in this object will be a string flavor, and its corresponding value will be the number of layers in the cake with that particular flavor
-  lastLayerLevered: null,
-  peakPastryPart: null,
-  cakeCost: 0, // the cake board is free
+  cakeLayout: [], // an array of layer objects that describes the order in which cake layers are stacked, from the base up
+  cakeCost: 0,
   error: false
 }
 
@@ -22,32 +20,19 @@ export default (state = initialState, action) => {
   	case types.STACK_LAYER:
   	  return { // return new, updated state object
   	  	...state, // copy over all key/value pairs from the old, previous, existing state object, but remember: this does NOT create a deep clone (it does NOT go into objects and create new nested objects)
-  	  	cakeLayout: { // set cakeLayout to a new JS object to maintain immutability
-  	  	  ...state.cakeLayout, // using spread operator, I distribute all key/value pairs from the old cakeLayout object into the new one
-  	  	  [action.layer.flavor]: state.cakeLayout[action.layer.flavor] + 1 // using bracket syntax, I dynamically override a given key/value pair in the cakeLayout object. I got a layer object as a payload from my dispatched action object.
-  	  	},
-  	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastry_part],
-        peakPastryPart: action.layer.pastry_part // string 'batter' or 'filling'
+        cakeLayout: [...state.cakeLayout, action.layer], // set cakeLayout = to a new array to maintain immutability. Copy over all layer object elements from the previous cakeLayout array, and then push the layer object just added (received as the payload in the action dispatched) onto the end of this new array
+  	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastry_part]
   	  };
   	case types.UNSTACK_LAYER:
   	  return {
   	  	...state,
-  	  	cakeLayout: {
-  	  	  ...state.cakeLayout,
-  	  	  [action.layer.flavor]: state.cakeLayout[action.layer.flavor] - 1
-  	  	},
-  	  	cakeCost: state.cakeCost - CAKE_COMPONENT_COSTS[action.layer.pastry_part],
-        peakPastryPart: action.layer.pastry_part === 'batter' ? 'filling' : 'batter'
+        cakeLayout: state.cakeLayout.slice(0, -1), // Removing the last array element. Note: this is fine because .slice() is nondestructive
+  	  	cakeCost: state.cakeCost - CAKE_COMPONENT_COSTS[action.layer.pastry_part]
   	  };
     case types.SET_LAYERS_SUCCESS: // this is executed whenever I successfully fetch layers from my Rails server
-      const updatedCakeLayout = {};
-      action.layers.forEach(layerObject => updatedCakeLayout[layerObject.flavor] = 0)
       return { // return a new, updated state object
         ...state, // copy over all key/value pairs from old, previous, existing state object
         layers: action.layers, // setLayersSuccess action creator function returned an action object w/ layers key pointing to layers payload (an array of layer objects that I got back in JSON response from server)
-        cakeLayout: {
-          ...updatedCakeLayout // copy over all key/value pairs from updatedCakeLayout object (in which each key is a string flavor pointing to the value of 0)
-        },
         error: false // set error to false to clear it in case I previously got an error that has since been resolved
       };
     case types.FETCH_LAYERS_FAILURE:
@@ -60,7 +45,5 @@ export default (state = initialState, action) => {
   }
 }
 // layers is an array of all layer objects fetched from my Rails server in CakeConstructor container class component's componentDidMount() lifecycle method.
-// Each layer object in this array has key/value pairs for flavor and pastryPart.
-// cakeLayout is an object representing the architecture of the current layer cake being constructed
-// each key in the cakeLayout object is a string flavor,
-// and its corresponding value is the number of layers in the cake with that particular flavor
+// Each layer object in this array has key/value pairs for flavor and pastry_part.
+// cakeLayout is the array of layer objects that comprise the cake currently being created
