@@ -27,6 +27,31 @@ class CakeConstructor extends Component {
       )
     )
   }
+
+  render() {
+    const { layers, cakeCost, error } = this.props;
+    const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
+    const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
+    return (
+      <div>
+        <p style={{marginTop: '10px'}}>Create a Custom Cake</p>
+        {error ? <p className={styles.error}>Unable to load flavor combinations for your custom cake creation</p> : null}
+        <Cake />
+        {(batterLayers.length > 0 && fillingLayers.length > 0) && 
+          <Fragment>
+            <div>
+              <p>Batter Flavors</p>
+              {this.producePastryPartLevers(batterLayers)}
+            </div>
+            <div>
+              <p>Filling Flavors</p>
+              {this.producePastryPartLevers(fillingLayers)}
+            </div>
+          </Fragment>
+        }
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = state => ({
