@@ -8,7 +8,7 @@ const LayerLevers = ({ batterLayers, fillingLayers, stackLayer, unstackLayer, ca
     pastryPartLayers.map(layerObject =>
       <LayerLever
         key={layerObject.id}
-        flavorLabel={layerObject.flavor}
+        label={layerObject.flavor}
         stackLayer={() => stackLayer(layerObject)}
         unstackLayer={() => unstackLayer(layerObject)}
         disableStack={cakeLayout.length > 0 && layerObject.pastry_part === lastLayerLevered.pastry_part}
