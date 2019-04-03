@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { loadLayers, stackLayer, unstackLayer } from '../../actions/cakeConstructor';
 import styles from './CakeConstructor.module.css';
 import Cake from '../../components/Cake/Cake';
-import LayerLevers from '../../components/LayerLevers/LayerLevers';
+import LayerLevers from '../../components/LayerLevers';
 
 class CakeConstructor extends Component {
 
