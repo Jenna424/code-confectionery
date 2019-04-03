@@ -4,31 +4,26 @@ import LayerLever from '../LayerLever/LayerLever';
 const LayerLevers = ({ batterLayers, fillingLayers, stackLayer, unstackLayer, cakeLayout }) => {
   const lastLayerLevered = cakeLayout[cakeLayout.length - 1]; // the last layer object in the array (or undefined if the array is empty)
 
+  const producePastryPartLevers = pastryPartLayers => (
+    pastryPartLayers.map(layerObject =>
+      <LayerLever
+        key={layerObject.id}
+        flavorLabel={layerObject.flavor}
+        stackLayer={() => stackLayer(layerObject)}
+        unstackLayer={() => unstackLayer(layerObject)}
+        disableStack={cakeLayout.length > 0 && layerObject.pastry_part === lastLayerLevered.pastry_part}
+        disableUnstack={!(cakeLayout.length && cakeLayout.includes(layerObject) && layerObject.id === lastLayerLevered.id)}
+      />
+    )
+  )
+
   return (
     <div style={{marginLeft: '10px'}}>
       <span><em>Batter Flavors</em></span>
-      {batterLayers.map(layerObject =>
-        <LayerLever
-          key={layerObject.id}
-          flavorLabel={layerObject.flavor}
-          stackLayer={() => stackLayer(layerObject)}
-          unstackLayer={() => unstackLayer(layerObject)}
-          disableStack={cakeLayout.length > 0 && layerObject.pastry_part === lastLayerLevered.pastry_part}
-          disableUnstack={!(cakeLayout.length && cakeLayout.includes(layerObject) && layerObject.id === lastLayerLevered.id)}
-        />
-      )}
+      {producePastryPartLevers(batterLayers)}
       <br />
       <span><em>Filling Flavors</em></span>
-      {fillingLayers.map(layerObject =>
-        <LayerLever
-          key={layerObject.id}
-          flavorLabel={layerObject.flavor}
-          stackLayer={() => stackLayer(layerObject)}
-          unstackLayer={() => unstackLayer(layerObject)}
-          disableStack={cakeLayout.length > 0 && layerObject.pastry_part === lastLayerLevered.pastry_part}
-          disableUnstack={!(cakeLayout.length && cakeLayout.includes(layerObject) && layerObject.id === lastLayerLevered.id)}
-        />
-      )}
+      {producePastryPartLevers(fillingLayers)}
     </div>
   )
 }
