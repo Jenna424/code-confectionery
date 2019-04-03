@@ -12,6 +12,7 @@ const Cake = ({ cakeLayout }) => {
 
   return (
     <div className={styles.cakeContainer}>
+      {cakeLayers}
       <div className={styles.cakeBoard}></div>
     </div>
   )
