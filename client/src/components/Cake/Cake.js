@@ -12,7 +12,7 @@ const Cake = ({ cakeLayout }) => {
 
   return (
     <div className={styles.cakeContainer}>
-      <p>Graphical representation of the layer cake currently being created goes here</p>
+      <div className={styles.cakeBoard}></div>
     </div>
   )
 }
