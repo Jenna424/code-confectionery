@@ -22,6 +22,16 @@
   margin: 2% auto;
 }
 
+.standardSpongeTop {
+  width: 450;
+  height: 100px;
+  background-color: #f3e5ab;
+  border-radius: 50% 50% 0 0;
+  box-shadow: inset -15px 0 #DEB887;
+  margin: 2% auto;
+  position: relative;
+}
+
 .batter {
   width: 90%;
   height: 10%;
