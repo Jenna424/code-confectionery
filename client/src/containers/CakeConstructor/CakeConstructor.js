@@ -36,11 +36,11 @@ class CakeConstructor extends Component {
       <Fragment>
         <h2 style={{textAlign: 'center'}}>Create a Custom Cake</h2>
         <div style={{float: 'left', marginLeft: '10px'}}>
-          <p style={{fontWeight: 'bold'}}>Batter Layers</p>
+          <p style={{fontWeight: 'bold'}}>Batter Flavors</p>
           {this.producePastryPartLevers(batterLayers)}
         </div>
         <div style={{float: 'right', marginRight: '10px'}}>
-          <p style={{fontWeight: 'bold'}}>Filling Layers</p>
+          <p style={{fontWeight: 'bold'}}>Filling Flavors</p>
           {this.producePastryPartLevers(fillingLayers)}
         </div>
         <Cake cakeLayout={cakeLayout} />
