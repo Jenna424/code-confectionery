@@ -34,20 +34,20 @@ class CakeConstructor extends Component {
     const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
     return (
       <div>
-        <p style={{marginTop: '10px'}}>Create a Custom Cake</p>
+        <h2 style={{textAlign: 'center'}}>Create a Custom Cake</h2>
         {error ? <p className={styles.error}>Unable to load flavor combinations for your custom cake creation</p> : null}
-        <Cake cakeLayout={cakeLayout} />
-        {(batterLayers.length > 0 && fillingLayers.length > 0) && 
-          <div className={styles.leversContainer}>
-            <div className={styles.pastryPartLevers}>
-              <p>Batter Flavors</p>
+        {(batterLayers.length > 0 && fillingLayers.length > 0) &&
+          <Fragment>
+            <div className={styles.batterLevers}>
+              <p style={{fontWeight: 'bold'}}>Batter Flavors</p>
               {this.producePastryPartLevers(batterLayers)}
             </div>
-            <div className={styles.pastryPartLevers}>
-              <p>Filling Flavors</p>
+            <div className={styles.fillingLayers}>
+              <p style={{fontWeight: 'bold'}}>Filling Flavors</p>
               {this.producePastryPartLevers(fillingLayers)}
             </div>
-          </div>
+            <Cake cakeLayout={cakeLayout} />
+          </Fragment>
         }
       </div>
     )
