@@ -1,15 +1,16 @@
-.cakeContainer { /* div.cakeContainer wraps the entire cake */
-  margin: auto; /* centers the div.cakeContainer */
-  width: 500px;
-  height: 450px;
+.standardSponge {
+  margin: auto;
+  text-align: center;
+  width: 450px;
+  height: 500px;
 }
 
-.cakeBoard { /* div.cakeBoard is the thin round silver base on which the cake sits */
-  width: 95%;
-  height: 1.5%;
-  background: linear-gradient(#D3D3D3, #C0C0C0); /* Transitioning between shades of gray. Not having a monotone color gives it a 3-dimensional look */
-  border-radius: 15px; /* rounded corners */
-  margin: auto; /* centers it */
+.cakeContainer { /* div.cakeContainer wraps the entire cake */
+  margin: auto;
+  text-align: center;
+  width: 450px;
+  height: 500px;
+  overflow: scroll;
 }
 
 .batter {
