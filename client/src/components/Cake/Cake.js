@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styles from './Cake.module.css';
 import CakeLayer from './CakeLayer';
 
