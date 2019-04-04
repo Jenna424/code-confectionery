@@ -6,16 +6,11 @@
   border-radius: '4px';
 }
 
-.leversContainer {
-  margin: auto;
-  width: 500px;
-  height: 450px;
-}
-
-.pastryPartLevers {
-  float: left;
-  text-align: center;
-  width: 250px;
-  height: 225px;
-  overflow: scroll;
+.batterLevers {
+  width: 100px;
+  float: right;
+  margin-top: 15px;
+  margin-right: 20px;
+  display: block; /* use flexbox to position the div with the text and the buttons (flex-flow will be row by default) */
+  overflow-y: scroll;
 }
