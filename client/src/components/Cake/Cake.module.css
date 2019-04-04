@@ -13,6 +13,15 @@
   overflow: scroll;
 }
 
+.standardSpongeBase {
+  width: 450;
+  height: 200px;
+  background-color: #f3e5ab;
+  border-radius: 0 0 40px 40px;
+  box-shadow: inset -15px 0 #DEB887;
+  margin: 2% auto;
+}
+
 .batter {
   width: 90%;
   height: 10%;
