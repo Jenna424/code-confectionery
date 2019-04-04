@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => (
-  <div className="ui top fixed menu">
+  <div className="ui top menu">
     <div className="item" style={{color: 'violet', backgroundColor: 'lightyellow'}}>
       <i className="birthday cake icon"></i>
     </div>
