@@ -16,6 +16,12 @@ class CakeLayer extends Component {
     }
     return batterClasses;
   }
+
+  styleFilling = flavor => {
+    return (
+      <p>stylize filling here</p>
+    )
+  }
 }
 
 export default CakeLayer;
