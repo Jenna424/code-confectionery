@@ -30,7 +30,7 @@ class CakeLayer extends Component {
     let layerStyles = pastryPart === 'batter' ? this.styleBatter(flavor) : this.styleFilling(flavor);
 
     return (
-      <div data-flavor={flavor} className={layerStyles.join(' ')}></div>
+      <div data-flavor={flavor} className={layerStyles.join(' ')}>{flavor}</div>
     )
   }
 }
