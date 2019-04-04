@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import styles from './Cake.module.css';
 import CakeLayer from './CakeLayer';
 
-const Cake = ({ cakeLayout }) => {
+const Cake = ({ cakeLayout, error }) => {
   let cakeLayers = cakeLayout.map(cakeObject => 
     <CakeLayer flavor={cakeObject.flavor} />
   )
