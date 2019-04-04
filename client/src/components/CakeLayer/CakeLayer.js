@@ -12,7 +12,7 @@ class CakeLayer extends Component {
         batterClasses.push(styles.carrot)
         break;
       default:
-        batterClasses.push(styles.mysteryFlavor)
+        batterClasses.push(styles.mysteryBatterFlavor)
     }
     return batterClasses;
   }
