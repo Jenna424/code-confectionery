@@ -42,7 +42,7 @@ class CakeConstructor extends Component {
               <p style={{fontWeight: 'bold'}}>Batter Flavors</p>
               {this.producePastryPartLevers(batterLayers)}
             </div>
-            <div className={styles.fillingLayers}>
+            <div>
               <p style={{fontWeight: 'bold'}}>Filling Flavors</p>
               {this.producePastryPartLevers(fillingLayers)}
             </div>
