@@ -43,7 +43,7 @@ class CakeConstructor extends Component {
           <p style={{fontWeight: 'bold'}}>Filling Flavors</p>
           {this.producePastryPartLevers(fillingLayers)}
         </div>
-        <Cake cakeLayout={cakeLayout} />
+        <Cake cakeLayout={cakeLayout} error={error} />
       </Fragment>
     )
   }
