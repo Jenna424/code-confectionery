@@ -41,26 +41,6 @@
   position: relative;
 }
 
-.batter {
-  width: 90%;
-  height: 10%;
-  margin: auto; /* centers it */
-  border-radius: 20px; /* rounded corners */
-  background-color: #f3e5ab;
-}
-
-.redVelvet {
-  background-color: #800B15;
-}
-
-.carrot {
-  background-color: #BF6F31;
-}
-
-.mysteryFlavor {
-  border: 1px solid #f0de95;
-}
-
 .mysteryFlavor:after {
   content: attr(data-flavor);
   text-align: center;
