@@ -10,7 +10,6 @@ const Cake = ({ cakeLayout }) => {
   if (!cakeLayers.length) {
     cakeLayers = (
       <Fragment>
-        <h2>Create a Custom Cake</h2>
         <div className={styles.standardSpongeTop}></div>
         <p><em>Swap this standard slab of spongecake for your custom cake confection!</em></p>
         <p><em>Please prepare your pastry by adding alternate layers of batter and filling</em></p>
@@ -19,7 +18,7 @@ const Cake = ({ cakeLayout }) => {
     )
   }
 
-  let cakeClass = (cakeLayout.length) ? styles.cakeContainer : styles.standardSponge
+  let cakeClass = cakeLayout.length ? styles.cakeContainer : styles.standardSponge
 
   return (
     <div className={cakeClass}>
