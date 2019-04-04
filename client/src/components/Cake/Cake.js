@@ -9,6 +9,17 @@ const Cake = ({ cakeLayout, error }) => {
     <CakeLayer flavor={cakeObject.flavor} />
   )
 
+  if (error) {
+    defaultFilling = <p className={styles.error}>Unable to load flavor combinations for your custom cake creation</p>
+  } else if (!cakeLayers.length) {
+    defaultFilling = (
+      <Fragment>
+        <p><em>Swap this standard slab of spongecake for your custom cake confection!</em></p>
+        <p><em>Please prepare your pastry by adding alternate layers of batter and filling</em></p>
+      </Fragment>
+    )
+  }
+
   let cakeClass = cakeLayout.length ? styles.cakeContainer : styles.standardSponge
 
   return (
