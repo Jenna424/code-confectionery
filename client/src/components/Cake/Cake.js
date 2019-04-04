@@ -9,13 +9,13 @@ const Cake = ({ cakeLayout }) => {
 
   if (!cakeLayers.length) {
     cakeLayers = (
-    <div style={{marginTop: '10px'}}>
-      <h2>Create a Custom Cake</h2>
-      <div className={styles.standardSpongeTop}></div>
+      <div style={{marginTop: '10px'}}>
+        <h2>Create a Custom Cake</h2>
+        <div className={styles.standardSpongeTop}></div>
         <p><em>Swap this standard slab of spongecake for your custom cake confection!</em></p>
         <p><em>Please prepare your pastry by adding alternate layers of batter and filling</em></p>
-      <div className={styles.standardSpongeBase}></div>
-    </div>
+        <div className={styles.standardSpongeBase}></div>
+      </div>
     )
   }
 
