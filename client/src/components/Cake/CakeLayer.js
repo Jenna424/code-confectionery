@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from './Cake.module.css';
 
 class CakeLayer extends Component {
-  styleBatter= flavor => {
+  styleBatter = flavor => {
     let batterClasses = [styles.batter];
     switch (flavor) {
       case ('Red Velvet'):
