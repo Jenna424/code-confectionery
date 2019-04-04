@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styles from './Cake.module.css';
-import CakeLayer from './CakeLayer';
+import CakeLayer from '../CakeLayer/CakeLayer';
 
 const Cake = ({ cakeLayout, error }) => {
   let defaultFilling;
