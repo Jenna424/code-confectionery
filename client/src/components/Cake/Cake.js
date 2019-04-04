@@ -6,7 +6,7 @@ const Cake = ({ cakeLayout, error }) => {
   let defaultFilling;
 
   let cakeLayers = cakeLayout.map(cakeObject => 
-    <CakeLayer key={cakeObject.id} flavor={cakeObject.flavor} />
+    <CakeLayer key={cakeObject.id} cakeObject={cakeObject} />
   )
 
   if (error) {
