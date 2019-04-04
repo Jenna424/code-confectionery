@@ -40,11 +40,3 @@
   margin: 2% auto;
   position: relative;
 }
-
-.mysteryFlavor:after {
-  content: attr(data-flavor);
-  text-align: center;
-  padding: 10px;
-  display: block;
-  line-height: initial;
-}
