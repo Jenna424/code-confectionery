@@ -20,6 +20,16 @@ const Cake = ({ cakeLayout, error }) => {
     )
   }
 
+  if (error || !cakeLayers.length) {
+    cakeLayers = (
+      <Fragment>
+        <div className={styles.standardSpongeTop}></div>
+        {defaultFilling}
+        <div className={styles.standardSpongeBase}></div>
+      </Fragment>
+    )
+  }
+
   let cakeClass = cakeLayout.length ? styles.cakeContainer : styles.standardSponge
 
   return (
