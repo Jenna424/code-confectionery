@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './Cake.module.css';
+import styles from './CakeLayer.module.css';
 
 class CakeLayer extends Component {
   styleBatter = flavor => {
