@@ -3,7 +3,7 @@ import styles from './CakeLayer.module.css';
 
 class CakeLayer extends Component {
   styleBatter = flavor => {
-    let batterClasses = [styles.batter];
+    let batterClasses = [styles.batter, styles.mysteryBatterFlavor];
     switch (flavor) {
       case ('Red Velvet'):
         batterClasses.push(styles.redVelvet);
@@ -12,7 +12,7 @@ class CakeLayer extends Component {
         batterClasses.push(styles.carrot)
         break;
       default:
-        batterClasses.push(styles.mysteryBatterFlavor)
+        return batterClasses;
     }
     return batterClasses;
   }
@@ -30,7 +30,7 @@ class CakeLayer extends Component {
     let layerStyles = pastryPart === 'batter' ? this.styleBatter(flavor) : this.styleFilling(flavor);
 
     return (
-      <div data-flavor={flavor} className={layerStyles.join(' ')}>{flavor}</div>
+      <div data-flavor={flavor} className={layerStyles.join(' ')}></div>
     )
   }
 }
