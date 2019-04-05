@@ -21,6 +21,8 @@ const PastryPartsPreview = ({ cakeLayout, cakeCost }) => {
         <p><strong>Filling Layers</strong>:</p>
         {fillingFlavors}
       </div>
+      <br />
+      <p><strong>Cake Cost</strong>: ${cakeCost.toFixed(2)}</p>
     </Fragment>
   )
 }
