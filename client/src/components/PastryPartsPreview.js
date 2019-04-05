@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 const PastryPartsPreview = ({ cakeLayout, cakeCost }) => {
   const containsFilling = cakeLayout.filter(layerObject => layerObject.pastry_part === 'filling').length > 0;
+  let fillingFlavors = cakeLayout.filter(layerObject => layerObject.pastry_part === 'filling').map(fillingObject => fillingObject.flavor).join(', ');
 
   return (
     <Fragment>
