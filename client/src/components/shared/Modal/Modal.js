@@ -7,7 +7,7 @@ const Modal = ({ viewable, closed, children }) => (
     <Backdrop viewable={viewable} hide={closed} />
     <div
       className={styles.modal}
-      style={{transform: viewable ? 'translateY(0)' : 'translateY(-100vh)', 
+      style={{textAlign: 'center', transform: viewable ? 'translateY(0)' : 'translateY(-100vh)', 
       opacity: viewable ? '1' : '0'}}>
       {children}
     </div>
