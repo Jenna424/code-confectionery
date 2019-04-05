@@ -40,6 +40,16 @@ class CakeConstructor extends Component {
     })
   }
 
+  continueCakeCheckout = () => {
+    this.props.history.push('/pastry-particulars')
+  }
+
+  cancelCakeCheckout = () => {
+    this.setState({
+      commenceCakeCheckout: false
+    })
+  }
+
   render() {
     const { layers, cakeLayout, cakeCost, error } = this.props;
     const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
