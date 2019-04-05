@@ -19,9 +19,6 @@ class CakeLayer extends Component {
 
   styleFilling = flavor => {
     let fillingClasses = [styles.filling, styles.mysteryFillingFlavor];
-    return (
-      <p>stylize filling here</p>
-    )
   }
 
   render() {
