@@ -36,7 +36,7 @@ class CakeConstructor extends Component {
   onPurchasePastry = () => {
     this.props.history.replace('/purchase/provide-pastry-particulars')
     this.setState({
-      presentlyPurchasingPastry: true
+      commenceCakeCheckout: true
     })
   }
 
