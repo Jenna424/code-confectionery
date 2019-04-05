@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const PastryPartsPreview = ({ cakeLayout, cakeCost }) => {
+const PastryPartsPreview = ({ cakeLayout, cakeCost, continueCakeCheckout, cancelCakeCheckout }) => {
   const containsFilling = cakeLayout.filter(layerObject => layerObject.pastry_part === 'filling').length > 0;
   let fillingFlavors = cakeLayout.filter(layerObject => layerObject.pastry_part === 'filling').map(fillingObject => fillingObject.flavor).join(', ');
   const batterFlavors = cakeLayout.filter(layerObject => layerObject.pastry_part === 'batter').map(batterObject => batterObject.flavor).join(', ');
@@ -23,6 +23,7 @@ const PastryPartsPreview = ({ cakeLayout, cakeCost }) => {
       </div>
       <br />
       <p><strong>Cake Cost</strong>: ${cakeCost.toFixed(2)}</p>
+      <br />
     </Fragment>
   )
 }
