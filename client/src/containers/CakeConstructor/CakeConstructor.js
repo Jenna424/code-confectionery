@@ -44,7 +44,11 @@ class CakeConstructor extends Component {
           {this.producePastryPartLevers(fillingLayers)}
         </div>
         <Cake cakeLayout={cakeLayout} cakeCost={cakeCost} error={error} />
-        <button className="ui inverted pink button" onClick={this.onPurchasePastry}>Purchase Pastry</button>
+        {cakeLayout.filter(layer => layer.pastry_part === 'batter').length > 0 &&
+          <div style={{textAlign: 'center'}}>
+            <button className="ui inverted pink button" onClick={this.onPurchasePastry}>Purchase Pastry</button>
+          </div>
+        }
       </Fragment>
     )
   }
