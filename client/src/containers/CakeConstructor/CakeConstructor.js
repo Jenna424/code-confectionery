@@ -8,6 +8,10 @@ import LayerLevers from '../../components/LayerLevers';
 
 class CakeConstructor extends Component {
 
+  state = {
+    presentlyPurchasingPastry: false
+  }
+
   componentDidMount() {
     this.props.loadLayers(); // executing action-dispatching arrow function (received from mapDispatchToProps) which, in turn, calls dispatch() to call function returned by loadLayers asynchronous action creator function, to hopefully successfully fetch layers from Rails API
   }
@@ -31,6 +35,9 @@ class CakeConstructor extends Component {
 
   onPurchasePastry = () => {
     this.props.history.replace('/purchase/provide-pastry-particulars')
+    this.setState({
+      presentlyPurchasingPastry: true
+    })
   }
 
   render() {
