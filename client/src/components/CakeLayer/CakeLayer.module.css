@@ -15,7 +15,7 @@
 }
 
 .mysteryBatterFlavor {
-  border: 1px solid #f0de95;
+  border: 1px solid linen;
 }
 
 .mysteryBatterFlavor:after {
@@ -25,7 +25,7 @@
   display: block;
   line-height: initial;
 }
-
+/* STYLES FOR FILLING LAYERS */
 .filling {
   width: 90%;
   height: 6%;
@@ -33,6 +33,10 @@
   border: 1px #eee;
   margin: auto;
   border-radius: 15px;
+}
+
+.mysteryFillingFlavor {
+  border: 1px solid snow;
 }
 
 .keylime {
