@@ -28,6 +28,10 @@ class CakeConstructor extends Component {
     )
   }
 
+  onPurchasePastry = () => {
+    this.props.history.replace('/purchase/provide-pastry-particulars')
+  }
+
   render() {
     const { layers, cakeLayout, cakeCost, error } = this.props;
     const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
