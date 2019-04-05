@@ -13,10 +13,12 @@ const PastryPartsPreview = ({ cakeLayout, cakeCost }) => {
     <Fragment>
       <h3><em>Preview Your Pastry Prior to Purchase</em></h3>
       <div>
-        <strong>Batter Layers</strong>:
-        <br />
+        <p><strong>Batter Layers</strong>:</p>
         {batterFlavors}
       </div>
+      <br />
+    </Fragment>
+  )
     </Fragment>
   )
 }
