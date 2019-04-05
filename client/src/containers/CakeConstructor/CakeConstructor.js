@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { loadLayers, stackLayer, unstackLayer } from '../../actions/cakeConstructor';
 import styles from './CakeConstructor.module.css';
 import Modal from '../../components/shared/Modal/Modal';
+import PastryPartsPreview from '../../components/PastryPartsPreview';
 import Cake from '../../components/Cake/Cake';
 import LayerLevers from '../../components/LayerLevers';
 
@@ -34,7 +35,6 @@ class CakeConstructor extends Component {
   }
 
   onPurchasePastry = () => {
-    this.props.history.replace('/purchase/provide-pastry-particulars')
     this.setState({
       commenceCakeCheckout: true
     })
@@ -47,7 +47,7 @@ class CakeConstructor extends Component {
     return (
       <Fragment>
         <Modal viewable={this.state.commenceCakeCheckout} closed={this.cancelCakeCheckout}>
-          <PastryPreview cakeLayout={cakeLayout} />
+          <PastryPartsPreview cakeLayout={cakeLayout} cakeCost={cakeCost} />
         </Modal>
         <h2 style={{textAlign: 'center'}}>Create a Custom Cake</h2>
         <div style={{float: 'left', marginLeft: '10px'}}>
