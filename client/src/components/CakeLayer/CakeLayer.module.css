@@ -25,3 +25,15 @@
   display: block;
   line-height: initial;
 }
+
+.filling {
+  width: 90%;
+  height: 6%;
+  background-color: #ddbf86;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.keylime {
+  background-color: #e8f48c;
+}
