@@ -29,10 +29,9 @@
 .filling {
   width: 90%;
   height: 6%;
-  background: linear-gradient(#f1dfd1, #f6f0ea);
-  border: 1px #eee;
   margin: auto;
   border-radius: 15px;
+  background: linear-gradient(#f1dfd1, #f6f0ea);
 }
 
 .mysteryFillingFlavor {
