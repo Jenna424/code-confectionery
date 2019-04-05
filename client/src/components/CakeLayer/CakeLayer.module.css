@@ -3,7 +3,7 @@
   height: 10%;
   margin: auto; /* centers it */
   border-radius: 20px; /* rounded corners */
-  background-color: #f3e5ab;
+  background: linear-gradient(#F3E5AB, #E9E1CF);
 }
 
 .redVelvet {
