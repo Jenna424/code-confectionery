@@ -50,8 +50,8 @@ class CakeConstructor extends Component {
           <PastryPartsPreview
             cakeLayout={cakeLayout}
             cakeCost={cakeCost}
-            continueCakeCheckout={continueCakeCheckout}
-            cancelCakeCheckout={cancelCakeCheckout}
+            continueCakeCheckout={this.continueCakeCheckout}
+            cancelCakeCheckout={this.cancelCakeCheckout}
           />
         </Modal>
         <h2 style={{textAlign: 'center'}}>Create a Custom Cake</h2>
