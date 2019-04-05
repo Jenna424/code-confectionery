@@ -46,7 +46,9 @@ class CakeConstructor extends Component {
     const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
     return (
       <Fragment>
-        <Modal viewable={this.state.commenceCakeCheckout} closed={this.cancelCakeCheckout} />
+        <Modal viewable={this.state.commenceCakeCheckout} closed={this.cancelCakeCheckout}>
+          <PastryPreview cakeLayout={cakeLayout} />
+        </Modal>
         <h2 style={{textAlign: 'center'}}>Create a Custom Cake</h2>
         <div style={{float: 'left', marginLeft: '10px'}}>
           <p style={{fontWeight: 'bold'}}>{layers.length ? 'Batter Flavors' : null}</p>
