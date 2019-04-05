@@ -5,6 +5,10 @@ const PastryPartsPreview = ({ cakeLayout, cakeCost }) => {
   let fillingFlavors = cakeLayout.filter(layerObject => layerObject.pastry_part === 'filling').map(fillingObject => fillingObject.flavor).join(', ');
   const batterFlavors = cakeLayout.filter(layerObject => layerObject.pastry_part === 'batter').map(batterObject => batterObject.flavor).join(', ');
 
+  if (!containsFilling) {
+    fillingFlavors = <p>Your cake does not contain any filling.</p>
+  }
+
   return (
     <Fragment>
       <h3><em>Preview Your Pastry Prior to Purchase</em></h3>
