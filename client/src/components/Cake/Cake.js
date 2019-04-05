@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import styles from './Cake.module.css';
 import CakeLayer from '../CakeLayer/CakeLayer';
 
-const Cake = ({ cakeLayout, error }) => {
+const Cake = ({ cakeLayout, cakeCost, error }) => {
   let defaultFilling;
 
   let cakeLayers = cakeLayout.map(cakeObject => 
@@ -34,6 +34,7 @@ const Cake = ({ cakeLayout, error }) => {
 
   return (
     <div className={cakeClass}>
+      {cakeCost ? <p><strong>Current Cake Cost</strong>: ${cakeCost.toFixed(2)}</p> : null}
       {cakeLayers}
     </div>
   )
