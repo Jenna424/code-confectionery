@@ -47,7 +47,12 @@ class CakeConstructor extends Component {
     return (
       <Fragment>
         <Modal viewable={this.state.commenceCakeCheckout} closed={this.cancelCakeCheckout}>
-          <PastryPartsPreview cakeLayout={cakeLayout} cakeCost={cakeCost} />
+          <PastryPartsPreview
+            cakeLayout={cakeLayout}
+            cakeCost={cakeCost}
+            continueCakeCheckout={continueCakeCheckout}
+            cancelCakeCheckout={cancelCakeCheckout}
+          />
         </Modal>
         <h2 style={{textAlign: 'center'}}>Create a Custom Cake</h2>
         <div style={{float: 'left', marginLeft: '10px'}}>
