@@ -9,7 +9,7 @@ import LayerLevers from '../../components/LayerLevers';
 class CakeConstructor extends Component {
 
   state = {
-    presentlyPurchasingPastry: false
+    commenceCakeCheckout: false
   }
 
   componentDidMount() {
