@@ -17,8 +17,10 @@ const PastryPartsPreview = ({ cakeLayout, cakeCost }) => {
         {batterFlavors}
       </div>
       <br />
-    </Fragment>
-  )
+      <div>
+        <p><strong>Filling Layers</strong>:</p>
+        {fillingFlavors}
+      </div>
     </Fragment>
   )
 }
