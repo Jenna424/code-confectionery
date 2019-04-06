@@ -192,4 +192,8 @@ const mapStateToProps = state => ({
   cakeCost: state.cakeCost
 })
 
+const mapDispatchToProps = dispatch => ({
+  purchasePastry: orderObject => dispatch(purchasePastry(orderObject))
+})
+
 export default connect(mapStateToProps, mapDispatchToProps)(CakeCustomizerForm);
