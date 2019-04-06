@@ -110,7 +110,6 @@ class CakeCustomizerForm extends Component {
             {value: 'none', label: 'None'}
           ]
         },
-        value: null,
         validationCriteria: {
           cannotBeBlank: true
         },
