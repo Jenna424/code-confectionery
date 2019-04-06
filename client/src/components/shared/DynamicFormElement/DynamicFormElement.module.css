@@ -3,3 +3,14 @@
   box-sizing: border-box;
   padding: 15px;
 }
+
+.genericTag {
+  display: block;
+  width: 85%;
+  box-sizing: border-box;
+  font: inherit;
+  background-color: white;
+  border: 1px solid black;
+  outline: none;
+  padding: 5px 15px;
+}
