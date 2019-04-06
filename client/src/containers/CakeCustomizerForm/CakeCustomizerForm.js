@@ -182,8 +182,6 @@ class CakeCustomizerForm extends Component {
                 tagContents={fieldObject.setup.tagContents}
                 value={fieldObject.setup.value}
                 isInvalid={!fieldObject.setup.isValid}
-                mustValidate={fieldObject.setup.validationCriteria}
-                interactedWith={fieldObject.setup.interactedWith}
                 handleOnChange={event => this.handleOnChange(event, fieldObject.fieldProperty)}
               />
             )}
