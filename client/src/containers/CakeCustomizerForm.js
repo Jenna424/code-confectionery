@@ -187,4 +187,9 @@ class CakeCustomizerForm extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  cakeLayout: state.cakeLayout,
+  cakeCost: state.cakeCost
+})
+
 export default connect(mapStateToProps, mapDispatchToProps)(CakeCustomizerForm);
