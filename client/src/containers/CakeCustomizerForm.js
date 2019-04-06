@@ -75,7 +75,7 @@ class CakeCustomizerForm extends Component {
         stringTag: 'select',
         tagContents: {
           optionsArray: [
-            {value: '', label: 'Select a garnish for cake decoration'}
+            {value: '', label: 'Select a garnish for cake decoration'},
             {value: 'rainbow sprinkles', label: 'Rainbow Sprinkles'},
             {value: 'chocolate sprinkles', label: 'Chocolate Sprinkles'},
             {value: 'sea salt', label: 'Sea Salt'},
