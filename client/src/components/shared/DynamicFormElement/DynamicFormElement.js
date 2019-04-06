@@ -1,19 +1,13 @@
 import React from 'react';
 import styles from './DynamicFormElement.module.css';
 
-const DynamicFormElement = ({ stringTag, tagContents, labelText, value, mustValidate, formIsInvalid, handleOnChange, interactedWith }) => {
-  const tagClassesArray = [styles.genericTag];
-
-  if (interactedWith && mustValidate && formIsInvalid) {
-    tagClassesArray.push(styles.validationError)
-  }
-
+const DynamicFormElement = ({ stringTag, tagContents, value, formIsInvalid, handleOnChange }) => {
   let htmlTag = null;
 
   switch (stringTag) {
     case 'select':
       htmlTag = (
-        <select className={tagClassesArray.join(' ')}
+        <select
           value={value}
           onChange={handleOnChange}>
           {tagContents.optionsArray.map(optionObject =>
@@ -25,15 +19,14 @@ const DynamicFormElement = ({ stringTag, tagContents, labelText, value, mustVali
       );
   	  break;
   	case 'textarea':
-  	  htmlTag = <textarea className={tagClassesArray.join(' ')} {...tagContents} value={value} onChange={handleOnChange} />;
+  	  htmlTag = <textarea {...tagContents} value={value} onChange={handleOnChange} />;
   	  break;
   	default:
-  	  htmlTag = <input className={tagClassesArray.join(' ')} {...tagContents} value={value} onChange={handleOnChange} />;
+  	  htmlTag = <input {...tagContents} value={value} onChange={handleOnChange} />;
   }
 
   return (
     <div className={styles.inputWrapper}>
-      <label className={styles.label}>{labelText}</label>
       {htmlTag}
     </div>
   )
