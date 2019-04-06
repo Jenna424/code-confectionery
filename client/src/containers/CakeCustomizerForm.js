@@ -107,14 +107,14 @@ class CakeCustomizerForm extends Component {
             {value: 'monogrammed metal topper', label: 'Monogrammed Metal Topper'},
             {value: 'text topper', label: 'Text Topper'},
             {value: 'none', label: 'None'}
-          ],
-          value: null,
-          validationCriteria: {
-            cannotBeBlank: true
-          },
-          isValid: false,
-          interactedWith: false
-        }
+          ]
+        },
+        value: null,
+        validationCriteria: {
+          cannotBeBlank: true
+        },
+        isValid: false,
+        interactedWith: false
       }
   	}
   }
