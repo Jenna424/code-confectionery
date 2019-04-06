@@ -19,7 +19,7 @@ const DynamicFormElement = ({ stringTag, tagContents, labelText, value, mustVali
             <option key={optionObject.value} value={optionObject.value}>
               {optionObject.label}
             </option>
-          ))}
+          )}
           value={value} 
           onChange={handleOnChange}>
   	    </select>
