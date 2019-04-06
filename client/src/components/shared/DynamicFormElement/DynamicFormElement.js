@@ -7,9 +7,6 @@ const DynamicFormElement = ({ stringTag, tagContents, labelText, value, mustVali
 
   if (interactedWith && mustValidate && isInvalid) {
     tagClassesArray.push(styles.validationErrorMessage)
-  }
-  
-  if (interactedWith && isInvalid) {
     validationErrorMessage = <span style={{color: 'red'}}>{labelText} must be valid. Please try again!</span>
   }
 
