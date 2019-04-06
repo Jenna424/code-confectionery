@@ -11,19 +11,18 @@ const DynamicFormElement = ({ stringTag, tagContents, labelText, value, mustVali
   let htmlTag = null;
 
   switch (stringTag) {
-  	case 'select':
-  	  htmlTag = (
-  	    <select 
-          className={tagClassesArray.join(' ')} 
-          {...tagContents.optionsArray.map(optionObject =>
+    case 'select':
+      htmlTag = (
+        <select className={tagClassesArray.join(' ')}
+          value={value}>
+          onChange={handleOnChange}
+          {tagContents.optionsArray.map(optionObject =>
             <option key={optionObject.value} value={optionObject.value}>
               {optionObject.label}
             </option>
           )}
-          value={value} 
-          onChange={handleOnChange}>
-  	    </select>
-  	  );
+        </select>
+      );
   	  break;
   	case 'textarea':
   	  htmlTag = <textarea className={tagClassesArray.join(' ')} {...tagContents} value={value} onChange={handleOnChange} />;
