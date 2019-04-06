@@ -101,6 +101,7 @@ class CakeCustomizerForm extends Component {
         stringTag: 'select',
         tagContents: {
           optionsArray: [
+            {value: '', label: 'Select a cake topper'},
             {value: 'birthday candles', label: 'Birthday Candles'},
             {value: 'wedding figurines', label: 'Bride and Groom Figurines'},
             {value: 'sparklers', label: 'Sparklers'},
