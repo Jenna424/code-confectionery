@@ -140,7 +140,7 @@ class CakeCustomizerForm extends Component {
     event.preventDefault(); // prevent the default form submit action
 
     const { pastryParticulars } = this.state;
-    const { layers, cakeCost, onPastryPurchase } = this.props;
+    const { cakeLayout, cakeCost, purchasePastry } = this.props;
     const cakeCustomizations = {};
 
     for (let fieldProperty in pastryParticulars) {
@@ -149,11 +149,11 @@ class CakeCustomizerForm extends Component {
 
     const orderObject = {
       cakeCustomizations,
-      layers,
+      cakeLayout,
       cakeCost
     }
 
-    onPastryPurchase(orderObject)
+    purchasePastry(orderObject)
   }
 
   render() {
@@ -188,4 +188,3 @@ class CakeCustomizerForm extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CakeCustomizerForm);
-
