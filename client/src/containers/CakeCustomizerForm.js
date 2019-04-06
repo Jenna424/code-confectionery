@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { meetsValidationCriteria } from '../utils/logic.js';
 import DynamicFormElement from '../components/shared/DynamicFormElement/DynamicFormElement';
+import { purchasePastry } from '../actions/pastryPurchaser';
 
 class CakeCustomizerForm extends Component {
   state = {
@@ -24,6 +25,8 @@ class CakeCustomizerForm extends Component {
         stringTag: 'select',
         tagContents: {
           optionsArray: [
+            {value: '', label: 'Select the occasion that calls for this cake!'},
+            {value: 'just because', label: 'Just because...'},
             {value: 'birthday', label: 'Birthday'},
             {value: 'b mitzvah', label: 'Bar/Bat Mitzvah'},
             {value: 'sweet 16', label: 'Sweet Sixteen'},
@@ -36,14 +39,14 @@ class CakeCustomizerForm extends Component {
             {value: 'open house', label: 'Open House'},
             {value: 'farewell', label: 'Farewell'},
             {value: 'retirement', label: 'Retirement'},
-            {value: 'just because', label: 'Just Because...'},
             {value: 'other', label: 'Other'}
-          ],
-          value: 'just because',
-          validationCriteria: {},
-          isValid: true,
-          interactedWith: false
-        }
+          ]
+        },
+        validationCriteria: {
+          cannotBeBlank: true
+        },
+        isValid: false,
+        interactedWith: false
       },
       message: {
         stringTag: 'input',
@@ -180,7 +183,7 @@ class CakeCustomizerForm extends Component {
               handleOnChange={event => this.handleOnChange(event, fieldObject.fieldProperty)}
             />
           )}
-          <input type="submit" disabled={!this.state.wholeFormIsValid}>Purchase Pastry</input>
+          <button type="submit" disabled={!this.state.wholeFormIsValid}>Purchase Pastry</button>
         </form>
       </div>
     )
