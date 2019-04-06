@@ -32,11 +32,11 @@ class CakeCustomizerForm extends Component {
             {value: 'wedding', label: 'Wedding'},
             {value: 'anniversary', label: 'Anniversary'},
             {value: 'baby shower', label: 'Baby Shower'},
-            {value: 'holiday', label: 'Holiday'}
+            {value: 'holiday', label: 'Holiday'},
             {value: 'open house', label: 'Open House'},
             {value: 'farewell', label: 'Farewell'},
             {value: 'retirement', label: 'Retirement'},
-            {value: 'just because', label: 'Just Because...'}
+            {value: 'just because', label: 'Just Because...'},
             {value: 'other', label: 'Other'}
           ],
           value: 'just because',
@@ -59,7 +59,7 @@ class CakeCustomizerForm extends Component {
       diameter: {
         stringTag: 'input',
         tagContents: {
-          type: 'number'
+          type: 'number',
           min: 4,
           max: 14
         },
@@ -83,7 +83,7 @@ class CakeCustomizerForm extends Component {
             {value: 'buttercream swirls', label: 'Buttercream Swirls'},
             {value: 'chocolate syrup', label: 'Chocolate Syrup'},
             {value: 'whipped cream', label: 'Whipped Cream Dollop'},
-            {value: 'fresh fruit', label: 'Fresh Fruit'}
+            {value: 'fresh fruit', label: 'Fresh Fruit'},
             {value: 'none', label: 'None'}
           ],
           value: null,
@@ -149,7 +149,7 @@ class CakeCustomizerForm extends Component {
 
     const orderObject = {
       cakeCustomizations,
-      layers
+      layers,
       cakeCost
     }
 
