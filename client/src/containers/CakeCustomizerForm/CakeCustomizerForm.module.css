@@ -1,7 +1,9 @@
 .cakeCustomizerContainer {
   margin: 2% auto;
   padding: 20px;
-  max-width: 500px;
+  width: 50%;
   text-align: center;
   background-color: lavender;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
