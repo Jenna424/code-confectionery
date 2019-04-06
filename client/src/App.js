@@ -19,6 +19,3 @@ class App extends Component {
 }
 
 export default App;
-
-/* Components like CakeConstructor that are directly loaded through a Route component will receive match and history props 
-(Components nested inside CakeConstructor will not receive those props unless we pass them on manually or use withRouter) */
