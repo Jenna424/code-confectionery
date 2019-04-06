@@ -24,6 +24,8 @@ const PastryPartsPreview = ({ cakeLayout, cakeCost, continueCakeCheckout, cancel
       <br />
       <p><strong>Cake Cost</strong>: ${cakeCost.toFixed(2)}</p>
       <br />
+      <button className="tiny ui pink button" onClick={continueCakeCheckout}>Continue Cake Checkout</button>
+      <button className="tiny ui pink button" onClick={cancelCakeCheckout}>Cancel Cake Checkout</button>
     </Fragment>
   )
 }
