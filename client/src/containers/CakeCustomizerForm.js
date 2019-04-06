@@ -75,6 +75,7 @@ class CakeCustomizerForm extends Component {
         stringTag: 'select',
         tagContents: {
           optionsArray: [
+            {value: '', label: 'Select a garnish for cake decoration'}
             {value: 'rainbow sprinkles', label: 'Rainbow Sprinkles'},
             {value: 'chocolate sprinkles', label: 'Chocolate Sprinkles'},
             {value: 'sea salt', label: 'Sea Salt'},
@@ -82,20 +83,19 @@ class CakeCustomizerForm extends Component {
             {value: 'gummy bears', label: 'Gummy Bears'},
             {value: 'cookie crumbs', label: 'Cookie Crumbs'},
             {value: 'chopped nuts', label: 'Chopped Nuts'},
-            {value: 'edible rose', label: 'Edible Rose'},
+            {value: 'edible roses', label: 'Edible Rose'},
             {value: 'buttercream swirls', label: 'Buttercream Swirls'},
             {value: 'chocolate syrup', label: 'Chocolate Syrup'},
             {value: 'whipped cream', label: 'Whipped Cream Dollop'},
             {value: 'fresh fruit', label: 'Fresh Fruit'},
             {value: 'none', label: 'None'}
-          ],
-          value: null,
-          validationCriteria: {
-            cannotBeBlank: true
-          },
-          isValid: false,
-          interactedWith: false
-        }
+          ]
+        },
+        validationCriteria: {
+          cannotBeBlank: true
+        },
+        isValid: false,
+        interactedWith: false
       },
       toppers: {
         stringTag: 'select',
