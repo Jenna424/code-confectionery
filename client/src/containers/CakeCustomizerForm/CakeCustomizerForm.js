@@ -9,7 +9,7 @@ class CakeCustomizerForm extends Component {
   state = {
     wholeFormIsValid: false,
   	pastryParticulars: {
-      customerName: {
+      name: {
         stringTag: 'input',
         tagContents: {
           type: 'text',
@@ -170,23 +170,24 @@ class CakeCustomizerForm extends Component {
       })
     }
     return (
-      <div>
-        <form className="ui form" onSubmit={this.handleOnSubmit}>
-          <div className={styles.cakeCustomizerContainer}>
-            <h2 className="ui header">Cake Customizer Form</h2>
-            <h4 className="ui header">Provide pastry particulars to complete your cake customization</h4>
-            {cakeCustomizerConfiguration.map(fieldObject =>
-              <DynamicFormElement
-                key={fieldObject.fieldProperty}
-                stringTag={fieldObject.setup.stringTag}
-                tagContents={fieldObject.setup.tagContents}
-                value={fieldObject.setup.value}
-                isInvalid={!fieldObject.setup.isValid}
-                handleOnChange={event => this.handleOnChange(event, fieldObject.fieldProperty)}
-              />
-            )}
-            <button type="submit" disabled={!this.state.wholeFormIsValid}>Purchase Pastry</button>
-          </div>
+      <div className={styles.cakeCustomizerContainer}>
+        <h2>Cake Customizer Form</h2>
+        <h3>Provide pastry particulars to complete your cake customization</h3>
+        <form onSubmit={this.handleOnSubmit}>
+          {cakeCustomizerConfiguration.map(fieldObject =>
+            <DynamicFormElement
+              key={fieldObject.fieldProperty}
+              labelText={fieldObject.fieldProperty.charAt(0).toUpperCase() + fieldObject.fieldProperty.slice(1)}
+              stringTag={fieldObject.setup.stringTag}
+              tagContents={fieldObject.setup.tagContents}
+              value={fieldObject.setup.value}
+              isInvalid={!fieldObject.setup.isValid}
+              mustValidate={fieldObject.setup.validationCriteria}
+              interactedWith={fieldObject.setup.interactedWith}
+              handleOnChange={event => this.handleOnChange(event, fieldObject.fieldProperty)}
+            />
+          )}
+          <button type="submit" disabled={!this.state.wholeFormIsValid}>Purchase Pastry</button>
         </form>
       </div>
     )
