@@ -3,25 +3,3 @@
   box-sizing: border-box;
   padding: 15px;
 }
-
-.genericTag {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  font: inherit;
-  background-color: white;
-  border: 1px solid black;
-  outline: none;
-  padding: 5px 15px;
-}
-
-.genericTag:focus {
-  background-color: lightyellow;
-  outline: none;
-}
-
-.label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
