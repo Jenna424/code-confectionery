@@ -6,9 +6,13 @@ export const purchasePastrySuccess = cakeOrder => ({
   cakeOrder
 })
 
-export const purchasePastryFailure = errorMessage => ({
+export const purchasePastryFailure = errorObject => ({
   type: types.PURCHASE_PASTRY_FAILURE,
-  errorMessage
+  errorObject
+})
+
+export const purchasePastryPending = () => ({
+  type: types.PURCHASE_PASTRY_PENDING
 })
 // purchasePastrySuccess action creator function
 // accepts the cakeOrder object that was just created as an argument.
