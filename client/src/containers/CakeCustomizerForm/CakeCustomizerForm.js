@@ -26,7 +26,7 @@ class CakeCustomizerForm extends Component {
         stringTag: 'input',
         tagContents: {
           type: 'text',
-          placeholder: 'Enter your name here...'
+          placeholder: 'Propose a pastry name for our menu...'
         },
         value: '',
         validationCriteria: {
