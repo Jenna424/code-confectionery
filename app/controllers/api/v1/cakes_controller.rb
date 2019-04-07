@@ -47,11 +47,8 @@ module Api
           params.require(:cake).permit(
             :structure,
             :occasion,
-            :width,
+            :diameter,
             :price,
-            :img_url,
-            :ordered,
-            :flavor_combination,
             ingredient_ids: []
           )
         end
