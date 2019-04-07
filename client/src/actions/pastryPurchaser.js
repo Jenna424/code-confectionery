@@ -24,7 +24,6 @@ export const createCake = cake => {
       .then(response => response.json())
       .then(cake => {
         dispatch(purchasePastrySuccess(cake))
-        console.log(cake)
       })
       .catch(error => dispatch(purchasePastryFailure(error)))
   }
