@@ -9,6 +9,19 @@ class CakeCustomizerForm extends Component {
   state = {
     wholeFormIsValid: false,
   	pastryParticulars: {
+      customer: {
+        stringTag: 'input',
+        tagContents: {
+          type: 'text',
+          placeholder: 'Enter your name here...'
+        },
+        value: '',
+        validationCriteria: {
+          cannotBeBlank: true
+        },
+        isValid: false,
+        interactedWith: false
+      },
       name: {
         stringTag: 'input',
         tagContents: {
