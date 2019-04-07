@@ -1,5 +1,4 @@
 import * as types from './actionTypes';
-
 const BASE_URL = process.env.REACT_APP_API_URL;
 
 // Synchronous action creator functions:
