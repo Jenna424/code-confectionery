@@ -7,13 +7,13 @@ import thunk from 'redux-thunk';
 
 import App from './App';
 
-import cakeConstructor from './reducers/cakeConstructor';
+import layerLeveler from './reducers/layerLeveler';
 import pastryPurchaser from './reducers/pastryPurchaser';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  cakeConstructor,
+  layerLeveler,
   pastryPurchaser
 });
 
