@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_07_120712) do
+ActiveRecord::Schema.define(version: 2019_04_07_120829) do
 
   create_table "cake_layers", force: :cascade do |t|
     t.integer "cake_id"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 2019_04_07_120712) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "customer"
+    t.string "name"
+    t.string "message"
+    t.string "garnish"
+    t.string "toppers"
   end
 
   create_table "layers", force: :cascade do |t|
