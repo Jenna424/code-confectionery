@@ -10,6 +10,8 @@ import App from './App';
 import cakeConstructor from './reducers/cakeConstructor';
 import pastryPurchaser from './reducers/pastryPurchaser';
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const rootReducer = combineReducers({
   cakeConstructor,
   pastryPurchaser
