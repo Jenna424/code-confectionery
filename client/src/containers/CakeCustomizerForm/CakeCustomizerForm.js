@@ -77,7 +77,7 @@ class CakeCustomizerForm extends Component {
         stringTag: 'input',
         tagContents: {
           type: 'text',
-          placeholder: 'Specify your desired dessert diameter (in inches)',
+          placeholder: 'Specify your desired dessert diameter (in number of inches)',
         },
         value: '',
         validationCriteria: {
