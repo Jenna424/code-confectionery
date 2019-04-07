@@ -53,8 +53,7 @@ module Api
             :name,
             :message,
             :garnish,
-            :toppers,
-            ingredient_ids: []
+            :toppers
           )
         end
     end
