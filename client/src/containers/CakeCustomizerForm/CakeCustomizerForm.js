@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { meetsValidationCriteria } from '../../utils/validationLogic.js';
 import DynamicFormElement from '../../components/shared/DynamicFormElement/DynamicFormElement';
-import { purchasePastry } from '../../actions/pastryPurchaser';
+import { purchasePastry, purchasePastryPending, purchasePastrySuccess, purchasePastryFailure } from '../../actions/pastryPurchaser';
 import styles from './CakeCustomizerForm.module.css';
 
 class CakeCustomizerForm extends Component {
@@ -77,7 +77,7 @@ class CakeCustomizerForm extends Component {
         stringTag: 'input',
         tagContents: {
           type: 'text',
-          placeholder: 'Specify your desired dessert diameter (number of inches)',
+          placeholder: 'Specify your desired dessert diameter (in number of inches)',
         },
         value: '',
         validationCriteria: {
