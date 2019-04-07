@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { meetsValidationCriteria } from '../../utils/validationLogic.js';
 import DynamicFormElement from '../../components/shared/DynamicFormElement/DynamicFormElement';
-import { purchasePastry, purchasePastryPending, purchasePastrySuccess, purchasePastryFailure } from '../../actions/pastryPurchaser';
+import { createCake, purchasePastryPending, purchasePastrySuccess, purchasePastryFailure } from '../../actions/pastryPurchaser';
 import styles from './CakeCustomizerForm.module.css';
 
 class CakeCustomizerForm extends Component {
