@@ -85,10 +85,10 @@ class CakeConstructor extends Component {
 }
 
 const mapStateToProps = state => ({
-  layers: state.layers,
-  cakeLayout: state.cakeLayout,
-  cakeCost: state.cakeCost,
-  error: state.error
+  layers: state.cakeConstructor.layers,
+  cakeLayout: state.cakeConstructor.cakeLayout,
+  cakeCost: state.cakeConstructor.cakeCost,
+  error: state.cakeConstructor.error
 })
 
 const mapDispatchToProps = dispatch => ({
