@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { loadLayers, stackLayer, unstackLayer } from '../../actions/cakeConstructor';
+import { loadLayers, stackLayer, unstackLayer } from '../../actions/layerLeveler';
 import styles from './CakeConstructor.module.css';
 import Modal from '../../components/shared/Modal/Modal';
 import PastryPartsPreview from '../../components/PastryPartsPreview';
