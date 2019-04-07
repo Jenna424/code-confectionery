@@ -158,20 +158,20 @@ class CakeCustomizerForm extends Component {
     event.preventDefault(); // prevent the default form submit action
 
     const { pastryParticulars } = this.state;
-    const { cakeLayout, cakeCost, purchasePastry } = this.props;
+    const { cakeLayout, cakeCost, createCake } = this.props;
     const cakeCustomizations = {};
 
     for (let fieldProperty in pastryParticulars) {
       cakeCustomizations[fieldProperty] = pastryParticulars[fieldProperty].value;
     }
 
-    const orderObject = {
-      cakeCustomizations,
-      cakeLayout,
-      cakeCost
+    const pastryPendingPurchase = {
+      ...cakeCustomizations,
+      price: cakeCost,
+      layer_ids: cakeLayout.map(layerObject => layerObject.id)
     }
 
-    purchasePastry(orderObject)
+    createCake(pastryPendingPurchase)
   }
 
   render() {
@@ -200,7 +200,7 @@ class CakeCustomizerForm extends Component {
               handleOnChange={event => this.handleOnChange(event, fieldObject.fieldProperty)}
             />
           )}
-          <button type="submit" disabled={!this.state.wholeFormIsValid}>Purchase Pastry</button>
+          <button onSubmit={this.handleOnSubmit} type="submit" disabled={!this.state.wholeFormIsValid}>Purchase Pastry</button>
         </form>
       </div>
     )
@@ -208,12 +208,12 @@ class CakeCustomizerForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  cakeLayout: state.cakeLayout,
-  cakeCost: state.cakeCost
+  cakeLayout: state.cakeConstructor.cakeLayout,
+  cakeCost: state.cakeConstructor.cakeCost
 })
 
 const mapDispatchToProps = dispatch => ({
-  purchasePastry: orderObject => dispatch(purchasePastry(orderObject))
+  createCake: customizedCake => dispatch(createCake(customizedCake))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CakeCustomizerForm);
