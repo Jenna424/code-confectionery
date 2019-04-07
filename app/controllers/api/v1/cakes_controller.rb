@@ -49,6 +49,11 @@ module Api
             :occasion,
             :diameter,
             :price,
+            :customer,
+            :name,
+            :message,
+            :garnish,
+            :toppers,
             ingredient_ids: []
           )
         end
