@@ -90,7 +90,7 @@ class CakeCustomizerForm extends Component {
         stringTag: 'select',
         tagContents: {
           optionsArray: [
-            {value: '', label: 'Choose Garnish for Cake Decoration'},
+            {value: '', label: 'Choose an Edible Garnish for Pastry Plating and Presentation'},
             {value: 'rainbow sprinkles', label: 'Rainbow Sprinkles'},
             {value: 'chocolate sprinkles', label: 'Chocolate Sprinkles'},
             {value: 'sea salt', label: 'Sea Salt'},
@@ -116,7 +116,7 @@ class CakeCustomizerForm extends Component {
         stringTag: 'select',
         tagContents: {
           optionsArray: [
-            {value: '', label: 'Choose a Cake Topper'},
+            {value: '', label: 'Choose a Cake Topper for Cake Decoration'},
             {value: 'birthday candles', label: 'Birthday Candles'},
             {value: 'wedding figurines', label: 'Bride and Groom Figurines'},
             {value: 'sparklers', label: 'Sparklers'},
