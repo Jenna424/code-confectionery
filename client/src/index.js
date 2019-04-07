@@ -8,11 +8,11 @@ import thunk from 'redux-thunk';
 import App from './App';
 
 import cakeConstructor from './reducers/cakeConstructor';
-import ordersPlaced from './reducers/ordersPlaced';
+import pastryPurchaser from './reducers/pastryPurchaser';
 
 const rootReducer = combineReducers({
   cakeConstructor,
-  ordersPlaced
+  pastryPurchaser
 });
 
 const store = createStore(
