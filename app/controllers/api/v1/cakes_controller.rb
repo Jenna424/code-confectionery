@@ -53,7 +53,8 @@ module Api
             :name,
             :message,
             :garnish,
-            :toppers
+            :toppers,
+            layer_ids: []
           )
         end
     end
