@@ -6,6 +6,11 @@ import styles from './CakesGallery.module.css';
 const CakesGallery = ({ cakes }) => {
   return (
     <Fragment>
+      {!cakes.length &&
+        <div className={styles.emptyGallery}>
+      	  <p>No cakes have been customized.</p>
+      	  <p>You may design a specialty cake for our menu <Link to='/'>here</Link>.</p>
+      	</div>}
     </Fragment>
   )
 }
