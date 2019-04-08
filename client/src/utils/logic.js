@@ -11,3 +11,8 @@ export const meetsValidationCriteria = (currentValue, criteria) => {
 
   return criteriaMet;
 }
+
+export const dynamicallyDeleteKey = (object, keyToDelete) => {
+  const {[keyToDelete]: deletedKey, ...remainingKeys} = object;
+  return remainingKeys;
+}
