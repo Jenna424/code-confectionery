@@ -14,13 +14,13 @@ const CakesGallery = ({ cakes }) => {
       {cakes.length &&
       	<div className={styles.cakesMenu}>
       	  {cakes.map(cakeObject =>
-      	  	<CakeMenuItem 
-      	  	  key={cakeObject.id}
-      	  	  id={cakeObject.id}
-      	  	  name={cakeObject.name}
-      	  	  flavorCombination={cakeObject.flavor_combination}
-      	  	  price={cakeObject.price}
-      	  	/>
+      	    <CakeMenuItem
+      	      key={cakeObject.id}
+      	      id={cakeObject.id}
+      	      name={cakeObject.name}
+      	      flavorCombination={cakeObject.flavor_combination}
+      	      price={cakeObject.price}
+      	    />
       	  )}
       	</div>}
     </Fragment>
