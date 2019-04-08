@@ -208,7 +208,7 @@ class CakeCustomizerForm extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   cakeLayout: state.layerLeveler.cakeLayout,
   cakeCost: state.layerLeveler.cakeCost
 })
