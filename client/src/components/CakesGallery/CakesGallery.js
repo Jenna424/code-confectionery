@@ -1,10 +1,10 @@
 import React from 'react';
+import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import styles from './CakesGallery.module.css';
 
 const CakesGallery = ({ cakes }) => {
   return (
-    <div>
-      This stateless functional presentational component should display the index of all cakes
-    </div>
   )
 }
 
