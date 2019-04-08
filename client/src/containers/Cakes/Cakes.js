@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadCakes } from '../../actions/pastryPurchaser';
 
-class Cakes extends Component {
+class CakesContainer extends Component {
 
   componentDidMount() {
     this.props.loadCakes()
@@ -26,4 +26,4 @@ const mapDispatchToProps = dispatch => ({
   loadCakes: () => dispatch(loadCakes())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cakes);
+export default connect(mapStateToProps, mapDispatchToProps)(CakesContainer);
