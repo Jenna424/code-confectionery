@@ -16,4 +16,8 @@ const mapStateToProps = state => ({
   error: state.pastryPurchaser.error
 })
 
+const mapDispatchToProps = dispatch => ({
+  loadCakes: () => dispatch(loadCakes())
+})
+
 export default connect(mapStateToProps, mapDispatchToProps)(Cakes);
