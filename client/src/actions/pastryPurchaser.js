@@ -1,4 +1,6 @@
 import * as types from './actionTypes';
+import { clearCakeConstructor } from './layerLeveler';
+
 const BASE_URL = process.env.REACT_APP_API_URL;
 
 // Synchronous action creator functions:
@@ -24,6 +26,7 @@ export const createCake = cake => {
       .then(response => response.json())
       .then(cake => {
         dispatch(purchasePastrySuccess(cake))
+        dispatch(clearCakeConstructor())
       })
       .catch(error => dispatch(purchasePastryFailure(error)))
   }
