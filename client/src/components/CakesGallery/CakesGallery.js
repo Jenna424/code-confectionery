@@ -13,8 +13,16 @@ const CakesGallery = ({ cakes }) => {
       	</div>}
       {cakes.length &&
       	<div className={styles.cakesMenu}>
-      	</div>
-      }
+      	  {cakes.map(cakeObject =>
+      	  	<CakeMenuItem 
+      	  	  key={cakeObject.id}
+      	  	  id={cakeObject.id}
+      	  	  name={cakeObject.name}
+      	  	  flavorCombination={cakeObject.flavor_combination}
+      	  	  price={cakeObject.price}
+      	  	/>
+      	  )}
+      	</div>}
     </Fragment>
   )
 }
