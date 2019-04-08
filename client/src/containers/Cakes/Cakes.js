@@ -11,4 +11,4 @@ class Cakes extends Component {
   }
 }
 
-export default Cakes;
+export default connect(mapStateToProps, mapDispatchToProps)(Cakes);
