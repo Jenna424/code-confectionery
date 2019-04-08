@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { loadCakes } from '../../actions/pastryPurchaser';
 
 class Cakes extends Component {
   render() {
