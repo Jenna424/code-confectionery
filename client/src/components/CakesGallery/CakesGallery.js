@@ -5,6 +5,8 @@ import styles from './CakesGallery.module.css';
 
 const CakesGallery = ({ cakes }) => {
   return (
+    <Fragment>
+    </Fragment>
   )
 }
 
