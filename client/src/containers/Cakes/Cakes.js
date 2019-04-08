@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 import { loadCakes } from '../../actions/pastryPurchaser';
 
 class Cakes extends Component {
+
+  componentDidMount() {
+    this.props.loadCakes()
+  }
+  
   render() {
     return (
       <div>
