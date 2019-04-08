@@ -11,4 +11,9 @@ class Cakes extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  cakes: state.pastryPurchaser.cakes,
+  error: state.pastryPurchaser.error
+})
+
 export default connect(mapStateToProps, mapDispatchToProps)(Cakes);
