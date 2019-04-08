@@ -12,8 +12,9 @@ class CakesContainer extends Component {
   render() {
     const { cakes, error } = this.props;
     return (
-      <div>
+      <div style={{textAlign: 'center'}}>
         <h2>Cakes Gallery</h2>
+        {error ? <span className={styles.error}>Cakes menu could not be loaded</span> : null}
       </div>
     )
   }
