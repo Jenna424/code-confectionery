@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { loadCakes } from '../../actions/pastryPurchaser';
 import styles from '../../components/shared/sharedStyles.module.css';
+import CakesMenu from '../../components/CakesMenu/CakesMenu';
 
 class CakesContainer extends Component {
 
@@ -11,12 +12,14 @@ class CakesContainer extends Component {
 
   render() {
     const { cakes, error } = this.props;
+
     return (
       <Fragment>
         <div style={{textAlign: 'center'}}>
           <h2>Cakes Gallery</h2>
           {error ? <span className={styles.error}>Cakes menu could not be loaded</span> : null}
         </div>
+        {!error && <CakesMenu cakes={cakes} />}
       </Fragment>
     )
   }
