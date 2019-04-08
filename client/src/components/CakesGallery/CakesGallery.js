@@ -11,6 +11,10 @@ const CakesGallery = ({ cakes }) => {
       	  <p>No cakes have been customized.</p>
       	  <p>You may design a specialty cake for our menu <Link to='/'>here</Link>.</p>
       	</div>}
+      {cakes.length &&
+      	<div className={styles.cakesMenu}>
+      	</div>
+      }
     </Fragment>
   )
 }
