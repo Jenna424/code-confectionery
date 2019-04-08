@@ -2,6 +2,7 @@ import React from 'react';
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './CakesGallery.module.css';
+import CakeMenuItem from '../CakeMenuItem/CakeMenuItem';
 
 const CakesGallery = ({ cakes }) => {
   return (
