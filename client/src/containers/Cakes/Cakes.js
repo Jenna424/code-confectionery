@@ -7,10 +7,11 @@ class Cakes extends Component {
   componentDidMount() {
     this.props.loadCakes()
   }
-  
+
   render() {
     return (
       <div>
+        <h2>Cake Menu</h2>
         In the componentDidMount lifecycle method of Cakes container class component, I will fetch the index of cakes from my Rails API backend.
       </div>
     )
