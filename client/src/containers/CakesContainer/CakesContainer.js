@@ -10,6 +10,7 @@ class CakesContainer extends Component {
   }
 
   render() {
+    const { cakes, error } = this.props;
     return (
       <div>
         <h2>Cakes Gallery</h2>
