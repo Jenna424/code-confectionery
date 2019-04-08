@@ -18,6 +18,12 @@ export default (state = initialState, action) => {
         ...state,
         error: true
       };
+    case types.SET_CAKES_SUCCESS:
+      return {
+        ...state,
+        cakes: action.cakes,
+        error: false // set error to false to clear it in case I previously got an error that has since been resolved
+      }
     default:
       return state;
   }
