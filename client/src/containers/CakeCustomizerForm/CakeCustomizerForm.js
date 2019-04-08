@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { meetsValidationCriteria } from '../../utils/validationLogic.js';
 import DynamicFormElement from '../../components/shared/DynamicFormElement/DynamicFormElement';
-import { createCake, purchasePastryPending, purchasePastrySuccess, purchasePastryFailure } from '../../actions/pastryPurchaser';
+import { createCake } from '../../actions/pastryPurchaser';
 import styles from './CakeCustomizerForm.module.css';
 
 class CakeCustomizerForm extends Component {
@@ -158,7 +158,7 @@ class CakeCustomizerForm extends Component {
     event.preventDefault(); // prevent the default form submit action
 
     const { pastryParticulars } = this.state;
-    const { cakeLayout, cakeCost, createCake } = this.props;
+    const { cakeLayout, cakeCost, createCake, history } = this.props;
     const cakeCustomizations = {};
 
     for (let fieldProperty in pastryParticulars) {
@@ -172,6 +172,7 @@ class CakeCustomizerForm extends Component {
     }
 
     createCake(pastryPendingPurchase)
+    history.push('/cakes');
   }
 
   render() {
@@ -207,7 +208,7 @@ class CakeCustomizerForm extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   cakeLayout: state.layerLeveler.cakeLayout,
   cakeCost: state.layerLeveler.cakeCost
 })
