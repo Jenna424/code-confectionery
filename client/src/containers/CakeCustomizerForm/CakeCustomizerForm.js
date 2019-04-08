@@ -8,7 +8,7 @@ import styles from './CakeCustomizerForm.module.css';
 class CakeCustomizerForm extends Component {
   state = {
     wholeFormIsValid: false,
-  	pastryParticulars: {
+    pastryParticulars: {
       customer: {
         stringTag: 'input',
         tagContents: {
@@ -131,7 +131,7 @@ class CakeCustomizerForm extends Component {
         isValid: false,
         interactedWith: false
       }
-  	}
+    }
   }
 
   handleOnChange = (event, pastryParticularsProperty) => {
