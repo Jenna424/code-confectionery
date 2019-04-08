@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { meetsValidationCriteria } from '../../utils/validationLogic.js';
+import { meetsValidationCriteria } from '../../utils/logic.js';
 import DynamicFormElement from '../../components/shared/DynamicFormElement/DynamicFormElement';
 import { createCake } from '../../actions/pastryPurchaser';
 import styles from './CakeCustomizerForm.module.css';
