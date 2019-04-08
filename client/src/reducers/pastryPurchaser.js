@@ -23,7 +23,7 @@ export default (state = initialState, action) => {
         ...state,
         cakes: action.cakes,
         error: false // set error to false to clear it in case I previously got an error that has since been resolved
-      }
+      };
     case types.FETCH_CAKES_FAILURE:
       return {
         ...state,
