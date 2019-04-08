@@ -11,7 +11,7 @@ class CakesContainer extends Component {
   render() {
     return (
       <div>
-        <h2>Cake Menu</h2>
+        <h2>Cakes Gallery</h2>
       </div>
     )
   }
