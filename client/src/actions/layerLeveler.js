@@ -29,6 +29,10 @@ export const loadLayers = () => {
       .catch(error => dispatch(fetchLayersFailure())) // However, if my request to fetch layers from my Rails server failed, I want to adjust my error key = true in Redux store state. To this end, I dispatch the action object that is returned by calling synchronous action creator function fetchLayersFailure()
   };
 };
+
+export const clearCakeConstructor = () => ({
+  type: types.CLEAR_CAKE_CONSTRUCTOR
+})
 // stackLayer action creator arrow function accepts a layer object as an argument
 // and implicitly returns an action object of type 'STACK_LAYER'
 // which also contains a payload of the layer being stacked on top of the cake
