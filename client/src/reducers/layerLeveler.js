@@ -1,4 +1,5 @@
 import * as types from '../actions/actionTypes';
+import { dynamicallyDeleteKey } from '../utils/logic';
 
 const initialState = {
   layers: [], // initially set = to an empty array, layers will ultimately store an array of layer objects fetched asynchronously from my Rails API backend
@@ -40,6 +41,12 @@ export default (state = initialState, action) => {
         ...state,
         error: true
       };
+    case types.CLEAR_CAKE_CONSTRUCTOR:
+      const initialStateWithoutLayers = dynamicallyDeleteKey(initialState, 'layers');
+      return {
+        layers: [...state.layers],
+        ...initialStateWithoutLayers
+      }
     default:
       return state;
   }
