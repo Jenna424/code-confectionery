@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CakeGallery = props => {
+const CakesGallery = ({ cakes }) => {
   return (
     <div>
       This stateless functional presentational component should display the index of all cakes
@@ -8,4 +8,4 @@ const CakeGallery = props => {
   )
 }
 
-export default CakeGallery;
+export default CakesGallery;
