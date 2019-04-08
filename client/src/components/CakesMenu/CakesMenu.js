@@ -1,10 +1,10 @@
 import React from 'react';
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './CakesGallery.module.css';
+import styles from './CakesMenu.module.css';
 import CakeMenuItem from '../CakeMenuItem/CakeMenuItem';
 
-const CakesGallery = ({ cakes }) => {
+const CakesMenu = ({ cakes }) => {
   return (
     <Fragment>
       {!cakes.length &&
@@ -28,4 +28,4 @@ const CakesGallery = ({ cakes }) => {
   )
 }
 
-export default CakesGallery;
+export default CakesMenu;
