@@ -35,6 +35,19 @@ class CakeCustomizerForm extends Component {
         isValid: false,
         interactedWith: false
       },
+      flavorCombination: {
+        stringTag: 'input',
+        tagContents: {
+          type: 'text',
+          placeholder: 'Describe the flavor combinations that your cake contains...'
+        },
+        value: '',
+        validationCriteria: {
+          cannotBeBlank: true
+        },
+        isValid: false,
+        interactedWith: false
+      },
       occasion: {
         stringTag: 'select',
         tagContents: {
