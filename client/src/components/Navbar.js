@@ -11,3 +11,5 @@ const Navbar = () => (
     <NavLink to="/ingredients/new" className="item" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Add Ingredient</NavLink>
   </div>
 )
+
+export default Navbar;
