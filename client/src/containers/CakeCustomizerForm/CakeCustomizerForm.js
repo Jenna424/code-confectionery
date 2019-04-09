@@ -5,6 +5,7 @@ import DynamicFormElement from '../../components/shared/DynamicFormElement/Dynam
 import { createCake } from '../../actions/pastryPurchaser';
 import styles from './CakeCustomizerForm.module.css';
 import Modal from '../../components/shared/Modal/Modal';
+import { Link } from 'react-router-dom';
 
 class CakeCustomizerForm extends Component {
   state = {
