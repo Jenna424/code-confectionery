@@ -13,7 +13,7 @@ const CakesMenu = ({ cakes }) => {
           <p>You may design a specialty cake for our menu <Link to='/'>here</Link>.</p>
         </div>}
       {cakes.length &&
-        <div className={styles.cakesMenu}>
+        <div>
           {cakes.map(cakeObject =>
             <CakeMenuItem
               key={cakeObject.id}
