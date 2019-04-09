@@ -47,6 +47,7 @@ module Api
           params.require(:cake).permit(
             :structure,
             :occasion,
+            :flavor_combination,
             :diameter,
             :price,
             :customer,
