@@ -35,7 +35,7 @@ class CakeCustomizerForm extends Component {
         isValid: false,
         interactedWith: false
       },
-      flavorCombination: {
+      flavor_combination: {
         stringTag: 'input',
         tagContents: {
           type: 'text',
@@ -204,7 +204,7 @@ class CakeCustomizerForm extends Component {
           {cakeCustomizerConfiguration.map(fieldObject =>
             <DynamicFormElement
               key={fieldObject.fieldProperty}
-              labelText={fieldObject.fieldProperty === 'flavorCombination' ? 'Flavors' : fieldObject.fieldProperty.charAt(0).toUpperCase() + fieldObject.fieldProperty.slice(1)}
+              labelText={fieldObject.fieldProperty === 'flavor_combination' ? 'Flavors' : fieldObject.fieldProperty.charAt(0).toUpperCase() + fieldObject.fieldProperty.slice(1)}
               stringTag={fieldObject.setup.stringTag}
               tagContents={fieldObject.setup.tagContents}
               value={fieldObject.setup.value}
