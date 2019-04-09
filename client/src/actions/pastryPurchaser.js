@@ -1,5 +1,4 @@
 import * as types from './actionTypes';
-import history from '../index';
 import { clearCakeConstructor } from './layerLeveler';
 
 const BASE_URL = process.env.REACT_APP_API_URL;
@@ -28,7 +27,6 @@ export const createCake = cake => {
       .then(cake => {
         dispatch(purchasePastrySuccess(cake))
         dispatch(clearCakeConstructor())
-        history.push(`/cakes/${cake.id}`)
       })
       .catch(error => dispatch(purchasePastryFailure(error)))
   }
