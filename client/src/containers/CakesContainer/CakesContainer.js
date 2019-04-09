@@ -12,8 +12,6 @@ class CakesContainer extends Component {
   }
 
   render() {
-    const { cakes, error } = this.props;
-
     return (
       <Fragment>
         <div style={{textAlign: 'center'}}>
