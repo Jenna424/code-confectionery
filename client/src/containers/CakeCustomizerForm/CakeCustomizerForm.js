@@ -185,7 +185,6 @@ class CakeCustomizerForm extends Component {
     }
 
     createCake(pastryPendingPurchase)
-    history.push('/cakes');
   }
 
   render() {
