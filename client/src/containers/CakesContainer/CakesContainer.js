@@ -12,6 +12,7 @@ class CakesContainer extends Component {
   }
 
   render() {
+    let cakes = <Spinner />;
     return (
       <Fragment>
         <div style={{textAlign: 'center'}}>
