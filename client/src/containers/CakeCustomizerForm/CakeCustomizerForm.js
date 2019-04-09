@@ -199,6 +199,14 @@ class CakeCustomizerForm extends Component {
     }
     return (
       <div className={styles.cakeCustomizerContainer}>
+        <Modal viewable={this.props.cakeCreationCompleted}>
+          <div>
+            <p>You are done designing your dessert.</p>
+            <p>Thank you for contributing a custom cake creation!</p>
+            <br />
+            <Link to="/">Close and return to homepage</Link>
+          </div>
+        </Modal>
         <h2>Cake Customizer Form</h2>
         <h3>Provide pastry particulars to complete your cake customization</h3>
         <form onSubmit={this.handleOnSubmit}>
