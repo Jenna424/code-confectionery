@@ -16,7 +16,7 @@ class CakesContainer extends Component {
     return (
       <Fragment>
         <div style={{textAlign: 'center'}}>
-          <h2>Cakes Gallery</h2>
+          <h2>Cakes Menu</h2>
           {error ? <span className={styles.error}>Cakes menu could not be loaded</span> : null}
         </div>
         {!error && <CakesMenu cakes={cakes} />}
