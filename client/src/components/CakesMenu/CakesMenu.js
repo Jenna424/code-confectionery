@@ -8,7 +8,7 @@ const CakesMenu = ({ cakes }) => {
   return (
     <Fragment>
       {!cakes.length &&
-        <div className={styles.emptyGallery}>
+        <div className={styles.emptyMenu}>
       	  <p>No cakes have been customized.</p>
       	  <p>You may design a specialty cake for our menu <Link to='/'>here</Link>.</p>
       	</div>}
