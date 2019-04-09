@@ -14,23 +14,27 @@ export default (state = initialState, action) => {
         ...state, // copy over all key/value pairs from the old, previous, existing state objects
         cakes: [...state.cakes, action.cake], // set cakes = to a new array to maintain immutability. Copy over all cake object elements from the previous cakes array, and then push the cake object just added (received as the payload in the action dispatched) onto the end of this new array. An alternative way of writing this -- cakes: state.cakes.concat(action.cake)
         cakeCreationCompleted: true,
-        error: false // set error to false to clear it in case I previously got an error that has since been resolved
+        error: false // set error to false to clear it in case I previously got an error that has since been resolved,
+        loading: false
       };
     case types.PURCHASE_PASTRY_FAILURE:
       return {
         ...state,
-        error: true
+        error: true,
+        loading: false
       };
     case types.SET_CAKES_SUCCESS:
       return {
         ...state,
         cakes: action.cakes,
-        error: false // set error to false to clear it in case I previously got an error that has since been resolved
+        error: false // set error to false to clear it in case I previously got an error that has since been resolved,
+        loading: false
       };
     case types.FETCH_CAKES_FAILURE:
       return {
         ...state,
-        error: true
+        error: true,
+        loading: false
       };
     default:
       return state;
