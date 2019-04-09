@@ -39,7 +39,7 @@ class CakeCustomizerForm extends Component {
         stringTag: 'input',
         tagContents: {
           type: 'text',
-          placeholder: 'Describe your cake\'s flavor combinations...'
+          placeholder: 'Describe the flavor combinations that your cake contains...'
         },
         value: '',
         validationCriteria: {
@@ -204,7 +204,7 @@ class CakeCustomizerForm extends Component {
           {cakeCustomizerConfiguration.map(fieldObject =>
             <DynamicFormElement
               key={fieldObject.fieldProperty}
-              labelText={fieldObject.fieldProperty.charAt(0).toUpperCase() + fieldObject.fieldProperty.slice(1)}
+              labelText={fieldObject.fieldProperty === 'flavorCombination' ? 'Flavors' : fieldObject.fieldProperty.charAt(0).toUpperCase() + fieldObject.fieldProperty.slice(1)}
               stringTag={fieldObject.setup.stringTag}
               tagContents={fieldObject.setup.tagContents}
               value={fieldObject.setup.value}
