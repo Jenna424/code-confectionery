@@ -3,7 +3,8 @@ import * as types from '../actions/actionTypes';
 const initialState = {
   cakes: [],
   cakeCreationCompleted: false,
-  error: false
+  error: false,
+  loading: true
 }
 
 export default (state = initialState, action) => {
