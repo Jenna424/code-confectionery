@@ -4,6 +4,7 @@ import { meetsValidationCriteria } from '../../utils/logic.js';
 import DynamicFormElement from '../../components/shared/DynamicFormElement/DynamicFormElement';
 import { createCake } from '../../actions/pastryPurchaser';
 import styles from './CakeCustomizerForm.module.css';
+import Modal from '../../components/shared/Modal/Modal';
 
 class CakeCustomizerForm extends Component {
   state = {
@@ -222,7 +223,8 @@ class CakeCustomizerForm extends Component {
 
 const mapStateToProps = state => ({
   cakeLayout: state.layerLeveler.cakeLayout,
-  cakeCost: state.layerLeveler.cakeCost
+  cakeCost: state.layerLeveler.cakeCost,
+  cakeCreationCompleted: state.pastryPurchaser.cakeCreationCompleted
 })
 
 const mapDispatchToProps = dispatch => ({
