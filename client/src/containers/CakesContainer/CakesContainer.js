@@ -26,6 +26,7 @@ class CakesContainer extends Component {
 }
 
 const mapStateToProps = state => ({
+  loading: state.pastryPurchaser.loading,
   cakes: state.pastryPurchaser.cakes,
   error: state.pastryPurchaser.error
 })
