@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { loadCakes } from '../../actions/pastryPurchaser';
 import styles from '../../components/shared/sharedStyles.module.css';
 import CakesMenu from '../../components/CakesMenu/CakesMenu';
+import Spinner from '../../components/shared/Spinner/Spinner';
 
 class CakesContainer extends Component {
 
