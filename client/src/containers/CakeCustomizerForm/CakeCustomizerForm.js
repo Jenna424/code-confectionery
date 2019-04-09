@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import { meetsValidationCriteria } from '../../utils/logic.js';
 import DynamicFormElement from '../../components/shared/DynamicFormElement/DynamicFormElement';
 import { createCake } from '../../actions/pastryPurchaser';
