@@ -12,8 +12,8 @@ export const createLayerFailure = error => ({
   error
 })
 
-// proposeLayerFlavor is an asynchronous action creator function that handles the process of creating a new flavored layer
-export const proposeLayerFlavor = layer => {
+// proposeFlavoredLayer is an asynchronous action creator function that handles the process of creating a new flavored layer
+export const proposeFlavoredLayer = layer => {
   return dispatch => {
     return fetch(`${BASE_URL}/layers`, {
       method: 'POST',
