@@ -4,8 +4,7 @@ import { meetsValidationCriteria } from '../../utils/logic.js';
 import DynamicFormElement from '../../components/shared/DynamicFormElement/DynamicFormElement';
 import { createCake } from '../../actions/pastryPurchaser';
 import styles from './CakeCustomizerForm.module.css';
-import Modal from '../../components/shared/Modal/Modal';
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 class CakeCustomizerForm extends Component {
   state = {
@@ -191,6 +190,7 @@ class CakeCustomizerForm extends Component {
 
   render() {
     const cakeCustomizerConfiguration = [];
+
     for (let fieldProperty in this.state.pastryParticulars) {
       cakeCustomizerConfiguration.push({
         fieldProperty,
@@ -199,14 +199,7 @@ class CakeCustomizerForm extends Component {
     }
     return (
       <div className={styles.cakeCustomizerContainer}>
-        <Modal viewable={this.props.cakeCreationCompleted}>
-          <div>
-            <p>You are done designing your dessert.</p>
-            <p>Thank you for contributing a custom cake creation!</p>
-            <br />
-            <Link to="/">Close and return to homepage</Link>
-          </div>
-        </Modal>
+        {this.props.cakeCreationCompleted ? <Redirect to="/cakes" /> : null}
         <h2>Cake Customizer Form</h2>
         <h3>Provide pastry particulars to complete your cake customization</h3>
         <form onSubmit={this.handleOnSubmit}>
