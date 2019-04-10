@@ -172,7 +172,7 @@ class CakeCustomizerForm extends Component {
     event.preventDefault(); // prevent the default form submit action
 
     const { pastryParticulars } = this.state;
-    const { cakeLayout, cakeCost, createCake, history } = this.props;
+    const { cakeLayout, cakeCost, createCake } = this.props;
     const cakeCustomizations = {};
 
     for (let fieldProperty in pastryParticulars) {
