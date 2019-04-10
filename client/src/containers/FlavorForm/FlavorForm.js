@@ -16,6 +16,14 @@ class FlavorForm extends Component {
               value={flavor}
             />
           </div>
+          <div>
+            <label htmlFor="pastry_part">Select the type of cake layer that should contain this flavor:</label>
+            <select>
+              <option value="">Pick Pastry Part</option>
+              <option value="batter">Batter</option>
+              <option value="filling">Filling</option>
+            </select>
+          </div>
         </form>
       </div>
     )
