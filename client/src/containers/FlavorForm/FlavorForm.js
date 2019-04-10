@@ -15,7 +15,7 @@ class FlavorForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.createFlavoredLayer(flavoredLayerData)
+    this.props.proposeFlavoredLayer(flavoredLayerData)
   }
 
   render() {
