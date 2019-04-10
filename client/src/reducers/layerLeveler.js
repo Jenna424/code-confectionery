@@ -5,7 +5,8 @@ const initialState = {
   layers: [], // initially set = to an empty array, layers will ultimately store an array of layer objects fetched asynchronously from my Rails API backend
   cakeLayout: [], // an array of layer objects that describes the order in which cake layers are stacked, from the base up
   cakeCost: 0,
-  error: false
+  error: false,
+  layerCreationCompleted: false
 }
 
 const CAKE_COMPONENT_COSTS = {
