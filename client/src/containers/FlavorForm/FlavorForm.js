@@ -19,7 +19,7 @@ class FlavorForm extends Component {
   }
 
   render() {
-    const { flavor, pastryPart } = this.props.flavorFormData;
+    const { flavor, pastryPart } = this.props.flavoredLayerData;
     return (
       <div>
         <h2>Propose a New Flavor for a Cake Layer</h2>
