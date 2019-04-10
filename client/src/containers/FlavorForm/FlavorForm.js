@@ -3,9 +3,15 @@ import { connect } from 'react-redux';
 import { createFlavoredLayer, updateFlavorFormData } from '../../actions/flavorForm';
 
 class FlavorForm extends Component {
+
   handleOnChange = event => {
-  
+    const currentFlavorFormData = {
+      ...this.props.flavorFormData,
+      event.target.name: event.target.value
+    }
+    this.props.updateFlavorFormData(currentFlavorFormData)
   }
+  
   render() {
     const { flavor, pastryPart } = this.props.flavorForm;
     return (
