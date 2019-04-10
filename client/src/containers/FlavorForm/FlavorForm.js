@@ -26,7 +26,7 @@ class FlavorForm extends Component {
       <div className={formStyles.flavorFormContainer}>
         <h2>Propose a New Flavor for a Cake Layer</h2>
         <form onSubmit={this.handleOnSubmit}>
-          <div>
+          <div className={styles.inputWrapper}>
             <label htmlFor="flavor">Fill in the field below with a new flavor for a cake layer:</label>
             <input 
               type="text"
@@ -36,7 +36,7 @@ class FlavorForm extends Component {
               value={flavor}
             />
           </div>
-          <div>
+          <div className={styles.inputWrapper}>
             <label htmlFor="pastry_part">Select the type of cake layer that contains this flavor:</label>
             <select name="pastry_part" onChange={this.handleOnChange} value={pastryPart}>
               <option value="">Pick Pastry Part</option>
