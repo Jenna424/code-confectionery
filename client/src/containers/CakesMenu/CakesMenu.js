@@ -13,6 +13,7 @@ class CakesMenu extends Component {
 
   render() {
     let dessertsDesigned;
+    
     if (this.props.error) {
       dessertsDesigned = <span className={styles.error}>Cakes menu could not be loaded</span>
     } else if (!this.props.cakes.length) {
