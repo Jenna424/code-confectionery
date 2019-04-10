@@ -199,7 +199,7 @@ class CakeCustomizerForm extends Component {
     }
     return (
       <div className={styles.cakeCustomizerContainer}>
-        {this.props.cakeCreationCompleted ? <Redirect to="/cakes" /> : null}
+        {this.props.cakeCreationCompleted ? <Redirect to='/cakes' /> : null}
         <h2>Cake Customizer Form</h2>
         <h3>Provide pastry particulars to complete your cake customization</h3>
         <form onSubmit={this.handleOnSubmit}>
