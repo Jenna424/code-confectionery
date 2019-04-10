@@ -24,6 +24,7 @@ class FlavorForm extends Component {
               <option value="filling">Filling</option>
             </select>
           </div>
+          <button type="submit">Submit Flavor</button>
         </form>
       </div>
     )
