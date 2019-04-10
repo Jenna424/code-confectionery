@@ -5,7 +5,7 @@ import { loadCakes } from '../../actions/pastryPurchaser';
 import styles from '../../components/shared/sharedStyles.module.css';
 import CakeMenuItem from '../../components/CakeMenuItem/CakeMenuItem';
 
-class CakesContainer extends Component {
+class CakesMenu extends Component {
 
   componentDidMount() {
     this.props.loadCakes()
@@ -46,4 +46,4 @@ const mapDispatchToProps = dispatch => ({
   loadCakes: () => dispatch(loadCakes())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(CakesContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CakesMenu);
