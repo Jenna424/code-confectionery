@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { createFlavoredLayer } from '../../actions/flavorForm';
 
 class FlavorForm extends Component {
@@ -40,4 +41,4 @@ const mapDispatchToProps = dispatch => ({
   createFlavoredLayer: layer => dispatch(createFlavoredLayer(layer))
 })
 
-export default FlavorForm;
+export default connect(mapStateToProps, mapDispatchToProps)(FlavorForm);
