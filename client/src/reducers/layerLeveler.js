@@ -18,6 +18,12 @@ const CAKE_COMPONENT_COSTS = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case types.CREATE_LAYER_SUCCESS:
+      return { // return new, updated state object
+        ...state, // copy over all key/value pairs from the old, previous, existing state object
+        layers: [...state.layers, action.layer], // set layers = to a new array to maintain immutability. Copy over all layer object elements from the previous layers array, and then push the layer object just added (received as the payload in the action dispatched) onto the end of this new array. An alternative way of writing this -- layers: state.layers.concat(action.layer)
+        error: false // set error to false to clear it in case I previously got an error that has since been resolved
+      };
   	case types.STACK_LAYER:
   	  return { // return new, updated state object
   	  	...state, // copy over all key/value pairs from the old, previous, existing state object, but remember: this does NOT create a deep clone (it does NOT go into objects and create new nested objects)
