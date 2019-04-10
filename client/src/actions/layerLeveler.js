@@ -1,4 +1,5 @@
 import * as types from './actionTypes';
+import { resetFlavorForm } from './flavorForm';
 const BASE_URL = process.env.REACT_APP_API_URL;
 
 export const createLayerSuccess = layer => ({
