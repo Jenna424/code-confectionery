@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { createFlavoredLayer } from '../../actions/flavorForm';
 
 class FlavorForm extends Component {
   render() {
@@ -33,6 +34,10 @@ class FlavorForm extends Component {
 
 const mapStateToProps = state => ({
   flavorFormData: state.flavorForm
+})
+
+const mapDispatchToProps = dispatch => ({
+  createFlavoredLayer: layer => dispatch(createFlavoredLayer(layer))
 })
 
 export default FlavorForm;
