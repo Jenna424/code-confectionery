@@ -8,14 +8,14 @@ class FlavorForm extends Component {
   handleOnChange = event => {
     const currentFlavorFormData = {
       ...this.props.flavoredLayerData,
-      event.target.name: event.target.value
+      [event.target.name]: event.target.value
     }
     this.props.updateFlavorFormData(currentFlavorFormData)
   }
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.proposeFlavoredLayer(flavoredLayerData)
+    this.props.proposeFlavoredLayer(this.props.flavoredLayerData)
   }
 
   render() {
