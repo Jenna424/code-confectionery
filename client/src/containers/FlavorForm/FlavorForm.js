@@ -32,7 +32,7 @@ class FlavorForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  flavorFormData: state.flavorForm.flavorFormData
+  flavorFormData: state.flavorForm
 })
 
 export default FlavorForm;
