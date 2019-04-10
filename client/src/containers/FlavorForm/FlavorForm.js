@@ -23,7 +23,7 @@ class FlavorForm extends Component {
   render() {
     const { flavor, pastryPart } = this.props.flavoredLayerData;
     return (
-      <div>
+      <div className={formStyles.flavorFormContainer}>
         <h2>Propose a New Flavor for a Cake Layer</h2>
         <form onSubmit={this.handleOnSubmit}>
           <div>
