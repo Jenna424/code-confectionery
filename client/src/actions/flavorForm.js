@@ -1,7 +1,7 @@
 import * as types from './actionTypes';
 const BASE_URL = process.env.REACT_APP_API_URL;
 
-// Synchronous action creator functions that handle the process of creating a new flavored layer:
+// The two synchronous action creator functions right below handle the process of creating a new flavored layer:
 export const createFlavorSuccess = flavoredLayer => ({
   type: types.CREATE_FLAVOR_SUCCESS,
   flavoredLayer
@@ -10,11 +10,6 @@ export const createFlavorSuccess = flavoredLayer => ({
 export const createFlavorFailure = error => ({
   type: types.CREATE_FLAVOR_FAILURE,
   error
-})
-
-export const updateFlavorFormData = flavorFormData => ({
-  type: types.UPDATE_FLAVOR_FORM_DATA,
-  flavorFormData
 })
 
 export const resetFlavorForm = () => ({
@@ -39,3 +34,8 @@ export const createFlavoredLayer = layer => {
       .catch(error => dispatch(createFlavorFailure(error)))
   }
 }
+
+export const updateFlavorFormData = flavorFormData => ({
+  type: types.UPDATE_FLAVOR_FORM_DATA,
+  flavorFormData
+})
