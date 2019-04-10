@@ -11,9 +11,9 @@ class FlavorForm extends Component {
     }
     this.props.updateFlavorFormData(currentFlavorFormData)
   }
-  
+
   render() {
-    const { flavor, pastryPart } = this.props.flavorForm;
+    const { flavor, pastryPart } = this.props.flavorFormData;
     return (
       <div>
         <h2>Propose a New Flavor for a Cake Layer</h2>
