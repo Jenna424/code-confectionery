@@ -1,6 +1,16 @@
 import * as types from './actionTypes';
 const BASE_URL = process.env.REACT_APP_API_URL;
 
+export const createLayerSuccess = layer => ({
+  type: types.CREATE_LAYER_SUCCESS,
+  layer
+})
+
+export const createLayerFailure = error => ({
+  type: types.CREATE_LAYER_FAILURE,
+  error
+})
+
 // synchronous action creators:
 export const stackLayer = layer => ({
   type: types.STACK_LAYER,
