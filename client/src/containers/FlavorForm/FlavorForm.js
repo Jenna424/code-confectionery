@@ -12,6 +12,11 @@ class FlavorForm extends Component {
     this.props.updateFlavorFormData(currentFlavorFormData)
   }
 
+  handleOnSubmit = event => {
+    event.preventDefault();
+    this.props.createFlavoredLayer(flavoredLayerData)
+  }
+
   render() {
     const { flavor, pastryPart } = this.props.flavorFormData;
     return (
