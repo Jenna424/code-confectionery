@@ -11,6 +11,25 @@ export const createLayerFailure = error => ({
   error
 })
 
+// proposeLayerFlavor is an asynchronous action creator function that handles the process of creating a new flavored layer
+export const proposeLayerFlavor = layer => {
+  return dispatch => {
+    return fetch(`${BASE_URL}/layers`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ layer: layer })
+    })
+      .then(response => response.json())
+      .then(layer => {
+        dispatch(createLayerSuccess(layer))
+        dispatch(resetFlavorForm())
+      })
+      .catch(error => dispatch(createLayerFailure(error)))
+  }
+}
+
 // synchronous action creators:
 export const stackLayer = layer => ({
   type: types.STACK_LAYER,
