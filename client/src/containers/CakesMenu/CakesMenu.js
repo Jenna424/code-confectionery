@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loadCakes } from '../../actions/pastryPurchaser';
 import styles from '../../components/shared/sharedStyles.module.css';
-import CakesMenu from '../../components/CakesMenu/CakesMenu';
-//import Spinner from '../../components/shared/Spinner/Spinner';
+import CakeMenuItem from '../../components/CakeMenuItem/CakeMenuItem';
 
 class CakesContainer extends Component {
 
