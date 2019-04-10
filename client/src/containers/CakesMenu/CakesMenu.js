@@ -22,8 +22,7 @@ class CakesMenu extends Component {
           <p>You may design a specialty cake for our menu <Link to='/'>here</Link>.</p>
         </div>
        )
-    } else if (this.props.cakes.length > 0) {
-      dessertsDesigned = <CakesMenu cakes={pastries} />
+    } else if (this.props.cakes.length) {
     }
 
     return (
