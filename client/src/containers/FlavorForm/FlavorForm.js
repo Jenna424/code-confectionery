@@ -31,4 +31,8 @@ class FlavorForm extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  flavorFormData: state.flavorForm.flavorFormData
+})
+
 export default FlavorForm;
