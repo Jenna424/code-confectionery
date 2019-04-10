@@ -13,7 +13,7 @@ export const createFlavorFailure = error => ({
 })
 
 export const resetFlavorForm = () => ({
-  type: RESET_FLAVOR_FORM
+  type: types.RESET_FLAVOR_FORM
 })
 
 // Asynchronous action creator function that handles the process of creating a new flavored layer:
