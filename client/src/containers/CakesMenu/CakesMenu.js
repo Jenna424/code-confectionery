@@ -23,6 +23,14 @@ class CakesMenu extends Component {
         </div>
        )
     } else if (this.props.cakes.length) {
+      dessertsDesigned = this.props.cakes.map(cakeObject =>
+        <CakeMenuItem 
+          key={cakeObject.id}
+          name={cakeObject.name}
+          flavorCombination={cakeObject.flavor_combination}
+          price={cakeObject.price}
+        />
+      )
     }
 
     return (
