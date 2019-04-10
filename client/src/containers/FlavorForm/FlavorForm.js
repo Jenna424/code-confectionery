@@ -38,11 +38,7 @@ class FlavorForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  flavorForm: state.flavorForm
+  flavorFormData: state.flavorForm
 })
-
-//const mapDispatchToProps = dispatch => ({
-  //createFlavoredLayer: layer => dispatch(createFlavoredLayer(layer))
-//})
 
 export default connect(mapStateToProps, { createFlavoredLayer, updateFlavorFormData })(FlavorForm);
