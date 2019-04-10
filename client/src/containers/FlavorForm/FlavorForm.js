@@ -6,7 +6,7 @@ class FlavorForm extends Component {
 
   handleOnChange = event => {
     const currentFlavorFormData = {
-      ...this.props.flavorFormData,
+      ...this.props.flavoredLayerData,
       event.target.name: event.target.value
     }
     this.props.updateFlavorFormData(currentFlavorFormData)
@@ -49,7 +49,7 @@ class FlavorForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  flavorFormData: state.flavorForm
+  flavoredLayerData: state.flavorForm
 })
 
 export default connect(mapStateToProps, { createFlavoredLayer, updateFlavorFormData })(FlavorForm);
