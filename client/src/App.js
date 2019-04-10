@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import CakeConstructor from './containers/CakeConstructor/CakeConstructor';
 import CakeCustomizerForm from './containers/CakeCustomizerForm/CakeCustomizerForm';
 import CakesMenu from './containers/CakesMenu/CakesMenu';
+import FlavorForm from './containers/FlavorForm/FlavorForm';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <Route exact path="/pastry-particulars" component={CakeCustomizerForm} />
           <Route exact path="/" component={CakeConstructor} />
           <Route exact path="/cakes" component={CakesMenu} />
+          <Route exact path="/layers/new" component={FlavorForm} />
         </Switch>
       </div>
     )
