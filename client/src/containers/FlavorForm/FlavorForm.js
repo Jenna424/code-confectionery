@@ -3,7 +3,11 @@ import { connect } from 'react-redux';
 import { createFlavoredLayer } from '../../actions/flavorForm';
 
 class FlavorForm extends Component {
+  handleOnChange = event => {
+  
+  }
   render() {
+    const { flavor, pastryPart } = this.props.flavorFormData;
     return (
       <div>
         <h2>Propose a New Flavor for a Cake Layer</h2>
@@ -21,7 +25,7 @@ class FlavorForm extends Component {
           <div>
             <label htmlFor="pastry_part">Select the type of cake layer that contains this flavor:</label>
             <select name="pastry_part" onChange={this.handleOnChange}>
-              <option value="">Pick Pastry Part</option>
+              <option value={pastryPart}>Pick Pastry Part</option>
               <option value="batter">Batter</option>
               <option value="filling">Filling</option>
             </select>
@@ -34,7 +38,7 @@ class FlavorForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  flavorFormData: state.flavorForm
+  flavorForm: state.flavorForm
 })
 
 const mapDispatchToProps = dispatch => ({
