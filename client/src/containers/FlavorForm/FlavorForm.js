@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createFlavoredLayer } from '../../actions/flavorForm';
+import { createFlavoredLayer, updateFlavorFormData } from '../../actions/flavorForm';
 
 class FlavorForm extends Component {
   handleOnChange = event => {
