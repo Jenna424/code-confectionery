@@ -35,13 +35,15 @@ export default (state = initialState, action) => {
   	  return { // return new, updated state object
   	  	...state, // copy over all key/value pairs from the old, previous, existing state object, but remember: this does NOT create a deep clone (it does NOT go into objects and create new nested objects)
         cakeLayout: [...state.cakeLayout, action.layer], // set cakeLayout = to a new array to maintain immutability. Copy over all layer object elements from the previous cakeLayout array, and then push the layer object just added (received as the payload in the action dispatched) onto the end of this new array
-  	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastry_part]
+  	  	cakeCost: state.cakeCost + CAKE_COMPONENT_COSTS[action.layer.pastry_part],
+        error: false
   	  };
   	case types.UNSTACK_LAYER:
   	  return {
   	  	...state,
         cakeLayout: state.cakeLayout.slice(0, -1), // Removing the last array element. Note: this is fine because .slice() is nondestructive
-  	  	cakeCost: state.cakeCost - CAKE_COMPONENT_COSTS[action.layer.pastry_part]
+  	  	cakeCost: state.cakeCost - CAKE_COMPONENT_COSTS[action.layer.pastry_part],
+        error: false
   	  };
     case types.SET_LAYERS_SUCCESS: // this is executed whenever I successfully fetch layers from my Rails server
       return { // return a new, updated state object
@@ -58,7 +60,8 @@ export default (state = initialState, action) => {
       const initialStateWithoutLayers = dynamicallyDeleteKey(initialState, 'layers');
       return {
         layers: [...state.layers],
-        ...initialStateWithoutLayers
+        ...initialStateWithoutLayers,
+        error: false
       }
     default:
       return state;
