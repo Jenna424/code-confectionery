@@ -17,7 +17,7 @@ class FlavorForm extends Component {
     return (
       <div>
         <h2>Propose a New Flavor for a Cake Layer</h2>
-        <form>
+        <form onSubmit={this.handleOnSubmit}>
           <div>
             <label htmlFor="flavor">Flavor:</label>
             <input 
