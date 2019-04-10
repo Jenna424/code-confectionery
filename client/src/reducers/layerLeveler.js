@@ -26,6 +26,11 @@ export default (state = initialState, action) => {
         error: false // set error to false to clear it in case I previously got an error that has since been resolved,
         layerCreationCompleted: true
       };
+    case types.CREATE_LAYER_FAILURE:
+      return {
+        ...state,
+        error: true
+      };
   	case types.STACK_LAYER:
   	  return { // return new, updated state object
   	  	...state, // copy over all key/value pairs from the old, previous, existing state object, but remember: this does NOT create a deep clone (it does NOT go into objects and create new nested objects)
