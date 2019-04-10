@@ -1,17 +1,6 @@
 import * as types from './actionTypes';
 const BASE_URL = process.env.REACT_APP_API_URL;
 
-// The two synchronous action creator functions right below handle the process of creating a new flavored layer:
-export const createFlavorSuccess = flavoredLayer => ({
-  type: types.CREATE_FLAVOR_SUCCESS,
-  flavoredLayer
-})
-
-export const createFlavorFailure = error => ({
-  type: types.CREATE_FLAVOR_FAILURE,
-  error
-})
-
 export const resetFlavorForm = () => ({
   type: types.RESET_FLAVOR_FORM
 })
