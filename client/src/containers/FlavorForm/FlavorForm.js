@@ -30,8 +30,8 @@ class FlavorForm extends Component {
           </div>
           <div>
             <label htmlFor="pastry_part">Select the type of cake layer that contains this flavor:</label>
-            <select name="pastry_part" onChange={this.handleOnChange}>
-              <option value={pastryPart}>Pick Pastry Part</option>
+            <select name="pastry_part" onChange={this.handleOnChange} value={pastryPart}>
+              <option value="">Pick Pastry Part</option>
               <option value="batter">Batter</option>
               <option value="filling">Filling</option>
             </select>
