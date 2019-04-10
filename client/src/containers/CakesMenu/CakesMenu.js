@@ -12,25 +12,25 @@ class CakesMenu extends Component {
   }
 
   render() {
-    let pastries;
+    let dessertsDesigned;
     if (this.props.error) {
-      pastries = <span className={styles.error}>Cakes menu could not be loaded</span>
+      dessertsDesigned = <span className={styles.error}>Cakes menu could not be loaded</span>
     } else if (!this.props.cakes.length) {
-      pastries = (
+      dessertsDesigned = (
         <div className={styles.emptyMenu}>
           <p>No cakes have been customized.</p>
           <p>You may design a specialty cake for our menu <Link to='/'>here</Link>.</p>
         </div>
        )
     } else if (this.props.cakes.length > 0) {
-      pastries = <CakesMenu cakes={pastries} />
+      dessertsDesigned = <CakesMenu cakes={pastries} />
     }
 
     return (
       <Fragment>
         <div style={{textAlign: 'center'}}>
           <h2>Cakes Menu</h2>
-          {pastries}
+          {dessertsDesigned}
         </div>
       </Fragment>
     )
