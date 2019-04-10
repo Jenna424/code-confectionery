@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateFlavorFormData } from '../../actions/flavorForm';
 import { proposeFlavoredLayer } from '../../actions/layerLeveler';
+import formStyles from './FlavorForm.module.css';
+import styles from '../../components/shared/DynamicFormElement/DynamicFormElement.module.css';
 
 class FlavorForm extends Component {
 
@@ -25,11 +27,11 @@ class FlavorForm extends Component {
         <h2>Propose a New Flavor for a Cake Layer</h2>
         <form onSubmit={this.handleOnSubmit}>
           <div>
-            <label htmlFor="flavor">Flavor:</label>
+            <label htmlFor="flavor">Fill in the field below with a new flavor for a cake layer:</label>
             <input 
               type="text"
               name="flavor"
-              placeholder="Fill in this field with a new flavor for a cake layer..." 
+              placeholder="Enter a batter or filling flavor here..." 
               onChange={this.handleOnChange} 
               value={flavor}
             />
