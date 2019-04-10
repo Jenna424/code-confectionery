@@ -41,8 +41,8 @@ const mapStateToProps = state => ({
   flavorForm: state.flavorForm
 })
 
-const mapDispatchToProps = dispatch => ({
-  createFlavoredLayer: layer => dispatch(createFlavoredLayer(layer))
-})
+//const mapDispatchToProps = dispatch => ({
+  //createFlavoredLayer: layer => dispatch(createFlavoredLayer(layer))
+//})
 
-export default connect(mapStateToProps, mapDispatchToProps)(FlavorForm);
+export default connect(mapStateToProps, { createFlavoredLayer, updateFlavorFormData })(FlavorForm);
