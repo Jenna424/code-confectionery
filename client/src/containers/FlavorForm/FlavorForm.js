@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createFlavoredLayer, updateFlavorFormData } from '../../actions/flavorForm';
+import { updateFlavorFormData } from '../../actions/flavorForm';
 
 class FlavorForm extends Component {
 
@@ -52,4 +52,4 @@ const mapStateToProps = state => ({
   flavoredLayerData: state.flavorForm
 })
 
-export default connect(mapStateToProps, { createFlavoredLayer, updateFlavorFormData })(FlavorForm);
+export default connect(mapStateToProps, { , updateFlavorFormData })(FlavorForm);
