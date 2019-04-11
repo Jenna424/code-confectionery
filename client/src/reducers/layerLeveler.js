@@ -3,7 +3,7 @@ import { dynamicallyDeleteKey } from '../utils/logic';
 
 const initialState = {
   layers: [], // initially set = to an empty array, layers will ultimately store an array of layer objects fetched asynchronously from my Rails API backend
-  cakeLayout: [], // an array of layer objects that describes the order in which cake layers are stacked, from the base up
+  cakeLayout: [], // an array of layer objects that describes the structure of the cake currently being created, from the top to the bottom
   cakeCost: 0,
   error: false
 }
@@ -55,8 +55,7 @@ export default (state = initialState, action) => {
       const initialStateWithoutLayers = dynamicallyDeleteKey(initialState, 'layers');
       return {
         layers: [...state.layers],
-        ...initialStateWithoutLayers,
-        error: false
+        ...initialStateWithoutLayers
       }
     default:
       return state;
