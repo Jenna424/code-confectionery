@@ -4,9 +4,9 @@ import { clearCakeConstructor } from './layerLeveler';
 const BASE_URL = process.env.REACT_APP_API_URL;
 
 // Synchronous action creator functions that involve the cake creation process:
-export const purchasePastrySuccess = pastry => ({
+export const purchasePastrySuccess = cake => ({
   type: types.PURCHASE_PASTRY_SUCCESS,
-  pastry
+  cake
 })
 
 export const purchasePastryFailure = error => ({
