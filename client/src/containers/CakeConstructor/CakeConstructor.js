@@ -74,7 +74,7 @@ class CakeConstructor extends Component {
           {this.producePastryPartLevers(fillingLayers)}
         </div>
         <Cake cakeLayout={cakeLayout} cakeCost={cakeCost} error={error} />
-        {cakeLayout.filter(layer => layer.pastry_part === 'batter').length > 0 &&
+        {cakeLayout.filter(layer => layer.pastry_part === 'batter').length > 0 && cakeLayout[0].pastry_part === 'batter' && cakeLayout[cakeLayout.length - 1].pastry_part === 'batter' &&
           <div style={{textAlign: 'center'}}>
             <button className="ui inverted pink button" onClick={this.commenceCakeCheckout}>Purchase Pastry</button>
           </div>
