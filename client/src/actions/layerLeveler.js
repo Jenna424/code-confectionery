@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
 import { resetFlavorForm } from './flavorForm';
+import history from '../index.js';
 const BASE_URL = process.env.REACT_APP_API_URL;
 
 export const createLayerSuccess = layer => ({
@@ -26,6 +27,7 @@ export const proposeFlavoredLayer = layer => {
       .then(layer => {
         dispatch(createLayerSuccess(layer))
         dispatch(resetFlavorForm())
+        history.push('/')
       })
       .catch(error => dispatch(createLayerFailure(error)))
   }
