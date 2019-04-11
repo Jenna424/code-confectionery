@@ -37,7 +37,8 @@ class CakesMenu extends Component {
     return (
       <Fragment>
         <div style={{textAlign: 'center'}}>
-          <h2>Cakes Menu</h2>
+          <h2><em>Cakes Menu</em></h2>
+          <br />
           {dessertsDesigned}
         </div>
       </Fragment>
