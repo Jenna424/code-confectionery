@@ -5,8 +5,8 @@ import CakeLayer from '../CakeLayer/CakeLayer';
 const Cake = ({ cakeLayout, cakeCost, error }) => {
   let defaultFilling;
 
-  let cakeLayers = cakeLayout.map(cakeObject => 
-    <CakeLayer key={cakeObject.id} cakeObject={cakeObject} />
+  let cakeLayers = cakeLayout.map((cakeObject, index) => 
+    <CakeLayer key={`${index}${cakeObject.id}`} cakeObject={cakeObject} />
   )
 
   if (error) {
