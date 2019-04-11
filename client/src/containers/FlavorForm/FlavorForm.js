@@ -39,7 +39,7 @@ class FlavorForm extends Component {
           </div>
           <div className={styles.inputWrapper}>
             <label className={styles.label} htmlFor="pastry_part">Select the type of cake layer that contains this flavor:</label>
-            <select className={styles.genericTag} name="pastry_part" onChange={this.handleOnChange} value={pastryPart}>
+            <select className={styles.genericTag} name="pastry_part" onChange={this.handleOnChange}>
               <option value="">Pick Pastry Part</option>
               <option value="batter">Batter</option>
               <option value="filling">Filling</option>
