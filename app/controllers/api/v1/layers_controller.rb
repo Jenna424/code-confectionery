@@ -20,6 +20,12 @@ module Api
       def show
         render json: Layer.find_by(id: params[:id]), status: 200
       end
+
+      private
+
+        def layer_params
+          params.require(:layer).permit(:flavor, :pastry_part)
+        end
     end
   end
 end
