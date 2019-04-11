@@ -5,8 +5,7 @@ const initialState = {
   layers: [], // initially set = to an empty array, layers will ultimately store an array of layer objects fetched asynchronously from my Rails API backend
   cakeLayout: [], // an array of layer objects that describes the order in which cake layers are stacked, from the base up
   cakeCost: 0,
-  error: false,
-  layerCreationCompleted: false
+  error: false
 }
 
 const CAKE_COMPONENT_COSTS = {
@@ -23,8 +22,7 @@ export default (state = initialState, action) => {
       return { // return new, updated state object
         ...state, // copy over all key/value pairs from the old, previous, existing state object
         layers: [...state.layers, action.layer], // set layers = to a new array to maintain immutability. Copy over all layer object elements from the previous layers array, and then push the layer object just added (received as the payload in the action dispatched) onto the end of this new array. An alternative way of writing this -- layers: state.layers.concat(action.layer)
-        error: false, // set error to false to clear it in case I previously got an error that has since been resolved,
-        layerCreationCompleted: true
+        error: false // set error to false to clear it in case I previously got an error that has since been resolved
       };
     case types.CREATE_LAYER_FAILURE:
       return {
