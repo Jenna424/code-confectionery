@@ -10,10 +10,7 @@ const initialState = {
 
 const CAKE_COMPONENT_COSTS = {
   batter: 5.5,
-  filling: 4.5,
-  frosting: 3.5,
-  garnish: 2.5,
-  topper: 1.5
+  filling: 4.5
 }
 
 export default (state = initialState, action) => {
