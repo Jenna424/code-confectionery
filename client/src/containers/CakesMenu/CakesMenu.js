@@ -25,7 +25,7 @@ class CakesMenu extends Component {
        )
     } else if (this.props.cakes.length) {
       dessertsDesigned = this.props.cakes.map(cakeObject =>
-        <CakeMenuItem 
+        <CakeMenuItem
           key={cakeObject.id}
           name={cakeObject.name}
           flavorCombination={cakeObject.flavor_combination}
