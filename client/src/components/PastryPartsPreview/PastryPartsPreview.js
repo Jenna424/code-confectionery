@@ -32,6 +32,8 @@ const PastryPartsPreview = ({ cakeBatterLayers, cakeFillingLayers, cakeCost, con
         {fillingProportions}
       </div>
       <br />
+      <p className={styles.proportionsParagraph}><strong>Cake Cost</strong>: ${cakeCost.toFixed(2)}</p>
+      <br />
     </Fragment>
   )
 }
