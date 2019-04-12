@@ -13,7 +13,12 @@ const PastryPartsPreview = ({ cakeBatterLayers, cakeFillingLayers, cakeCost, con
       <p>{fillingFlavor}: {calculateCakePartProportions(cakeFillingLayers)[fillingFlavor]}</p>
     )
   }
-  
+
+  const batterFlavors = Object.keys(calculateCakePartProportions(cakeBatterLayers))
+  const batterProportions = batterFlavors.map(batterFlavor =>
+    <p>{batterFlavor}: {calculateCakePartProportions(cakeBatterLayers)[batterFlavor]}</p>
+  )
+
   return (
   )
 }
