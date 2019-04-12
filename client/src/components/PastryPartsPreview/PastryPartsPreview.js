@@ -20,6 +20,9 @@ const PastryPartsPreview = ({ cakeBatterLayers, cakeFillingLayers, cakeCost, con
   )
 
   return (
+    <Fragment>
+      <h3><em>Preview Your Pastry Prior to Purchase</em></h3>
+    </Fragment>
   )
 }
 
