@@ -32,7 +32,11 @@ const PastryPartsPreview = ({ cakeBatterLayers, cakeFillingLayers, cakeCost, con
         {fillingProportions}
       </div>
       <br />
-      <p className={styles.priceParagraph}><strong>Cake Cost</strong>: ${cakeCost.toFixed(2)}</p>
+      <p>
+        <strong className={styles.price}>Cake Cost:</strong>
+        <br />
+        ${cakeCost.toFixed(2)}
+      </p>
       <br />
       <button className="tiny ui pink button" onClick={continueCakeCheckout}>Continue Cake Checkout</button>
       <button className="tiny ui pink button" onClick={cancelCakeCheckout}>Cancel Cake Checkout</button>
