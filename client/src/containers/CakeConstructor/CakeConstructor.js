@@ -54,11 +54,15 @@ class CakeConstructor extends Component {
     const { layers, cakeLayout, cakeCost, error } = this.props;
     const batterLayers = layers.filter(layerObject => layerObject.pastry_part === 'batter');
     const fillingLayers = layers.filter(layerObject => layerObject.pastry_part === 'filling');
+    const cakeBatterLayers = cakeLayout.filter(layerObject => layerObject.pastry_part === 'batter');
+    const cakeFillingLayers = cakeLayout.filter(layerObject => layerObject.pastry_part === 'filling');
     return (
       <Fragment>
         <Modal viewable={this.state.commenceCakeCheckout} closed={this.cancelCakeCheckout}>
           <PastryPartsPreview
             cakeLayout={cakeLayout}
+            cakeBatterLayers={cakeBatterLayers}
+            cakeFillingLayers={cakeFillingLayers}
             cakeCost={cakeCost}
             continueCakeCheckout={this.continueCakeCheckout}
             cancelCakeCheckout={this.cancelCakeCheckout}
