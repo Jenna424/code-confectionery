@@ -23,16 +23,16 @@ const PastryPartsPreview = ({ cakeBatterLayers, cakeFillingLayers, cakeCost, con
     <Fragment>
       <h3><em>Preview Your Pastry Prior to Purchase</em></h3>
       <div>
-        <p className={styles.proportionsParagraph}><strong>Batter Layers</strong>:</p>
+        <p className={styles.proportionParagraph}><strong>Batter Layers</strong>:</p>
         {batterProportions}
       </div>
       <br />
       <div>
-        <p className={styles.proportionsParagraph}><strong>Filling Layers</strong>:</p>
+        <p className={styles.proportionParagraph}><strong>Filling Layers</strong>:</p>
         {fillingProportions}
       </div>
       <br />
-      <p className={styles.proportionsParagraph}><strong>Cake Cost</strong>: ${cakeCost.toFixed(2)}</p>
+      <p className={styles.priceParagraph}><strong>Cake Cost</strong>: ${cakeCost.toFixed(2)}</p>
       <br />
       <button className="tiny ui pink button" onClick={continueCakeCheckout}>Continue Cake Checkout</button>
       <button className="tiny ui pink button" onClick={cancelCakeCheckout}>Cancel Cake Checkout</button>
