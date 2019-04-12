@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { loadLayers, stackLayer, unstackLayer } from '../../actions/layerLeveler';
 import styles from './CakeConstructor.module.css';
 import Modal from '../../components/shared/Modal/Modal';
-import PastryPartsPreview from '../../components/PastryPartsPreview';
+import PastryPartsPreview from '../../components/PastryPartsPreview/PastryPartsPreview';
 import Cake from '../../components/Cake/Cake';
 import LayerLevers from '../../components/LayerLevers';
 
