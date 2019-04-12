@@ -34,6 +34,8 @@ const PastryPartsPreview = ({ cakeBatterLayers, cakeFillingLayers, cakeCost, con
       <br />
       <p className={styles.proportionsParagraph}><strong>Cake Cost</strong>: ${cakeCost.toFixed(2)}</p>
       <br />
+      <button className="tiny ui pink button" onClick={continueCakeCheckout}>Continue Cake Checkout</button>
+      <button className="tiny ui pink button" onClick={cancelCakeCheckout}>Cancel Cake Checkout</button>
     </Fragment>
   )
 }
