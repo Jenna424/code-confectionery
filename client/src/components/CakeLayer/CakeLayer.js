@@ -50,6 +50,9 @@ class CakeLayer extends Component {
       case 'Blueberry Jam':
         fillingClasses.push(styles.blueberry);
         break;
+      case 'Apricot Preserves':
+        fillingClasses.push(styles.apricot);
+        break;
       default:
         return fillingClasses;
     }
