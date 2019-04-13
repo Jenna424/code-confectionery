@@ -25,6 +25,7 @@ class CakeLayer extends Component {
         break;
       case 'Chocolate Ganache':
         fillingClasses.push(styles.chocolateGanache);
+        break;
       default:
         return fillingClasses;
     }
