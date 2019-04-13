@@ -46,6 +46,10 @@
   line-height: initial;
 }
 
+.chocolateGanache {
+  background: linear-gradient(#A0522D, #8B4513);
+}
+
 .keylime {
   background: linear-gradient(#e8f48c, #e2f48c);
 }
