@@ -46,6 +46,12 @@
   line-height: initial;
 }
 
+.buttercream {
+  background: linear-gradient(#FFF8DC, #F5DEB3);
+}
+
+D2691E
+
 .chocolateGanache {
   background: linear-gradient(#A0522D, #8B4513);
 }

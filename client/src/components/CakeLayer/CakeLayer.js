@@ -20,6 +20,9 @@ class CakeLayer extends Component {
   styleFilling = flavor => {
     let fillingClasses = [styles.filling, styles.mysteryFillingFlavor];
     switch (flavor) {
+      case 'Buttercream':
+        fillingClasses.push(styles.buttercream);
+        break;
       case 'Keylime Pie':
         fillingClasses.push(styles.keylime);
         break;
