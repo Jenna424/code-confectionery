@@ -23,6 +23,8 @@ class CakeLayer extends Component {
       case 'Keylime Pie':
         fillingClasses.push(styles.keylime);
         break;
+      case 'Chocolate Ganache':
+        fillingClasses.push(styles.chocolateGanache);
       default:
         return fillingClasses;
     }
