@@ -63,7 +63,8 @@
 }
 
 .whippedCream {
-  background: linear-gradient(#FFFFFF, #FFFFF0);
+  background: linear-gradient(#FFFFF0, #FFFFFF);
+  border: 1px solid #eee;
 }
 
 .keylime {
