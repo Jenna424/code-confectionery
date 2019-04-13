@@ -38,6 +38,12 @@ class CakeLayer extends Component {
       case 'Keylime Pie':
         fillingClasses.push(styles.keylime);
         break;
+      case 'Cream Cheese Frosting':
+        fillingClasses.push(styles.creamCheese);
+        break;
+      case 'Raspberry Jam':
+        fillingClasses.push(styles.raspberry);
+        break;
       default:
         return fillingClasses;
     }

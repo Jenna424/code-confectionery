@@ -75,3 +75,19 @@
   background: linear-gradient(#FFFFF0, #FFFFFF);
   border: 1px solid #eee;
 }
+
+.raspberry {
+  background: linear-gradient(#DC143C, #A52A2A);
+}
+
+.strawberry {
+  background: linear-gradient(#e8f48c, #e2f48c);
+}
+
+.blueberry {
+  background: linear-gradient(#e8f48c, #e2f48c);
+}
+
+.apricot {
+  background: linear-gradient(#e8f48c, #e2f48c);
+}
