@@ -20,6 +20,7 @@ class CakeConstructor extends Component {
   producePastryPartLevers = pastryPartLayers => {
     const { cakeLayout, stackLayer, unstackLayer } = this.props;
     const lastLayerLevered = cakeLayout[cakeLayout.length - 1];
+    const emptyCakeBox = !cakeLayout.length;
     return (
       pastryPartLayers.map(layerObject =>
         <LayerLevers
@@ -27,7 +28,7 @@ class CakeConstructor extends Component {
           label={layerObject.flavor}
           stackLayer={() => stackLayer(layerObject)}
           unstackLayer={() => unstackLayer(layerObject)}
-          disableStack={cakeLayout.length > 0 && layerObject.pastry_part === lastLayerLevered.pastry_part}
+          disableStack={(emptyCakeBox && layerObject.pastry_part === 'filling') || (!emptyCakeBox && layerObject.pastry_part === lastLayerLevered.pastry_part)}
           disableUnstack={!(cakeLayout.length && cakeLayout.includes(layerObject) && layerObject.id === lastLayerLevered.id)}
         />
       )
