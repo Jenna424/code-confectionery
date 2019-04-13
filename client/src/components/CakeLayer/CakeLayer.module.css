@@ -7,11 +7,11 @@
 }
 
 .redVelvet {
-  background-color: #800B15;
+  background: linear-gradient(#8B0000, #800B15);
 }
 
 .carrot {
-  background-color: #BF6F31;
+  background: linear-gradient(#FFA500, #BF6F31);
 }
 
 .mysteryBatterFlavor {
