@@ -29,6 +29,9 @@ class CakeLayer extends Component {
       case 'Chocolate Ganache':
         fillingClasses.push(styles.chocolateGanache);
         break;
+      case 'Bavarian Cream':
+        fillingClasses.push(styles.bavarianCream);
+        break;
       case 'Dulce de Leche':
         fillingClasses.push(styles.dulceDeLeche);
         break;
