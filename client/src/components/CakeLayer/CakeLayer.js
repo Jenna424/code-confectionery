@@ -23,9 +23,6 @@ class CakeLayer extends Component {
       case 'Buttercream':
         fillingClasses.push(styles.buttercream);
         break;
-      case 'Keylime Pie':
-        fillingClasses.push(styles.keylime);
-        break;
       case 'Chocolate Ganache':
         fillingClasses.push(styles.chocolateGanache);
         break;
@@ -34,6 +31,12 @@ class CakeLayer extends Component {
         break;
       case 'Dulce de Leche':
         fillingClasses.push(styles.dulceDeLeche);
+        break;
+      case 'Whipped Cream':
+        fillingClasses.push(styles.whippedCream);
+        break;
+      case 'Keylime Pie':
+        fillingClasses.push(styles.keylime);
         break;
       default:
         return fillingClasses;
