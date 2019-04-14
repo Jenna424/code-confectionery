@@ -5,11 +5,38 @@ class CakeLayer extends Component {
   styleBatter = flavor => {
     let batterClasses = [styles.batter, styles.mysteryBatterFlavor];
     switch (flavor) {
+      case 'Vanilla Sponge':
+        batterClasses.push(styles.vanillaSponge);
+        break;
+      case 'Chocolate Sponge':
+        batterClasses.push(styles.chocolateSponge);
+        break;
+      case 'Strawberry Shortcake':
+        batterClasses.push(styles.strawberryShortcake);
+        break;
+      case 'Pumpkin':
+        batterClasses.push(styles.pumpkin);
+        break;
+      case 'Gingerbread':
+        batterClasses.push(styles.gingerbread);
+        break;
       case 'Red Velvet':
         batterClasses.push(styles.redVelvet);
         break;
       case 'Carrot':
-        batterClasses.push(styles.carrot)
+        batterClasses.push(styles.carrot);
+        break;
+      case 'Lemon':
+        batterClasses.push(styles.lemon);
+        break;
+      case 'Banana':
+        batterClasses.push(styles.banana);
+        break;
+      case 'Marble':
+        batterClasses.push(styles.marble);
+        break;
+      case 'Coffee':
+        batterClasses.push(styles.coffee);
         break;
       default:
         return batterClasses;
