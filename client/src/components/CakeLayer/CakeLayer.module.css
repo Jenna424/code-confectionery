@@ -6,12 +6,32 @@
   background: linear-gradient(#f3e5ab, #e9e1cf);
 }
 
+.vanillaSponge {
+  background: linear-gradient(#FFFFE0, #FFF8DC);
+}
+
+.chocolateSponge {
+  background: linear-gradient(#A0522D, #8B4513);
+}
+
+.strawberryShortcake {
+  background: linear-gradient(#F08080, #FFC0CB);
+}
+
+.pumpkin {
+  background: linear-gradient(#DAA520, #CD853F);
+}
+
+.gingerbread {
+  background: linear-gradient(#CD853F, #CD853F);
+}
+
 .redVelvet {
-  background: linear-gradient(#8B0000, #800B15);
+  background: linear-gradient(#A52A2A, #800000);
 }
 
 .carrot {
-  background: linear-gradient(#FFA500, #BF6F31);
+  background: linear-gradient(#ffa500, #ff8c00);
 }
 
 .mysteryBatterFlavor {
