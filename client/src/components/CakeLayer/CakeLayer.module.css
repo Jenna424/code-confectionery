@@ -34,6 +34,22 @@
   background: linear-gradient(#ffa500, #ff8c00);
 }
 
+.lemon {
+  background: linear-gradient(#FFFF00, #FFFACD);
+}
+
+.banana {
+  background: linear-gradient(#F0E68C, #DAA520);
+}
+
+.marble {
+  background: linear-gradient(#FFFFE0, #8B4513);
+}
+
+.coffee {
+  background: linear-gradient(#D2B48C, #A0522D);
+}
+
 .mysteryBatterFlavor {
   border: 1px solid linen;
 }
