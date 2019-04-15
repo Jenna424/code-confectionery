@@ -4,13 +4,13 @@ import { clearCakeConstructor } from './layerLeveler';
 const BASE_URL = process.env.REACT_APP_API_URL;
 
 // Synchronous action creator functions that involve the cake creation process:
-export const purchasePastrySuccess = cake => ({
-  type: types.PURCHASE_PASTRY_SUCCESS,
+export const proposePastrySuccess = cake => ({
+  type: types.PROPOSE_PASTRY_SUCCESS,
   cake
 })
 
-export const purchasePastryFailure = error => ({
-  type: types.PURCHASE_PASTRY_FAILURE,
+export const proposePastryFailure = error => ({
+  type: types.PROPOSE_PASTRY_FAILURE,
   error
 })
 // Asynchronous action creator function that involves the cake creation process:
@@ -25,10 +25,10 @@ export const createCake = cake => {
     })
       .then(response => response.json())
       .then(cake => {
-        dispatch(purchasePastrySuccess(cake))
+        dispatch(proposePastrySuccess(cake))
         dispatch(clearCakeConstructor())
       })
-      .catch(error => dispatch(purchasePastryFailure(error)))
+      .catch(error => dispatch(proposePastryFailure(error)))
   }
 }
 // Synchronous action creator functions that involve the process of fetching cakes from my Rails API backend server
