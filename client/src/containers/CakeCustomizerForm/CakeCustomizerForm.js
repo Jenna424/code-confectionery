@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { meetsValidationCriteria } from '../../utils/logic.js';
 import DynamicFormElement from '../../components/shared/DynamicFormElement/DynamicFormElement';
-import { createCake } from '../../actions/pastryPurchaser';
+import { createCake } from '../../actions/pastryProposal';
 import styles from './CakeCustomizerForm.module.css';
 import { Redirect } from 'react-router-dom';
 
