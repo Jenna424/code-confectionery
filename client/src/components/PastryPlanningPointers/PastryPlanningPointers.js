@@ -2,7 +2,7 @@ import React from 'react';
 
 const PastryPlanningPointers = () => (
   <div>
-    Tips for designing a cake go here
+    <h3><em>Pointers for Planning Your Pastry</em></h3>
   </div>
 )
 
