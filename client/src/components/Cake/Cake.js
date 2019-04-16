@@ -3,6 +3,8 @@ import styles from './Cake.module.css';
 import CakeLayer from '../CakeLayer/CakeLayer';
 
 const Cake = ({ cakeLayout, cakeCost, error }) => {
+  let cakeClass = cakeLayout.length ? styles.cakeContainer : styles.standardSponge
+  
   let defaultFilling;
 
   let cakeLayers = cakeLayout.map((cakeObject, index) => 
@@ -29,8 +31,6 @@ const Cake = ({ cakeLayout, cakeCost, error }) => {
       </Fragment>
     )
   }
-
-  let cakeClass = cakeLayout.length ? styles.cakeContainer : styles.standardSponge
 
   return (
     <div className={cakeClass}>
