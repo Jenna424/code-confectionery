@@ -47,8 +47,8 @@ class CakesMenu extends Component {
 }
 
 const mapStateToProps = state => ({
-  cakes: state.pastryPurchaser.cakes,
-  error: state.pastryPurchaser.error
+  cakes: state.pastryProposal.cakes,
+  error: state.pastryProposal.error
 })
 
 const mapDispatchToProps = dispatch => ({
