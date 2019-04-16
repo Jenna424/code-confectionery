@@ -179,13 +179,13 @@ class CakeCustomizerForm extends Component {
       cakeCustomizations[pastryProperty] = pastryParticulars[pastryProperty].value;
     }
 
-    const pastryPendingPurchase = {
+    const pastryPendingProposal = {
       ...cakeCustomizations,
       price: cakeCost,
       layer_ids: cakeLayout.map(layerObject => layerObject.id)
     }
 
-    createCake(pastryPendingPurchase)
+    createCake(pastryPendingProposal)
   }
 
   render() {
