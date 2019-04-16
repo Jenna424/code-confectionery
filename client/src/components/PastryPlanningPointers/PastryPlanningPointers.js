@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './PastryPlanningPointers.module.css';
 
 const PastryPlanningPointers = () => (
-  <div>
+  <div className={styles.pointers}>
     <h3>Pointers for Planning Your Pastry</h3>
     <p><em>When designing the graphical representation of your cake, please keep the following requirements in mind:</em></p>
     <p>~ At the bare minimum, your pastry must contain at least one layer of cake batter.</p>
