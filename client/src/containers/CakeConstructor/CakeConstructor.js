@@ -35,9 +35,9 @@ class CakeConstructor extends Component {
     )
   }
 
-  commenceCakeCheckout = () => {
+  commenceCakeCustomization = () => {
     this.setState({
-      commenceCakeCheckout: true
+      commenceCakeCustomization: true
     })
   }
 
@@ -59,7 +59,7 @@ class CakeConstructor extends Component {
     const cakeFillingLayers = cakeLayout.filter(layerObject => layerObject.pastry_part === 'filling');
     return (
       <Fragment>
-        <Modal viewable={this.state.commenceCakeCheckout} closed={this.cancelCakeCheckout}>
+        <Modal viewable={this.state.commenceCakeCustomization} closed={this.cancelCakeCheckout}>
           <PastryPartsPreview
             cakeLayout={cakeLayout}
             cakeBatterLayers={cakeBatterLayers}
@@ -81,7 +81,7 @@ class CakeConstructor extends Component {
         <Cake cakeLayout={cakeLayout} cakeCost={cakeCost} error={error} />
         {cakeLayout.filter(layer => layer.pastry_part === 'batter').length > 0 && cakeLayout[0].pastry_part === 'batter' && cakeLayout[cakeLayout.length - 1].pastry_part === 'batter' &&
           <div style={{textAlign: 'center'}}>
-            <button className="ui inverted pink button" onClick={this.commenceCakeCheckout}>Purchase Pastry</button>
+            <button className="ui inverted pink button" onClick={this.commenceCakeCustomization}>Purchase Pastry</button>
           </div>
         }
       </Fragment>
