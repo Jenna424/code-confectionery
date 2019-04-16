@@ -38,8 +38,8 @@ const PastryPartsPreview = ({ cakeBatterLayers, cakeFillingLayers, cakeCost, con
         ${cakeCost.toFixed(2)}
       </p>
       <br />
-      <button className="tiny ui pink button" onClick={continueCakeCheckout}>Continue</button>
-      <button className="tiny ui pink button" onClick={cancelCakeCheckout}>Cancel</button>
+      <button className="tiny ui pink button" onClick={continueCakeCustomization}>Continue</button>
+      <button className="tiny ui pink button" onClick={cancelCakeCustomization}>Cancel</button>
     </Fragment>
   )
 }
