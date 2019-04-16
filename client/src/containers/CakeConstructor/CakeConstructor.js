@@ -10,7 +10,7 @@ import LayerLevers from '../../components/LayerLevers';
 class CakeConstructor extends Component {
 
   state = {
-    commenceCakeCheckout: false
+    commenceCakeCustomization: false
   }
 
   componentDidMount() {
@@ -47,7 +47,7 @@ class CakeConstructor extends Component {
 
   cancelCakeCustomization = () => {
     this.setState({
-      commenceCakeCheckout: false
+      commenceCakeCustomization: false
     })
   }
 
