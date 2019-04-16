@@ -7,6 +7,7 @@ const Navbar = () => (
       <i className="birthday cake icon"></i>
     </div>
     <NavLink to="/cakes" className="item" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Cakes Menu</NavLink>
+    <NavLink to="/pastry-planning-pointers" className="item" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Pastry Planning Pointers</NavLink>
     <NavLink exact to="/" className="item" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Cake Constructor</NavLink>
     <NavLink to="/layers/new" className="item" activeStyle={{fontWeight: 'bold', color: 'violet', backgroundColor: 'lightyellow'}}>Propose a New Flavor</NavLink>
   </div>
