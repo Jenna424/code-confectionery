@@ -41,11 +41,11 @@ class CakeConstructor extends Component {
     })
   }
 
-  continueCakeCheckout = () => {
+  continueCakeCustomization = () => {
     this.props.history.push('/pastry-particulars')
   }
 
-  cancelCakeCheckout = () => {
+  cancelCakeCustomization = () => {
     this.setState({
       commenceCakeCheckout: false
     })
@@ -65,8 +65,8 @@ class CakeConstructor extends Component {
             cakeBatterLayers={cakeBatterLayers}
             cakeFillingLayers={cakeFillingLayers}
             cakeCost={cakeCost}
-            continueCakeCheckout={this.continueCakeCheckout}
-            cancelCakeCheckout={this.cancelCakeCheckout}
+            continueCakeCustomization={this.continueCakeCustomization}
+            cancelCakeCustomization={this.cancelCakeCustomization}
           />
         </Modal>
         <h2 style={{textAlign: 'center'}}>Create a Custom Cake</h2>
