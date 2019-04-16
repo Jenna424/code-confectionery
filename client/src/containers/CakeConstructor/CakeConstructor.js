@@ -59,7 +59,7 @@ class CakeConstructor extends Component {
     const cakeFillingLayers = cakeLayout.filter(layerObject => layerObject.pastry_part === 'filling');
     return (
       <Fragment>
-        <Modal viewable={this.state.commenceCakeCustomization} closed={this.cancelCakeCheckout}>
+        <Modal viewable={this.state.commenceCakeCustomization} closed={this.cancelCakeCustomization}>
           <PastryPartsPreview
             cakeLayout={cakeLayout}
             cakeBatterLayers={cakeBatterLayers}
