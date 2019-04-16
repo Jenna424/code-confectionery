@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loadCakes } from '../../actions/pastryPurchaser';
+import { loadCakes } from '../../actions/pastryProposal';
 import styles from '../../components/shared/sharedStyles.module.css';
 import CakeMenuItem from '../../components/CakeMenuItem/CakeMenuItem';
 
