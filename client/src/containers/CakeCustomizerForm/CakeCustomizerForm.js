@@ -203,17 +203,17 @@ class CakeCustomizerForm extends Component {
         <h2>Cake Customizer Form</h2>
         <h3>Provide pastry particulars to complete your cake customization</h3>
         <form onSubmit={this.handleOnSubmit}>
-          {cakeCustomizerConfiguration.map(fieldObject =>
+          {cakeCustomizerConfiguration.map(obj =>
             <DynamicFormElement
-              key={fieldObject.pastryProperty}
-              labelText={fieldObject.pastryProperty === 'flavor_combination' ? 'Flavors' : fieldObject.pastryProperty.charAt(0).toUpperCase() + fieldObject.pastryProperty.slice(1)}
-              stringTag={fieldObject.setup.stringTag}
-              tagContents={fieldObject.setup.tagContents}
-              value={fieldObject.setup.value}
-              isInvalid={!fieldObject.setup.isValid}
-              mustValidate={fieldObject.setup.validationCriteria}
-              interactedWith={fieldObject.setup.interactedWith}
-              handleOnChange={event => this.handleOnChange(event, fieldObject.pastryProperty)}
+              key={obj.pastryProperty}
+              labelText={obj.pastryProperty === 'flavor_combination' ? 'Flavors' : obj.pastryProperty.charAt(0).toUpperCase() + obj.pastryProperty.slice(1)}
+              stringTag={obj.setup.stringTag}
+              tagContents={obj.setup.tagContents}
+              value={obj.setup.value}
+              isInvalid={!obj.setup.isValid}
+              mustValidate={obj.setup.validationCriteria}
+              interactedWith={obj.setup.interactedWith}
+              handleOnChange={event => this.handleOnChange(event, obj.pastryProperty)}
             />
           )}
           <button onSubmit={this.handleOnSubmit} type="submit" disabled={!this.state.wholeFormIsValid}>Propose Pastry</button>
