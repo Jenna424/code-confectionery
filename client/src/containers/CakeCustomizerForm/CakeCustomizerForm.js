@@ -216,7 +216,7 @@ class CakeCustomizerForm extends Component {
               handleOnChange={event => this.handleOnChange(event, fieldObject.fieldProperty)}
             />
           )}
-          <button onSubmit={this.handleOnSubmit} type="submit" disabled={!this.state.wholeFormIsValid}>Purchase Pastry</button>
+          <button onSubmit={this.handleOnSubmit} type="submit" disabled={!this.state.wholeFormIsValid}>Propose Pastry</button>
         </form>
       </div>
     )
