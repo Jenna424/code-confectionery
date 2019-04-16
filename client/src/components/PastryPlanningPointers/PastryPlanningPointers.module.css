@@ -1,3 +1,7 @@
 .pointers {
   text-align: center;
 }
+
+.pointers h3 {
+  color: fuchsia;
+}
