@@ -21,7 +21,7 @@ const PastryPartsPreview = ({ cakeBatterLayers, cakeFillingLayers, cakeCost, con
 
   return (
     <Fragment>
-      <h3><em>Preview Your Pastry Prior to Purchase</em></h3>
+      <h3><em>Preview Your Pastry Part Proportions</em></h3>
       <div>
         <p className={styles.proportionParagraph}><strong>Batter Layers</strong>:</p>
         {batterProportions}
