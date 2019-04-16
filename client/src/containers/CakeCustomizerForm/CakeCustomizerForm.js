@@ -175,8 +175,8 @@ class CakeCustomizerForm extends Component {
     const { cakeLayout, cakeCost, createCake } = this.props;
     const cakeCustomizations = {};
 
-    for (let fieldProperty in pastryParticulars) {
-      cakeCustomizations[fieldProperty] = pastryParticulars[fieldProperty].value;
+    for (let pastryProperty in pastryParticulars) {
+      cakeCustomizations[pastryProperty] = pastryParticulars[pastryProperty].value;
     }
 
     const pastryPendingPurchase = {
