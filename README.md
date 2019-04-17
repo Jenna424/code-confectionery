@@ -2,20 +2,20 @@
 Code Confectionery is a React + Redux application that utilizes a Ruby on Rails API backend server. This application enables pastry chefs to design custom layer cakes to incorporate in a bakery menu and to propose new flavors for cake layers.
 
 # Installation Guide
-Fork and clone this repository.
-Install all gem dependencies by running bundle install (or bundle).
-Run migrations with the command rake db:migrate to set up the database.
-Seed your database by running rake db:seed.
-Alternatively, run rake db:reset.
-To start up your application's local server, run rake start.
-Navigate to http://localhost:3000/ to start using Code Confectionery!
+1. Fork and clone this repository.
+2. Install all gem dependencies by running bundle install (or bundle).
+3. Run migrations with the command rake db:migrate to set up the database.
+4. Seed your database by running rake db:seed.
+5. Alternatively, you can run rake db:reset.
+6. To start up your application's local server, run rake start.
+7. Navigate to http://localhost:3000/ to start using Code Confectionery!
 
 # Contributors' Guide
-Please fork and clone this repository.
-Run bundle install (or bundle) to install/update gems.
-Make any changes you see fit, such as the addition of a new feature or a bug fix.
-Concisely and clearly document any changes you make with a descriptive commit message!
-Send a pull request. Bug reports and pull requests are welcome on GitHub at https://github.com/Jenna424/code-confectionery. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+1. Please fork and clone this repository.
+2. Run bundle install (or bundle) to install/update gems.
+3. Make any changes you see fit, such as the addition of a new feature or a bug fix.
+4. Concisely and clearly document any changes you make with a descriptive commit message!
+5. Send a pull request. Bug reports and pull requests are welcome on GitHub at https://github.com/Jenna424/code-confectionery. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
 # License
 This project has been licensed under the MIT open source license. Read the LICENSE.md file in this repository.
