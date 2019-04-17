@@ -1,5 +1,5 @@
 # README
-Code Confectionery is a React and Redux application that utilizes a Ruby on Rails backend. This application enables pastry chefs to design custom layer cakes to incorporate in a bakery menu and to propose new flavors for cake layers.
+Code Confectionery is a React + Redux application that utilizes a Ruby on Rails backend. This application enables pastry chefs to design custom layer cakes to incorporate in a bakery menu and to propose new flavors for cake layers.
 
 # Installation Guide
 Fork and clone this repository.
