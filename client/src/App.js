@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './components/shared/Navbar/Navbar';
 import PastryPlanningPointers from './components/PastryPlanningPointers/PastryPlanningPointers';
 import CakeConstructor from './containers/CakeConstructor/CakeConstructor';
 import CakeCustomizerForm from './containers/CakeCustomizerForm/CakeCustomizerForm';
