@@ -6,7 +6,7 @@ export const meetsValidationCriteria = (currentValue, criteria) => {
   }
 
   if (criteria.numberIsRequired) {
-    criteriaMet = /^\d+$/.test(currentValue) && criteriaMet
+    criteriaMet = /^[1-9]+$/.test(currentValue) && criteriaMet
   }
 
   return criteriaMet;
