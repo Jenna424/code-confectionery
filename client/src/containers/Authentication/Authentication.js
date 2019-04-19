@@ -28,7 +28,7 @@ class Authentication extends Component {
         value: '',
         validationCriteria: {
           cannotBeBlank: true,
-          minLength: 8
+          minimumLength: 8
         },
         isValid: false,
         interactedWith: false
