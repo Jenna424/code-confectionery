@@ -6,7 +6,6 @@ import CakeConstructor from './containers/CakeConstructor/CakeConstructor';
 import CakeCustomizerForm from './containers/CakeCustomizerForm/CakeCustomizerForm';
 import CakesMenu from './containers/CakesMenu/CakesMenu';
 import FlavorForm from './containers/FlavorForm/FlavorForm';
-import Authentication from './containers/Authentication/Authentication';
 
 class App extends Component {
   render() {
@@ -18,7 +17,6 @@ class App extends Component {
           <Route exact path="/pastry-planning-pointers" component={PastryPlanningPointers} />
           <Route exact path="/cakes" component={CakesMenu} />
           <Route exact path="/layers/new" component={FlavorForm} />
-          <Route path="/authentication" component={Authentication} />
           <Route exact path="/" component={CakeConstructor} />
         </Switch>
       </div>
