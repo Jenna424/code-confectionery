@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../components/shared/DynamicFormElement/DynamicFormElement';
+import { meetsValidationCriteria } from '../../utils/logic.js';
 import styles from './Authentication.module.css';
 
 class Authentication extends Component {
