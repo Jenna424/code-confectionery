@@ -43,10 +43,22 @@ class Authentication extends Component {
         setup: this.state.authFormInputs[inputIdentifier]
       })
     }
-    
+
     return (
   	  <div className={styles.authenticationContainer}>
   	    <form>
+  	      {authFormInputsArray.map(obj =>
+  	        <DynamicFormElement
+  	          key={obj.inputIdentifier}
+  	          labelText={obj.inputIdentifier.charAt(0).toUpperCase() + obj.inputIdentifier.slice(1)}
+  	          stringTag={obj.setup.stringTag}
+  	          tagContents={obj.setup.tagContents}
+  	          value={obj.setup.value}
+  	          isInvalid={!obj.setup.isValid}
+  	          interactedWith={obj.setup.interactedWith}
+  	          handleOnChange={event => this.handleOnChange(event, obj.inputIdentifier)}
+  	        />
+  	      )}
   	    </form>
   	  </div>
   	);
