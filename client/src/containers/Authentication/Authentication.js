@@ -4,6 +4,19 @@ import '../../components/shared/DynamicFormElement/DynamicFormElement';
 class Authentication extends Component {
   state = {
     authFormInputs: {
+      chefName: {
+        stringTag: 'input',
+        tagContents: {
+          type: 'text',
+          placeholder: 'Enter your name here...'
+        },
+        value: '',
+        validationCriteria: {
+          cannotBeBlank: true
+        },
+        isValid: false,
+        interactedWith: false
+      }
     }
   }
 
