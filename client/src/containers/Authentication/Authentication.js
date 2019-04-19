@@ -45,7 +45,7 @@ class Authentication extends Component {
     }
 
     return (
-  	  <div className={styles.authenticationContainer}>
+  	  <div className={styles.authFormContainer}>
   	    <form onSubmit={this.authenticateUser}>
   	      {authFormInputsArray.map(obj =>
   	        <DynamicFormElement
