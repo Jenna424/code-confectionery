@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './DynamicFormElement.module.css';
 
-const DynamicFormElement = ({ stringTag, tagContents, labelText, value, mustValidate, isInvalid, handleOnChange, interactedWith }) => {
+const DynamicFormElement = ({ stringTag, tagContents, labelText, value, isInvalid, handleOnChange, interactedWith }) => {
   const tagClassesArray = [styles.genericTag];
   let validationErrorMessage = null;
 
-  if (interactedWith && mustValidate && isInvalid) {
+  if (interactedWith && isInvalid) {
     tagClassesArray.push(styles.validationErrorMessage)
     validationErrorMessage = <span style={{color: 'red'}}>{labelText} must be valid. Please try again!</span>
   }
