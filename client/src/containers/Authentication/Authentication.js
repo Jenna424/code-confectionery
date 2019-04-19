@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../components/shared/DynamicFormElement/DynamicFormElement';
+import DynamicFormElement from '../../components/shared/DynamicFormElement/DynamicFormElement';
 import { meetsValidationCriteria } from '../../utils/logic.js';
 import styles from './Authentication.module.css';
 
@@ -68,7 +68,7 @@ class Authentication extends Component {
   	      {authFormInputsArray.map(obj =>
   	        <DynamicFormElement
   	          key={obj.id}
-  	          labelText={obj.id.charAt(0).toUpperCase() + obj.id.slice(1)}
+  	          labelText={obj.id === 'name' ? 'Name of Pastry Chef' : 'Password to Code Confectionery'}
   	          stringTag={obj.setup.stringTag}
   	          tagContents={obj.setup.tagContents}
   	          value={obj.setup.value}
