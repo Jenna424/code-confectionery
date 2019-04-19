@@ -16,6 +16,20 @@ class Authentication extends Component {
         },
         isValid: false,
         interactedWith: false
+      },
+      password: {
+        stringTag: 'input',
+        tagContents: {
+          type: 'password',
+          placeholder: 'Enter your password...'
+        },
+        value: '',
+        validationCriteria: {
+          cannotBeBlank: true,
+          minLength: 8
+        },
+        isValid: false,
+        interactedWith: false
       }
     }
   }
