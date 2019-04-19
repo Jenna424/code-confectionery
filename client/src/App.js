@@ -6,6 +6,7 @@ import CakeConstructor from './containers/CakeConstructor/CakeConstructor';
 import CakeCustomizerForm from './containers/CakeCustomizerForm/CakeCustomizerForm';
 import CakesMenu from './containers/CakesMenu/CakesMenu';
 import FlavorForm from './containers/FlavorForm/FlavorForm';
+import Authentication from './containers/Authentication/Authentication';
 
 class App extends Component {
   render() {
