@@ -39,7 +39,7 @@ class Authentication extends Component {
 
     for (let inputIdentifier in this.state.authFormInputs) {
       authFormInputsArray.push({
-        inputIdentifier,
+        id: inputIdentifier,
         setup: this.state.authFormInputs[inputIdentifier]
       })
     }
@@ -49,14 +49,14 @@ class Authentication extends Component {
   	    <form>
   	      {authFormInputsArray.map(obj =>
   	        <DynamicFormElement
-  	          key={obj.inputIdentifier}
-  	          labelText={obj.inputIdentifier.charAt(0).toUpperCase() + obj.inputIdentifier.slice(1)}
+  	          key={obj.id}
+  	          labelText={obj.id.charAt(0).toUpperCase() + obj.id.slice(1)}
   	          stringTag={obj.setup.stringTag}
   	          tagContents={obj.setup.tagContents}
   	          value={obj.setup.value}
   	          isInvalid={!obj.setup.isValid}
   	          interactedWith={obj.setup.interactedWith}
-  	          handleOnChange={event => this.handleOnChange(event, obj.inputIdentifier)}
+  	          handleOnChange={event => this.handleOnChange(event, obj.id)}
   	        />
   	      )}
   	    </form>
