@@ -18,6 +18,7 @@ class App extends Component {
           <Route exact path="/pastry-planning-pointers" component={PastryPlanningPointers} />
           <Route exact path="/cakes" component={CakesMenu} />
           <Route exact path="/layers/new" component={FlavorForm} />
+          <Route path="/authentication" component={Authentication} />
           <Route exact path="/" component={CakeConstructor} />
         </Switch>
       </div>
