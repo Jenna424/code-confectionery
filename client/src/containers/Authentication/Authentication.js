@@ -35,7 +35,16 @@ class Authentication extends Component {
   }
 
   render() {
-  	return (
+    const authFormInputsArray = [];
+
+    for (let inputIdentifier in this.state.authFormInputs) {
+      authFormInputsArray.push({
+        id: inputIdentifier,
+        setup: this.state.authFormInputs[inputIdentifier]
+      })
+    }
+
+    return (
   	  <div>
   	    <form>
   	    </form>
