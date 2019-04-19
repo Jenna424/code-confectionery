@@ -4,7 +4,7 @@ import '../../components/shared/DynamicFormElement/DynamicFormElement';
 class Authentication extends Component {
   state = {
     authFormInputs: {
-      chefName: {
+      name: {
         stringTag: 'input',
         tagContents: {
           type: 'text',
@@ -39,9 +39,9 @@ class Authentication extends Component {
 
     for (let inputIdentifier in this.state.authFormInputs) {
       authFormInputsArray.push({
-        id: inputIdentifier,
+        inputIdentifier,
         setup: this.state.authFormInputs[inputIdentifier]
-      })
+      )}
     }
 
     return (
