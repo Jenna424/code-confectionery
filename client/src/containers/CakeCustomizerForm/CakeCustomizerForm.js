@@ -95,7 +95,7 @@ class CakeCustomizerForm extends Component {
         },
         value: '',
         validationCriteria: {
-          numberIsRequired: true
+          positiveNumberIsRequired: true
         },
         isValid: false,
         interactedWith: false

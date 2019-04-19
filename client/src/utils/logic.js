@@ -5,7 +5,7 @@ export const meetsValidationCriteria = (currentValue, criteria) => {
     criteriaMet = currentValue.trim().length && criteriaMet
   }
 
-  if (criteria.numberIsRequired) {
+  if (criteria.positiveNumberIsRequired) {
     criteriaMet = /^[1-9]+$/.test(currentValue) && criteriaMet
   }
 
