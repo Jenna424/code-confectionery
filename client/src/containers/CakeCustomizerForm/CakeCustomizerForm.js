@@ -211,7 +211,6 @@ class CakeCustomizerForm extends Component {
               tagContents={obj.setup.tagContents}
               value={obj.setup.value}
               isInvalid={!obj.setup.isValid}
-              mustValidate={obj.setup.validationCriteria}
               interactedWith={obj.setup.interactedWith}
               handleOnChange={event => this.handleOnChange(event, obj.pastryProperty)}
             />
