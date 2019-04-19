@@ -36,6 +36,22 @@ class Authentication extends Component {
     }
   }
 
+  handleOnChange = (event, inputId) => {
+    const formDataWithChangedField = {
+      ...this.state.authFormInputs, // copy over all key/value pairs in the authFormInputs object in the local state object of Authentication container
+      [inputId]: { // override the configuration for the form field corresponding to the inputId of 'name' or 'password', whichever was passed in as argument to handleOnChange
+        ...this.state.authFormInputs[inputId], // distribute all key/value pairs in the configuration object corresponding to that inputId
+        value: event.target.value, // override value with value entered in form field
+        isValid: meetsValidationCriteria(event.target.value, this.state.authFormInputs[inputId].validationCriteria) // override isValid, set = to calling meetsValidationCriteria imported function with the value entered in the form field (event.target.value) and the validationCriteria object containing validation rules for that inputId of name or password
+        interactedWith: true // override interactedWith = true because when the user types something in the form field, this event handler is called
+      }
+    };
+
+    this.setState({
+      authFormInputs: formDataWithChangedField
+    })
+  }
+
   render() {
     const authFormInputsArray = [];
 
@@ -48,7 +64,7 @@ class Authentication extends Component {
 
     return (
   	  <div className={styles.authFormContainer}>
-  	    <form onSubmit={this.authenticateUser}>
+  	    <form>
   	      {authFormInputsArray.map(obj =>
   	        <DynamicFormElement
   	          key={obj.id}
