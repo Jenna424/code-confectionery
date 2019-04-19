@@ -43,9 +43,9 @@ class Authentication extends Component {
         setup: this.state.authFormInputs[inputIdentifier]
       })
     }
-
+    
     return (
-  	  <div>
+  	  <div className={styles.authenticationContainer}>
   	    <form>
   	    </form>
   	  </div>
