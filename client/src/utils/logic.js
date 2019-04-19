@@ -8,11 +8,7 @@ export const meetsValidationCriteria = (currentValue, criteria) => {
   if (criteria.positiveNumberIsRequired) {
     criteriaMet = /^[1-9]+$/.test(currentValue) && criteriaMet
   }
-
-  if (criteria.minimumLength) {
-    criteriaMet = currentValue.length >= criteria.minimumLength && criteriaMet
-  }
-
+  
   return criteriaMet;
 }
 
