@@ -41,7 +41,7 @@ class Authentication extends Component {
       authFormInputsArray.push({
         inputIdentifier,
         setup: this.state.authFormInputs[inputIdentifier]
-      )}
+      })
     }
 
     return (
