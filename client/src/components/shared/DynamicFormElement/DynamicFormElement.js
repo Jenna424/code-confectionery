@@ -28,9 +28,6 @@ const DynamicFormElement = ({ stringTag, tagContents, labelText, value, isInvali
         </select>
       );
   	  break;
-  	case 'textarea':
-  	  htmlTag = <textarea className={tagClassesArray.join(' ')} {...tagContents} value={value} onChange={handleOnChange} />;
-  	  break;
   	default:
   	  htmlTag = <input className={tagClassesArray.join(' ')} {...tagContents} value={value} onChange={handleOnChange} />;
   }
