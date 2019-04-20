@@ -15,9 +15,9 @@ class App extends Component {
         <Switch>
           <Route exact path="/pastry-particulars" component={CakeCustomizerForm} />
           <Route exact path="/pastry-planning-pointers" component={PastryPlanningPointers} />
+          <Route exact path="/" component={CakeConstructor} />
           <Route exact path="/cakes" component={CakesMenu} />
           <Route exact path="/layers/new" component={FlavorForm} />
-          <Route exact path="/" component={CakeConstructor} />
         </Switch>
       </div>
     )
