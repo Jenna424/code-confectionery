@@ -11,7 +11,7 @@ import App from './App';
 import layerLeveler from './reducers/layerLeveler';
 import pastryProposal from './reducers/pastryProposal';
 import flavorForm from './reducers/flavorForm';
-import searchForm from './reducers/searchForm';
+import searchDessertsForm from './reducers/searchForm';
 
 const history = createBrowserHistory();
 
@@ -21,7 +21,7 @@ const rootReducer = combineReducers({
   layerLeveler,
   pastryProposal,
   flavorForm,
-  searchForm
+  searchDessertsForm
 });
 
 const store = createStore(
