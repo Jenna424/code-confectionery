@@ -9,6 +9,12 @@ class SearchForm extends Component {
     searchTerm: ''
   }
 
+  handleOnChange = event => {
+    this.setState({
+      searchTerm: event.target.value
+    })
+  }
+
   render() {
     return (
       <div className={styles.searchFormContainer}>
