@@ -21,6 +21,7 @@ class SearchDessertsForm extends Component {
   }
 
   render() {
+    const { desserts, error } = this.props;
     return (
       <div className={styles.searchFormContainer}>
         <div className="ui segment">
@@ -34,14 +35,15 @@ class SearchDessertsForm extends Component {
             <button type="submit">Search Desserts</button>
           </form>
         </div>
-        <PastryPictures pictures={this.props.desserts} />
+        {error ? <p className={styles.loadImagesError}>Images could not be loaded.</p> : <PastryPictures pictures={desserts} />}
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  desserts: state.searchDesserts.desserts
+  desserts: state.searchDesserts.desserts,
+  error: state.searchDesserts.error
 })
 
 const mapDispatchToProps = dispatch => ({
