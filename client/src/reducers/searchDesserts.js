@@ -13,6 +13,11 @@ export default (state = initialState, action) => {
         desserts: [...action.desserts],
         error: false
       }
+    case types.SEARCH_DESSERTS_FAILURE:
+      return {
+        ...state,
+        error: true
+      }
     default:
       return state;
   }
