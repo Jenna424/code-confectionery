@@ -15,6 +15,11 @@ class SearchForm extends Component {
     })
   }
 
+  handleOnSubmit = event => {
+    event.preventDefault();
+    this.props.searchDesserts(this.state.searchTerm)
+  }
+
   render() {
     return (
       <div className={styles.searchFormContainer}>
