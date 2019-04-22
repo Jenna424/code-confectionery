@@ -11,6 +11,7 @@ import App from './App';
 import layerLeveler from './reducers/layerLeveler';
 import pastryProposal from './reducers/pastryProposal';
 import flavorForm from './reducers/flavorForm';
+import searchForm from './reducers/searchForm';
 
 const history = createBrowserHistory();
 
@@ -19,7 +20,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
   layerLeveler,
   pastryProposal,
-  flavorForm
+  flavorForm,
+  searchForm
 });
 
 const store = createStore(
