@@ -11,7 +11,7 @@ import App from './App';
 import layerLeveler from './reducers/layerLeveler';
 import pastryProposal from './reducers/pastryProposal';
 import flavorForm from './reducers/flavorForm';
-import searchDessertsForm from './reducers/searchForm';
+import searchDessertsForm from './reducers/searchDessertsForm';
 
 const history = createBrowserHistory();
 
