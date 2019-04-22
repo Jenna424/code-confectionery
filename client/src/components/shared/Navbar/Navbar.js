@@ -16,7 +16,7 @@ const Navbar = () => (
     <NavLink to="/pastry-planning-pointers" className="item" activeStyle={highlight}>Pastry Planning Pointers</NavLink>
     <NavLink exact to="/" className="item" activeStyle={highlight}>Cake Constructor</NavLink>
     <NavLink to="/layers/new" className="item" activeStyle={highlight}>Propose a New Flavor</NavLink>
-    <NavLink to="/search" className="item" activeStyle={highlight}>Peruse Pastries</NavLink>
+    <NavLink to="/search" className="item" activeStyle={highlight}>Search Desserts</NavLink>
   </div>
 )
 
