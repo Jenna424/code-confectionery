@@ -34,6 +34,7 @@ class SearchDessertsForm extends Component {
             <button type="submit">Search Desserts</button>
           </form>
         </div>
+        <PastryPictures pictures={this.props.desserts} />
       </div>
     )
   }
