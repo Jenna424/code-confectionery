@@ -26,7 +26,7 @@ class SearchDessertsForm extends Component {
         <div className="ui segment">
           <form onSubmit={this.handleOnSubmit}>
             <div className="field">
-              <label style={{fontWeight: 'bold'}}>Peruse pastries to gain inspiration for designing your dessert</label>:
+              <label>Peruse pastries to gain inspiration for designing your dessert</label>:
               <br /><br />
               <input type="text" placeholder="Enter a type of cake..." onChange={this.handleOnChange} />
             </div>
