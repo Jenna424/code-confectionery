@@ -3,3 +3,7 @@
   text-align: center;
   width: 80%;
 }
+
+.searchFormContainer label {
+  font-weight: bold;
+}
