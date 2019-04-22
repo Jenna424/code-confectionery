@@ -12,6 +12,15 @@ class SearchForm extends Component {
   render() {
     return (
       <div className={styles.searchFormContainer}>
+        <div className="ui segment">
+          <form onSubmit={this.handleOnSubmit}>
+            <div className="field">
+              <label>Peruse pastries to gain inspiration for designing your dessert</label>&nbsp;
+              <input type="text" placeholder="Enter a type of cake here..." onChange={this.handleOnChange} />
+            </div>
+            <button type="submit">Search Desserts</button>
+          </form>
+        </div>
       </div>
     )
   }
