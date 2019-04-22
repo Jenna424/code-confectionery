@@ -26,4 +26,8 @@ class SearchForm extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  desserts: state.searchDesserts.desserts
+})
+
 export default connect(mapStateToProps, mapDispatchToProps)(SearchForm)
