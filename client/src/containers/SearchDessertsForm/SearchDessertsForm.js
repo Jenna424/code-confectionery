@@ -4,7 +4,7 @@ import { searchDesserts } from '../../actions/searchDesserts';
 import styles from './SearchDessertsForm.module.css';
 import PastryPictures from '../../components/PastryPictures/PastryPictures';
 
-class SearchForm extends Component {
+class SearchDessertsForm extends Component {
   state = {
     searchTerm: ''
   }
@@ -45,4 +45,4 @@ const mapDispatchToProps = dispatch => ({
   searchDesserts: keywords => dispatch(searchDesserts(keywords))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchForm)
+export default connect(mapStateToProps, mapDispatchToProps)(SearchDessertsForm)
