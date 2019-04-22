@@ -5,6 +5,10 @@ import styles from './SearchDessertsForm.module.css';
 import PastryPictures from '../../components/PastryPictures/PastryPictures';
 
 class SearchForm extends Component {
+  state = {
+    searchTerm: ''
+  }
+
   render() {
     return (
       <div className={styles.searchFormContainer}>
