@@ -6,6 +6,7 @@ import CakeConstructor from './containers/CakeConstructor/CakeConstructor';
 import CakeCustomizerForm from './containers/CakeCustomizerForm/CakeCustomizerForm';
 import CakesMenu from './containers/CakesMenu/CakesMenu';
 import FlavorForm from './containers/FlavorForm/FlavorForm';
+import SearchForm from './containers/SearchForm/SearchForm';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path="/" component={CakeConstructor} />
           <Route exact path="/cakes" component={CakesMenu} />
           <Route exact path="/layers/new" component={FlavorForm} />
+          <Route path="/search" component={SearchForm} />
         </Switch>
       </div>
     )
