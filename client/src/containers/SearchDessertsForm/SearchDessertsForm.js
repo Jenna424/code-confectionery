@@ -30,4 +30,8 @@ const mapStateToProps = state => ({
   desserts: state.searchDesserts.desserts
 })
 
+const mapDispatchToProps = dispatch => ({
+  searchDesserts: keywords => dispatch(searchDesserts(keywords))
+})
+
 export default connect(mapStateToProps, mapDispatchToProps)(SearchForm)
