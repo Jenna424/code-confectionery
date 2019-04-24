@@ -21,15 +21,18 @@ class CakeConstructor extends Component {
     const { cakeLayout, stackLayer, unstackLayer } = this.props;
     const lastLayerLevered = cakeLayout[cakeLayout.length - 1];
     const emptyCakeBox = !cakeLayout.length;
+    console.log(cakeLayout)
+    console.log(lastLayerLevered)
+    console.log(emptyCakeBox)
     return (
       pastryPartLayers.map(layerObject =>
         <LayerLevers
-          key={layerObject.id}
+          key={layerObject.flavor}
           label={layerObject.flavor}
           stackLayer={() => stackLayer(layerObject)}
           unstackLayer={() => unstackLayer(layerObject)}
           disableStack={(emptyCakeBox && layerObject.pastry_part === 'filling') || (!emptyCakeBox && layerObject.pastry_part === lastLayerLevered.pastry_part)}
-          disableUnstack={!(cakeLayout.length && cakeLayout.includes(layerObject) && layerObject.id === lastLayerLevered.id)}
+          disableUnstack={!cakeLayout.length || layerObject.flavor !== lastLayerLevered.flavor}
         />
       )
     )
