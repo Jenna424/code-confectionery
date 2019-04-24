@@ -8,6 +8,7 @@ import { Redirect } from 'react-router-dom';
 
 class CakeCustomizerForm extends Component {
   state = {
+    cakeCreationCompleted: false,
     wholeFormIsValid: false,
     pastryParticulars: {
       customer: {
@@ -185,6 +186,10 @@ class CakeCustomizerForm extends Component {
       layer_ids: cakeLayout.map(layerObject => layerObject.id)
     }
 
+    this.setState({
+      cakeCreationCompleted: true
+    })
+
     createCake(pastryPendingProposal)
   }
 
@@ -199,7 +204,7 @@ class CakeCustomizerForm extends Component {
     }
     return (
       <div className={styles.cakeCustomizerContainer}>
-        {this.props.cakeCreationCompleted ? <Redirect to='/cakes' /> : null}
+        {this.state.cakeCreationCompleted ? <Redirect to='/cakes' /> : null}
         <h2>Cake Customizer Form</h2>
         <h3>Provide pastry particulars to complete your cake customization</h3>
         <form onSubmit={this.handleOnSubmit}>
@@ -224,8 +229,7 @@ class CakeCustomizerForm extends Component {
 
 const mapStateToProps = state => ({
   cakeLayout: state.layerLeveler.cakeLayout,
-  cakeCost: state.layerLeveler.cakeCost,
-  cakeCreationCompleted: state.pastryProposal.cakeCreationCompleted
+  cakeCost: state.layerLeveler.cakeCost
 })
 
 const mapDispatchToProps = dispatch => ({
