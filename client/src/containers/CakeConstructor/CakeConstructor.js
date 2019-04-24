@@ -21,9 +21,6 @@ class CakeConstructor extends Component {
     const { cakeLayout, stackLayer, unstackLayer } = this.props;
     const lastLayerLevered = cakeLayout[cakeLayout.length - 1];
     const emptyCakeBox = !cakeLayout.length;
-    console.log(cakeLayout)
-    console.log(lastLayerLevered)
-    console.log(emptyCakeBox)
     return (
       pastryPartLayers.map(layerObject =>
         <LayerLevers
