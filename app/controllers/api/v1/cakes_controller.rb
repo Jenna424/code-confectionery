@@ -30,11 +30,8 @@ module Api
       end
 
       def destroy
-        if @cake.destroy
-          render json: { message: "Your cake was successfully deleted!" }, status: 200
-        else
-          render json: { errors: "Unable to delete the cake" }, status: 400
-        end
+        @cake.destroy
+        render json: @cake, status: 200
       end
 
       private
